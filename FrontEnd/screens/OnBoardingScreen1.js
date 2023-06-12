@@ -11,10 +11,19 @@ const LoginScreen = () => {
     const [passwordFocusState,setPasswordFocusState] = useState(false);
     const [confirmPasswordFocusState,setConfirmPasswordFocusState] = useState(false)
  
-  
+  const[progress,setProgress]=useState(0);
+
+    useEffect(()=>{
+      setTimeout(() => {
+        setProgress(0.3)
+      }, 200);
+    })
   return (
     <View style={styles.container}>
-      
+      <View style={styles.topContainer}>
+      <Text style={styles.progressTitle}>1/3</Text>
+    <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
+      </View>
     <View style={styles.topContainer}>
       <Text style={styles.title}>Create Account</Text>
       <Text style={styles.subTitle}>Help us to seek more new features</Text>
