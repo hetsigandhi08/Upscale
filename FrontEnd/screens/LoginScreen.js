@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 import apple from '../assets/apple.png'
 import google from '../assets/google.png'
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
 
     const [emailFocusState,setEmailFocusState] = useState(false);
     const [passwordFocusState,setPasswordFocusState] = useState(false)
-
+    
   return (
     <View style={styles.container}>
 
@@ -24,14 +24,18 @@ const LoginScreen = () => {
       <TouchableOpacity style={styles.loginBtn}  >
           <Text style={styles.loginText}>Login</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity style={styles.signupBtn} onPress={toSignUp=()=>{navigation.navigate('OnBoardingScreen1')}} >
+          <Text style={styles.signupText}>Sign up</Text>
+      </TouchableOpacity>
     </View>
 
     <View style={styles.bottomContainer}>
-    <TouchableOpacity>
+    {/* <TouchableOpacity> */}
       <Text style={styles.optionText}>
         Other options
       </Text>
-    </TouchableOpacity>
+    {/* </TouchableOpacity> */}
       <TouchableOpacity style={styles.loginGoogle}  >
           <Image style={{marginLeft:6}} source={google}/>
           <Text style={styles.loginText}>Google</Text>
@@ -108,9 +112,26 @@ const styles = StyleSheet.create({
         borderRadius:42,
         marginTop:30
     },
+    signupBtn:{
+      display:'flex',
+      alignItems:'center',
+      justifyContent:'center',
+      width:263,
+      height:47,
+      backgroundColor:'#FBFBFB',
+      borderRadius:42,
+      marginTop:5,
+      borderColor:'#5237b0',
+      borderWidth:2,
+      color:'black'
+  },
     loginText:{
         color:'#FEFEFE',
         fontFamily:'SourceSans3-Regular',
+    },
+    signupText:{
+      color:'#5237b0',
+      fontFamily:'SourceSans3-Regular',
     },
     bottomContainer:{
         alignItems:'center',
