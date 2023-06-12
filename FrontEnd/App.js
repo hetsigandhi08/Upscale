@@ -5,7 +5,8 @@ import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen'
-import OnBoardingScreen1 from './screens/OnBoardingScreen1'
+import OnBoardingScreen1 from './screens/OnBoardingScreen1';
+import OnBoardingScreen2 from './screens/OnBoardingScreen2';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
@@ -32,6 +33,7 @@ export default function App() {
       <Stack.Screen name="Home" options={{headerShown: false}} component={HomeScreen} />
       <Stack.Screen  name="Login" options={{headerShown: false}} component={LoginScreen} />
       <Stack.Screen  name="OnBoardingScreen1" options={{headerShown: false}} component={OnBoardingScreen1} />
+      <Stack.Screen  name="OnBoardingScreen2" options={{headerShown: false}} component={OnBoardingScreen2} />
       </Stack.Navigator>
       <StatusBar style="dark"/>
     </NavigationContainer>
