@@ -5,7 +5,7 @@ import google from '../assets/google.png'
 import * as Progress from 'react-native-progress';
 
 
-const LoginScreen = () => {
+const OnBoardingScreen1 = ({ navigation }) => {
 
     const [emailFocusState,setEmailFocusState] = useState(false);
     const [passwordFocusState,setPasswordFocusState] = useState(false);
@@ -35,7 +35,7 @@ const LoginScreen = () => {
       <TextInput style={confirmPasswordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Confirm Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setConfirmPasswordFocusState(false)} onFocus={()=>setConfirmPasswordFocusState(true)}/>
 
 
-      <TouchableOpacity style={styles.loginBtn}  >
+      <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('OnBoardingScreen2')}} >
           <Text style={styles.loginText}>Sign Up</Text>
       </TouchableOpacity>
     </View>
@@ -61,7 +61,7 @@ const LoginScreen = () => {
   )
 }
 
-export default LoginScreen
+export default OnBoardingScreen1
 
 const styles = StyleSheet.create({
     container:{
