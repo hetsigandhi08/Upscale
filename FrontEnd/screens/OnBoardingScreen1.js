@@ -33,9 +33,7 @@ const OnBoardingScreen1 = ({ navigation }) => {
       <TextInput style={emailFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Email Address' autoComplete='email' onBlur={()=>setEmailFocusState(false)} onFocus={()=>setEmailFocusState(true)}/>
       <TextInput style={passwordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Create Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setPasswordFocusState(false)} onFocus={()=>setPasswordFocusState(true)}/>
       <TextInput style={confirmPasswordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Confirm Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setConfirmPasswordFocusState(false)} onFocus={()=>setConfirmPasswordFocusState(true)}/>
-
-
-      <TouchableOpacity style={styles.loginBtn}  onPress={toSignUp=()=>{navigation.navigate('OnBoardingScreen3')}}>
+      <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('OnBoardingScreen2')}} >
           <Text style={styles.loginText}>Sign Up</Text>
       </TouchableOpacity>
     </View>
