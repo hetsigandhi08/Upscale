@@ -9,10 +9,12 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/ngrok": "^4.1.1",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "expo": "~48.0.18",
     "expo-status-bar": "~1.4.4",
+    "ngrok": "^5.0.0-beta.2",
     "react": "18.2.0",
     "react-native": "0.71.8",
     "react-native-progress": "^5.0.0",

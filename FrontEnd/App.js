@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen'
 import OnBoardingScreen1 from './screens/OnBoardingScreen1'
+import OnBoardingScreen3 from './screens/OnBoardingScreen3';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
@@ -32,6 +33,7 @@ export default function App() {
       <Stack.Screen name="Home" options={{headerShown: false}} component={HomeScreen} />
       <Stack.Screen  name="Login" options={{headerShown: false}} component={LoginScreen} />
       <Stack.Screen  name="OnBoardingScreen1" options={{headerShown: false}} component={OnBoardingScreen1} />
+      <Stack.Screen  name="OnBoardingScreen3" options={{headerShown: false}} component={OnBoardingScreen3} />
       </Stack.Navigator>
       <StatusBar style="dark"/>
     </NavigationContainer>
