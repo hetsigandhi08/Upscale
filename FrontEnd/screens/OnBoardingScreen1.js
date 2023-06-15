@@ -15,7 +15,7 @@ const OnBoardingScreen1 = ({ navigation }) => {
 
     useEffect(()=>{
       setTimeout(() => {
-        setProgress(0.3)
+        setProgress(0.1)
       }, 200);
     })
   return (
