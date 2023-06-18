@@ -10,7 +10,7 @@ const GetStartedScreen1 = ({navigation}) => {
 const[progress,setProgress]=useState(0);
 useEffect(()=>{
   setTimeout(() => {
-    setProgress(0.3)
+    setProgress(0.4)
   }, 200);
 })
 
@@ -20,7 +20,9 @@ useEffect(()=>{
       <Text style={styles.progressTitle}>1/3</Text>
     <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
       </View>
+     
       </View>
+      
   )
 }
 
