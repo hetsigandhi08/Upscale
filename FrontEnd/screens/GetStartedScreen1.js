@@ -20,7 +20,10 @@ useEffect(()=>{
       <Text style={styles.progressTitle}>1/3</Text>
     <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
       </View>
-     
+     <View style={styles.topContainer}>
+     <Text style={styles.title}>Get Started</Text>
+      <Text style={styles.subTitle}>Take the worlds best courses from top universities</Text>
+     </View>
       </View>
       
   )
@@ -47,6 +50,16 @@ const styles = StyleSheet.create({
       fontWeight:'400',
       fontFamily:'SourceSans3-SemiBold',
       marginBottom:8
+  },
+  title:{
+      fontSize:30,
+      fontFamily:'SourceSans3-SemiBold'
+  },
+  subTitle:{
+      fontSize:14,
+      fontWeight:'400',
+      fontFamily:'SourceSans3-Regular',
+      color:"#636363"
   }
 
 })
