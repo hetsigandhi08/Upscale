@@ -29,7 +29,7 @@ const OnBoardingScreen3 = ({ navigation }) => {
   const handleSubmit=()=>{
     setProgress(5);
     setTimeout(() => {
-      navigation.navigate('OnBoardingScreen2')
+      navigation.navigate('Tab')
     }, 600);
    
   }

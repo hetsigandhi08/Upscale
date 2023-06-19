@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, TouchableWithoutFeedback,Keyboard } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import apple from '../assets/apple.png'
 import google from '../assets/google.png'
@@ -19,6 +19,8 @@ const OnBoardingScreen1 = ({ navigation }) => {
       }, 200);
     })
   return (
+
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
     <View style={styles.container}>
       <View style={styles.topContainer}>
       <Text style={styles.progressTitle}>1/3</Text>
@@ -56,6 +58,7 @@ const OnBoardingScreen1 = ({ navigation }) => {
       </View>
 
     </View>
+    </TouchableWithoutFeedback>
   )
 }
 
