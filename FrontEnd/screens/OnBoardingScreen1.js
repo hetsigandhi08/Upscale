@@ -15,7 +15,7 @@ const OnBoardingScreen1 = ({ navigation }) => {
 
     useEffect(()=>{
       setTimeout(() => {
-        setProgress(0.3)
+        setProgress(0.1)
       }, 200);
     })
   return (
@@ -35,8 +35,6 @@ const OnBoardingScreen1 = ({ navigation }) => {
       <TextInput style={emailFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Email Address' autoComplete='email' onBlur={()=>setEmailFocusState(false)} onFocus={()=>setEmailFocusState(true)}/>
       <TextInput style={passwordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Create Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setPasswordFocusState(false)} onFocus={()=>setPasswordFocusState(true)}/>
       <TextInput style={confirmPasswordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Confirm Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setConfirmPasswordFocusState(false)} onFocus={()=>setConfirmPasswordFocusState(true)}/>
-
-
       <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('OnBoardingScreen2')}} >
           <Text style={styles.loginText}>Sign Up</Text>
       </TouchableOpacity>
@@ -64,7 +62,7 @@ const OnBoardingScreen1 = ({ navigation }) => {
   )
 }
 
-export default OnBoardingScreen1
+export default OnBoardingScreen1;
 
 const styles = StyleSheet.create({
     container:{
@@ -97,7 +95,6 @@ const styles = StyleSheet.create({
       fontSize:20,
       fontWeight:'400',
       fontFamily:'SourceSans3-SemiBold',
-      
       marginBottom:8
   },
     mailInput:{

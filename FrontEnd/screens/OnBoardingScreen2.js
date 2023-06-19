@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import { SelectList } from 'react-native-dropdown-select-list'
 import * as Progress from 'react-native-progress';
 
-const OnBoardingScreen2 = () => {
+const OnBoardingScreen2 = ({ navigation }) => {
     const [nameFocusState,setNameFocusState] = useState(false);
     const [professionFocusState,setProfessionFocusState] = useState(false);
     const [bioFocusState,setBioFocusState] = useState(false);
@@ -19,7 +19,7 @@ const OnBoardingScreen2 = () => {
 
     useEffect(()=>{
       setTimeout(() => {
-        setProgress(0.6)
+        setProgress(0.5)
       }, 200);
     })
   return (
@@ -48,7 +48,7 @@ const OnBoardingScreen2 = () => {
         save="value"
     />
       <TextInput multiline={true} numberOfLines={10} style={bioFocusState ? styles.textAreaInputFocused : styles.textAreaInput} placeholder='Write about yourself in small sentences...'  onBlur={()=>setBioFocusState(false)} onFocus={()=>setBioFocusState(true)}/>
-      <TouchableOpacity style={styles.loginBtn} >
+      <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('OnBoardingScreen3')}} >
           <Text style={styles.loginText}>Submit</Text>
       </TouchableOpacity>
     </View>
