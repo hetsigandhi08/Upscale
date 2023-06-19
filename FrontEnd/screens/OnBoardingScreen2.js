@@ -1,12 +1,21 @@
-import { StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native'
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, TouchableWithoutFeedback,Keyboard} from 'react-native'
 import React, {useState, useEffect} from 'react'
+import { SelectList } from 'react-native-dropdown-select-list'
 import * as Progress from 'react-native-progress';
 
 const OnBoardingScreen2 = () => {
     const [nameFocusState,setNameFocusState] = useState(false);
     const [professionFocusState,setProfessionFocusState] = useState(false);
     const [bioFocusState,setBioFocusState] = useState(false);
-    const[progress,setProgress]=useState(0);
+    const [progress,setProgress]=useState(0);
+
+    const [selected, setSelected] = useState("");
+  
+    const data = [
+      {key:'1', value:'Student'},
+      {key:'2', value:'IT employee'},
+      {key:'3', value:'Teacher'},
+    ]
 
     useEffect(()=>{
       setTimeout(() => {
@@ -14,6 +23,8 @@ const OnBoardingScreen2 = () => {
       }, 200);
     })
   return (
+
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
     <View style={styles.container}>
       <View style={styles.topContainer}>
       <Text style={styles.progressTitle}>2/3</Text>
@@ -27,7 +38,15 @@ const OnBoardingScreen2 = () => {
 
     <View style={styles.inputContainer}>
       <TextInput style={nameFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Your Name'  onBlur={()=>setNameFocusState(false)} onFocus={()=>setNameFocusState(true)}/>
-      <TextInput style={professionFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Your profession'  onBlur={()=>setProfessionFocusState(false)} onFocus={()=>setProfessionFocusState(true)}/>
+      {/* <TextInput style={professionFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Your profession'  onBlur={()=>setProfessionFocusState(false)} onFocus={()=>setProfessionFocusState(true)}/> */}
+      <SelectList maxHeight={100} placeholder='Select your Profession' onSelect={()=>{
+        setNameFocusState(false);
+        setBioFocusState(false)
+      }} inputStyles={{fontSize:14, fontFamily:'SourceSans3-Regular',}} boxStyles={{width:320,borderRadius:5,borderColor: '#A9A9A9',backgroundColor:'#FBFBFB',}}
+        setSelected={(val) => setSelected(val)} 
+        data={data} 
+        save="value"
+    />
       <TextInput multiline={true} numberOfLines={10} style={bioFocusState ? styles.textAreaInputFocused : styles.textAreaInput} placeholder='Write about yourself in small sentences...'  onBlur={()=>setBioFocusState(false)} onFocus={()=>setBioFocusState(true)}/>
       <TouchableOpacity style={styles.loginBtn} >
           <Text style={styles.loginText}>Submit</Text>
@@ -35,6 +54,8 @@ const OnBoardingScreen2 = () => {
     </View>
 
     </View>
+    </TouchableWithoutFeedback>
+
   )
 }
 
@@ -84,7 +105,7 @@ const styles = StyleSheet.create({
           backgroundColor:'#FBFBFB',
           borderRadius:5,
           borderWidth:1,
-          borderColor: '#A9A9A9'
+          borderColor: '#A9A9A9',
       },
       mailInputFocused:{
           width:320,
@@ -95,7 +116,7 @@ const styles = StyleSheet.create({
           backgroundColor:'#FBFBFB',
           borderRadius:5,
           borderWidth:1,
-          borderColor: '#5237C0'
+          borderColor: '#5237C0',
       },
       textAreaInput:{
         width:320,
