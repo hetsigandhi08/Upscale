@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, TouchableWithoutFeedback,Keyboard} from 'react-native'
 import React, { useState } from 'react'
 import apple from '../assets/apple.png'
 import google from '../assets/google.png'
@@ -9,6 +9,8 @@ const LoginScreen = ({ navigation }) => {
     const [passwordFocusState,setPasswordFocusState] = useState(false)
     
   return (
+
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
     <View style={styles.container}>
 
     <View style={styles.topContainer}>
@@ -48,6 +50,7 @@ const LoginScreen = ({ navigation }) => {
       </View>
 
     </View>
+    </TouchableWithoutFeedback>
   )
 }
 
