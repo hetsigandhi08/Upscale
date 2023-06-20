@@ -37,7 +37,7 @@ export default function App() {
       <Stack.Screen  name="OnBoardingScreen2" options={{headerShown: false}} component={OnBoardingScreen2} />
       <Stack.Screen  name="OnBoardingScreen3" options={{headerShown: false}} component={OnBoardingScreen3} />
       </Stack.Navigator>
-      <StatusBar style="dark"/>
+      <StatusBar backgroundColor='#FFFFFF' style="dark"/>
     </NavigationContainer>
   );
 }
