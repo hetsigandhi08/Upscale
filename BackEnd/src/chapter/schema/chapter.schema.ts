@@ -2,10 +2,10 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { Document } from 'mongoose';
 
-export type RoadmapDocument = Roadmap & Document;
+export type ChapterDocument = Chapter & Document;
 
 @Schema()
-export class Roadmap {
+export class Chapter {
   @ApiProperty()
   @Prop()
   id: string;
@@ -19,4 +19,4 @@ export class Roadmap {
   img: string;
 }
 
-export const RoadmapSchema = SchemaFactory.createForClass(Roadmap);
+export const ChapterSchema = SchemaFactory.createForClass(Chapter);
