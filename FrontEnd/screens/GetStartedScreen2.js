@@ -4,22 +4,20 @@ import Rectangle4 from '../assets/Rectangle4.png'
 import Rectangle6 from '../assets/Rectangle6.png'
 import * as Progress from 'react-native-progress';
 
+const GetStartedScreen2 = ({navigation}) => {
 
-
-
-const GetStartedScreen1 = ({navigation}) => {
 
 const[progress,setProgress]=useState(0);
 useEffect(()=>{
   setTimeout(() => {
-    setProgress(0.4)
+    setProgress(0.6)
   }, 200);
 })
 
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
-      <Text style={styles.progressTitle}>1/3</Text>
+      <Text style={styles.progressTitle}>2/3</Text>
     <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
       </View>
       <View style={styles.columnStyle}>
@@ -27,7 +25,7 @@ useEffect(()=>{
       <Image style={styles.square} source={Rectangle6} />
       </View>
      <View style={styles.topContainer}>
-     <Text style={styles.title}>Take the worlds best courses from top universities from best partners</Text>
+     <Text style={styles.title}>Get suggestions from the best partners available on social media</Text>
       {/* <Text style={styles.subTitle}>Take the worlds best courses from top universities</Text> */}
      </View>
      <View>
@@ -45,15 +43,14 @@ useEffect(()=>{
      </View>
 
       </View>
-      
   )
 }
 
-export default GetStartedScreen1;
+export default GetStartedScreen2
 
 const styles = StyleSheet.create({
 
-  container:{
+ container:{
       backgroundColor:'#FAFCFB',
       display:'flex',
       flex:1,
@@ -127,4 +124,5 @@ loginText:{
   color:'#FEFEFE',
   fontFamily:'SourceSans3-Regular',
 }
+
 })
