@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity } from 'react-native'
 import React, { useState,useEffect } from 'react'
-import Rectangle4 from '../assets/Rectangle4.png'
-import Rectangle6 from '../assets/Rectangle6.png'
+import Rectangle10 from '../assets/Rectangle10.png'
+import Rectangle11 from '../assets/Rectangle11.png'
 import * as Progress from 'react-native-progress';
 
 const GetStartedScreen2 = ({navigation}) => {
@@ -21,8 +21,8 @@ useEffect(()=>{
     <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
       </View>
       <View style={styles.columnStyle}>
-      <Image style={styles.side} source={Rectangle4} />
-      <Image style={styles.square} source={Rectangle6} />
+      <Image style={styles.side} source={Rectangle10} />
+      <Image style={styles.square} source={Rectangle11} />
       </View>
      <View style={styles.topContainer}>
      <Text style={styles.title}>Get suggestions from the best partners available on social media</Text>
