@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         fontSize:14,
         fontWeight:'400',
         fontFamily:'SourceSans3-Regular',
-        color:"#636363"
+        color:'#636363'
     },
     mailInput:{
         width:320,

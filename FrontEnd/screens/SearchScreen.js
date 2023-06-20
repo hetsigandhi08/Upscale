@@ -1,10 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native'
+import React, {useState, useEffect} from 'react'
 
 const SearchScreen = () => {
+
+  const[loader,setLoader] = useState(true)
+
+    useEffect(()=>{
+      setTimeout(() => {
+        setLoader(false)
+      },2000);
+    })
+    
   return (
     <View style={styles.container}>
-      <Text>SearchScreen</Text>
+     {loader ? <ActivityIndicator size="small" /> : <Text>Search screen</Text>}
     </View>
   )
 }
@@ -15,7 +24,7 @@ const styles = StyleSheet.create({
     container:{
         display:'flex',
         flex:1,
-    backgroundColor:'#FAFCFB',
+        backgroundColor:'#FAFCFB',
         alignItems:'center',
         justifyContent:"center"
       }

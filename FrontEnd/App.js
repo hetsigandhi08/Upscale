@@ -30,14 +30,14 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Tab">
+      <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Tab" options={{headerShown: false}} component={BottomTabScreen} />
       <Stack.Screen  name="Login" options={{headerShown: false}} component={LoginScreen} />
       <Stack.Screen  name="OnBoardingScreen1" options={{headerShown: false}} component={OnBoardingScreen1} />
       <Stack.Screen  name="OnBoardingScreen2" options={{headerShown: false}} component={OnBoardingScreen2} />
       <Stack.Screen  name="OnBoardingScreen3" options={{headerShown: false}} component={OnBoardingScreen3} />
       </Stack.Navigator>
-      <StatusBar style="dark"/>
+      <StatusBar backgroundColor='#FFFFFF' style="dark"/>
     </NavigationContainer>
   );
 }
