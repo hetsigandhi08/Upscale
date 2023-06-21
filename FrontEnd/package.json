@@ -29,6 +29,7 @@
     "react-native-progress": "^5.0.0",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
+    "react-native-step-indicator": "^1.0.3",
     "react-native-timeline-flatlist": "^0.8.0",
     "react-native-web": "~0.18.11"
   },
