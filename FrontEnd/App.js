@@ -2,8 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useCallback } from 'react';
 import { useFonts } from 'expo-font';
-import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from './screens/HomeScreen';
+import BottomTabScreen from './screens/BottomTabScreen';
 import LoginScreen from './screens/LoginScreen'
 import OnBoardingScreen1 from './screens/OnBoardingScreen1';
 import OnBoardingScreen2 from './screens/OnBoardingScreen2';
@@ -11,6 +10,7 @@ import OnBoardingScreen3 from './screens/OnBoardingScreen3';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import GetStartedScreen1 from './screens/GetStartedScreen1';
 import GetStartedScreen2 from './screens/GetStartedScreen2';
+import { NavigationContainer } from '@react-navigation/native';
 
 
 const Stack = createNativeStackNavigator();
@@ -36,12 +36,13 @@ export default function App() {
       <Stack.Screen name = "GetStarted" options = {{headerShown: false}} component = {GetStartedScreen1} />
       <Stack.Screen name = "GetStarted2" options = {{headerShown: false}} component = {GetStartedScreen2} />
       <Stack.Screen name="Home" options={{headerShown: false}} component={HomeScreen} />
+      <Stack.Screen name="Tab" options={{headerShown: false}} component={BottomTabScreen} />
       <Stack.Screen  name="Login" options={{headerShown: false}} component={LoginScreen} />
       <Stack.Screen  name="OnBoardingScreen1" options={{headerShown: false}} component={OnBoardingScreen1} />
       <Stack.Screen  name="OnBoardingScreen2" options={{headerShown: false}} component={OnBoardingScreen2} />
       <Stack.Screen  name="OnBoardingScreen3" options={{headerShown: false}} component={OnBoardingScreen3} />
       </Stack.Navigator>
-      <StatusBar style="dark"/>
+      <StatusBar backgroundColor='#FFFFFF' style="dark"/>
     </NavigationContainer>
   );
 }
