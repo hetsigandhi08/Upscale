@@ -51,7 +51,7 @@ const OnBoardingScreen1 = ({ navigation }) => {
           <Text style={styles.loginText}>Google</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.loginApple}  >
+      <TouchableOpacity style={styles.loginApple} >
           <Image style={{marginBottom:4,marginRight:6}} source={apple}/>
           <Text style={styles.loginText}>Apple</Text>
       </TouchableOpacity>
