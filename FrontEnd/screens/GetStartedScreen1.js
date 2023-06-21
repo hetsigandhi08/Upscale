@@ -31,7 +31,7 @@ useEffect(()=>{
       {/* <Text style={styles.subTitle}>Take the worlds best courses from top universities</Text> */}
      </View>
      <View>
-     <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('OnBoardingScreen2')}} >
+     <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('GetStartedScreen2')}} >
           <Text style={styles.loginText}>Get Started</Text>
       </TouchableOpacity>
      </View>
