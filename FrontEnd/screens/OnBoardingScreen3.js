@@ -3,12 +3,37 @@ import React,{useState,useEffect} from 'react'
 import * as Progress from 'react-native-progress';
 const OnBoardingScreen3 = ({ navigation }) => {
     const[progress,setProgress]=useState(0);
-    
+    const[interest,SetInterest]=useState([]);
+    const[showElement,setShowElement]=useState(false);
     useEffect(()=>{
       setTimeout(() => {
-        setProgress(0.8)
+        setProgress(0.7)
       }, 200);
-    })
+    },[])
+
+   const handleInput=(item)=> 
+   {  if(interest.includes(item)){
+    if(interest.length>3){
+      setShowElement(false);
+    }
+    SetInterest(interest.filter((selectedItem)=>selectedItem!==item));
+   }else if(!interest.includes(item) && interest.length<4){
+    SetInterest([...interest,item]);
+   }
+   else{
+    setShowElement(true);
+    console.log(showElement);
+   }
+  }
+  
+  const handleSubmit=()=>{
+    setProgress(5);
+    setTimeout(() => {
+      navigation.navigate('Tab')
+    }, 600);
+   
+  }
+  const data=['Programming','AWS','JavaScript','C program','Web Development','Full Stack Developer','Cyber Security','Google Cloud']
   return (
     <View style={styles.container}>
        <View style={styles.ProgressContainer}>
@@ -18,36 +43,18 @@ const OnBoardingScreen3 = ({ navigation }) => {
       <View style={styles.topContainer}>
       <Text style={styles.title}>Your Interest</Text>
       <Text style={styles.subTitle}>Choose upto 4 of the Following</Text>
+      {showElement&&<Text style={styles.error}>You can select only 4 Interest</Text>}
     </View>
     <View style={styles.wordCloudContainer}>
-    <TouchableOpacity style={styles.wordCloud}>
-    <Text style={styles.word}>Progamming</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.wordCloud}>
-    <Text style={styles.word}>Javascript</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.wordCloud}>
-    <Text style={styles.word}>C program</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.wordCloud}>
-    <Text style={styles.word}>Web Development</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.wordCloud}>
-    <Text style={styles.word}>Full Stack Developer</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.wordCloud}>
-    <Text style={styles.word}>Cyber Security</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.wordCloud}>
-    <Text style={styles.word}>Google cloud</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.wordCloud}>
-    <Text style={styles.word}>AWS</Text>
-    </TouchableOpacity>
+      {data.map((item)=>(
+        <TouchableOpacity key={item} style={interest.includes(item)?styles.wordCloudSelected:styles.wordCloud} onPress={()=>{handleInput(item)}}>
+        <Text style={interest.includes(item)?styles.wordSelected:styles.word}>{item}</Text>
+        </TouchableOpacity>
+      ))}
     </View>
     <View style={styles.bottomContainer}>
-    <TouchableOpacity style={styles.loginBtn}  onPress={toSignUp=()=>{navigation.navigate('OnBoardingScreen3')}}>
-          <Text style={styles.loginText}>Sign Up</Text>
+    <TouchableOpacity style={styles.loginBtn}  onPress={handleSubmit}>
+          <Text style={styles.loginText}>Register</Text>
       </TouchableOpacity>
     <TouchableOpacity>
       <Text style={styles.optionText}>
@@ -77,14 +84,12 @@ const styles = StyleSheet.create({
         alignSelf:'flex-start',
         marginTop:40,
         marginBottom:20
-        
       },
     ProgressContainer:{
         width:'100%',
         marginTop:40
         
     },
-      
       title:{
         fontSize:30,
         fontFamily:'SourceSans3-SemiBold'
@@ -105,19 +110,35 @@ const styles = StyleSheet.create({
         display:'flex',
         flexDirection:'row',
         flexWrap:'wrap',
-        justifyContent:'space-between',
+        justifyContent:'flex-start',
+        gap:10,
     },
     wordCloud:{
         display:'flex',
         alignItems:'center',
         justifyContent:'center',
         width:'auto',
-        height:60,
+        height:50,
         padding:15,
         backgroundColor:'#D9D9D9',
-        borderRadius:42,
+        opacity:0.8,
+        borderRadius:44,
         textAlign:'center',
         marginBottom:10
+    },
+    wordCloudSelected:{
+       display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        width:'auto',
+        height:50,
+        padding:15,
+        backgroundColor:'#e97916',
+        borderRadius:42,
+        textAlign:'center',
+       marginBottom:10,
+       
+       
     },
     loginBtn:{
       display:'flex',
@@ -127,7 +148,8 @@ const styles = StyleSheet.create({
       height:47,
       backgroundColor:'#5237b0',
       borderRadius:42,
-      marginTop:30
+      marginTop:30,
+      
   },
   loginText:{
       color:'#FEFEFE',
@@ -142,7 +164,21 @@ optionText:{
     color:"#7A7A7A",
     fontSize:16,
     fontFamily:'SourceSans3-Regular'
+},
+wordSelected:{
+  color:'white'
+},
+
+error:{
+  color:'red',
+  alignSelf:'center',
+  fontFamily:'SourceSans3-SemiBold',
+  fontWeight:'400',
 }
+
+
+
+
 
 
 })
