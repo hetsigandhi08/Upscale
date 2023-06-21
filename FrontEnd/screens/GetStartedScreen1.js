@@ -37,7 +37,7 @@ useEffect(()=>{
      </View>
      <View style={{display:"flex",flexDirection:"row"}}>
       <Text style={styles.subTitle}>Already have an account </Text><TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
-      <Text>Login</Text>
+      <Text style={styles.subLogin}> Login</Text>
        </TouchableOpacity>
       </View>
       <View>
@@ -85,6 +85,17 @@ const styles = StyleSheet.create({
             // textAlignVertical: 'center',
             // alignContent: 'center',
   },
+  subLogin:{
+    fontSize:14,
+    fontWeight:'400',
+    textAlign: 'center',
+          alignSelf: 'center',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlignVertical: 'center',
+          alignContent: 'center',
+    fontFamily:'SourceSans3-Regular',
+    color:"#5E60CE"},
   subTitle:{
    
       fontSize:14,
