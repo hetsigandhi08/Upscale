@@ -24,18 +24,18 @@ const BottomTabScreen = () => {
               iconName = focused ? 'person-circle' : 'person-circle-outline';
             }else if (route.name === 'Search') {
               iconName = focused ? 'search' : 'search-outline';
-            }else if (route.name === 'MyCourse') {
+            }else if (route.name === 'My Course') {
               iconName = focused ? 'book' : 'book-outline';
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: '#031D44',
-          tabBarInactiveTintColor: '031D44',
+          tabBarInactiveTintColor: 'gray',
         })}
        >
-        <Tab.Screen name="Home" options={{headerShown: false}} component={HomeScreen} />
+        <Tab.Screen name="Home" options={{headerShown: false,}} component={HomeScreen} />
         <Tab.Screen name="Search" options={{headerShown: false}} component={SearchScreen} />
-        <Tab.Screen name="MyCourse" options={{headerShown: false}} component={MyCourseScreen} />
+        <Tab.Screen name="My Course" options={{headerShown: false}} component={MyCourseScreen} />
         <Tab.Screen name="Profile" options={{headerShown: false}} component={ProfileScreen} />
       </Tab.Navigator>
     </NavigationContainer>

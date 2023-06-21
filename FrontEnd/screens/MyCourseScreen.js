@@ -1,3 +1,4 @@
+
 import { StyleSheet, Text, View,TouchableOpacity,Image} from 'react-native'
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -34,6 +35,7 @@ const MyCourseScreen = () => {
     </View>
    
   )
+
 }
 
 export default MyCourseScreen
@@ -73,8 +75,6 @@ const styles = StyleSheet.create({
       justifyContent:'space-between',
       marginTop:'auto',
       gap:5,
-      
-      
     },
     title:{
       fontSize:20,

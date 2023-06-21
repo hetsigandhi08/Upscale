@@ -1,12 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native'
+import React, {useState, useEffect} from 'react'
 
 const ProfileScreen = () => {
-  return (
-    <View style={styles.container}>
-      <Text>ProfileScre</Text>
-    </View>
-  )
+
+  const[loader,setLoader] = useState(true)
+
+  useEffect(()=>{
+    setTimeout(() => {
+      setLoader(false)
+    },2000);
+  })
+  
+return (
+  <View style={styles.container}>
+   {loader ? <ActivityIndicator size="small" /> : <Text>Profile screen</Text>}
+  </View>
+)
+
 }
 
 export default ProfileScreen
