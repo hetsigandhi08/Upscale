@@ -5,14 +5,10 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('User')
+@ApiBearerAuth()
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
-
-  @Post()
-  create(@Body() createUserDto: CreateUserDto) {
-    return this.userService.create(createUserDto);
-  }
 
   @Get()
   findAll() {
@@ -33,4 +29,15 @@ export class UserController {
   remove(@Param('id') id: string) {
     return this.userService.remove(id);
   }
+
+  // @Post('logout')
+  // @HttpCode(HttpStatus.OK)
+  // userLogin(@Body() userLogout: UserLogoutDto) {
+  //   return this.authService.logout(userLogout);
+  // }
+
+  // @Post('change-password')
+  // changePassword(@Body() userChangePasswordDto: UserChangePasswordDto) {
+  //   return this.authService.changePassword(userChangePasswordDto);
+  // }
 }

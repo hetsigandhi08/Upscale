@@ -12,11 +12,11 @@ export class Chapter {
 
   @ApiProperty()
   @Prop()
-  name: string;
+  courseId: string;
 
   @ApiProperty()
   @Prop()
-  img: string;
+  name: string;
 }
 
 export const ChapterSchema = SchemaFactory.createForClass(Chapter);
