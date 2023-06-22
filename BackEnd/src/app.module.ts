@@ -6,6 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ChapterModule } from './chapter/chapter.module';
 import { VideoModule } from './video/video.module';
 import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
 require('dotenv').config();
 
 @Module({
@@ -15,6 +16,7 @@ require('dotenv').config();
     ChapterModule,
     VideoModule,
     UserModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
