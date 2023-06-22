@@ -5,6 +5,7 @@ import { UpdateVideoDto } from './dto/update-video.dto';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Video')
+@ApiBearerAuth()
 @Controller('video')
 export class VideoController {
   constructor(private readonly videoService: VideoService) {}

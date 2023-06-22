@@ -5,6 +5,7 @@ import { UpdateChapterDto } from './dto/update-chapter.dto';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Chapter')
+@ApiBearerAuth()
 @Controller('chapter')
 export class ChapterController {
   constructor(private readonly chapterService: ChapterService) {}
