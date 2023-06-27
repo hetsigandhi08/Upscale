@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity } from 'react-native'
 import React, { useState,useEffect } from 'react'
-import Rectangle4 from '../assets/Rectangle4.png'
-import Rectangle6 from '../assets/Rectangle6.png'
+import Rectangle4 from '../assets/Rectangle4.jpg'
+import Rectangle6 from '../assets/Rectangle6.jpg'
 import * as Progress from 'react-native-progress';
 
 
@@ -36,7 +36,7 @@ useEffect(()=>{
       </TouchableOpacity>
      </View>
      <View style={{display:"flex",flexDirection:"row"}}>
-      <Text style={styles.subTitle}>Already have an account </Text><TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
+      <Text style={styles.subTitle}>Already have an account?  </Text><TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
       <Text style={styles.subLogin}> Login</Text>
        </TouchableOpacity>
       </View>
@@ -95,7 +95,9 @@ const styles = StyleSheet.create({
           textAlignVertical: 'center',
           alignContent: 'center',
     fontFamily:'SourceSans3-Regular',
-    color:"#5E60CE"},
+    color:"#5E60CE",
+    textDecorationLine:'underline',
+  },
   subTitle:{
    
       fontSize:14,
@@ -118,11 +120,13 @@ const styles = StyleSheet.create({
     width: '70%',
     height: 300,
     margin: 4,
+    borderRadius:5,
   },
   side:{
     width:'30%',
     height: 300,
     margin:4,
+    borderRadius:5,
   },
   loginBtn:{
     display:'flex',
