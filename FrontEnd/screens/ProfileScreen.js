@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, ActivityIndicator } from 'react-native'
 import React, {useState, useEffect} from 'react'
 
 const ProfileScreen = () => {
+
   const[loader,setLoader] = useState(true)
 
   useEffect(()=>{
@@ -15,6 +16,7 @@ return (
    {loader ? <ActivityIndicator size="small" /> : <Text>Profile screen</Text>}
   </View>
 )
+
 }
 
 export default ProfileScreen

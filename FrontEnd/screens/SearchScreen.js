@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native'
 import React, {useState, useEffect} from 'react'
 
+
 const SearchScreen = () => {
 
   const[loader,setLoader] = useState(true)
@@ -27,5 +28,6 @@ const styles = StyleSheet.create({
         backgroundColor:'#FAFCFB',
         alignItems:'center',
         justifyContent:"center"
-      }
+      },
+      
 })

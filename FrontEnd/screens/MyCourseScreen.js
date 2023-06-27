@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native'
-import React, {useState, useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 
 const MyCourseScreen = () => {
+
   const[loader,setLoader] = useState(true)
 
   useEffect(()=>{
@@ -9,22 +10,24 @@ const MyCourseScreen = () => {
       setLoader(false)
     },2000);
   })
-  
-return (
-  <View style={styles.container}>
+
+  return (
+    <View style={styles.container}>
    {loader ? <ActivityIndicator size="small" /> : <Text>My Course screen</Text>}
   </View>
-)
+  )
+
 }
 
 export default MyCourseScreen
 
 const styles = StyleSheet.create({
-    container:{
-        display:'flex',
-        flex:1,
-        backgroundColor:'#FAFCFB',
-        alignItems:'center',
-        justifyContent:'center'
-      }
+  container:{
+    display:'flex',
+    flex:1,
+    backgroundColor:'#FAFCFB',
+    alignItems:'center',
+    justifyContent:"center"
+  }
+
 })
