@@ -12,6 +12,7 @@ import RoadMapScreen from './screens/RoadMapScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import GetStartedScreen1 from './screens/GetStartedScreen1';
 import GetStartedScreen2 from './screens/GetStartedScreen2';
+import GetStartedScreen3 from './screens/GetStartedScreen3';
 import { NavigationContainer } from '@react-navigation/native';
 
 
@@ -34,9 +35,10 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="GetStarted1">
-      <Stack.Screen name = "GetStarted1" options = {{headerShown: false}} component = {GetStartedScreen1} />
+      <Stack.Navigator initialRouteName="GetStarted3">
+      <Stack.Screen name = "GetStarted" options = {{headerShown: false}} component = {GetStartedScreen1} />
       <Stack.Screen name = "GetStarted2" options = {{headerShown: false}} component = {GetStartedScreen2} />
+      <Stack.Screen name = "GetStarted3" options = {{headerShown: false}} components = {GetStartedScreen3} />
       <Stack.Screen name="Home" options={{headerShown: false}} component={HomeScreen} />
       <Stack.Screen name="Tab" options={{headerShown: false}} component={BottomTabScreen} />
       <Stack.Screen  name="Login" options={{headerShown: false}} component={LoginScreen} />
