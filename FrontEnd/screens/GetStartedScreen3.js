@@ -15,7 +15,8 @@ useEffect(()=>{
 })
 
   return (
-    <View>
+    <>
+        <View>
       <View style={styles.topContainer}>
       <Text style={styles.progressTitle}>1/3</Text>
     <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
@@ -25,9 +26,7 @@ useEffect(()=>{
       <Image style={styles.square} source={Rectangle6} />
       </View>
      <View style={styles.topContainer}>
-     <Text style={styles.title}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ligula urna, accumsan ac est.
-
-</Text>
+     <Text style={styles.title}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ligula urna, accumsan ac est.</Text>
       {/* <Text style={styles.subTitle}>Take the worlds best courses from top universities</Text> */}
      </View>
      <View>
@@ -45,10 +44,11 @@ useEffect(()=>{
      </View>
 
     </View>
+    </>
   )
 }
 
-export default GetStartedScreen3
+export default GetStartedScreen3;
 
 const styles = StyleSheet.create({
 
@@ -136,7 +136,5 @@ const styles = StyleSheet.create({
   loginText:{
     color:'#FEFEFE',
     fontFamily:'SourceSans3-Regular',
-  }
-  
-
+  } 
 })

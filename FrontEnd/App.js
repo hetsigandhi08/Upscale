@@ -11,6 +11,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import GetStartedScreen1 from './screens/GetStartedScreen1';
 import GetStartedScreen2 from './screens/GetStartedScreen2';
 import GetStartedScreen3 from './screens/GetStartedScreen3';
+import HomeScreen from './screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 
 
