@@ -40,7 +40,7 @@ useEffect(()=>{
      </View>
      <View>
      <TouchableOpacity style={styles.loginBtn} onPress={()=>{
-      navigation.navigate('OnBoardingScreen1')
+      navigation.navigate('GetStarted3')
       video.current.pauseAsync();
       }} >
           <Text style={styles.loginText}>Get Started</Text>
