@@ -1,8 +1,12 @@
 import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity } from 'react-native'
 import React, { useState,useEffect } from 'react'
-import Rectangle4 from '../assets/Rectangle4.png'
-import Rectangle6 from '../assets/Rectangle6.png'
+import Rectangle4 from '../assets/Rectangle4.jpg'
+import Rectangle6 from '../assets/Rectangle6.jpg'
+import Rectangle5 from '../assets/Rectangle5.png'
+import Rectangle10 from '../assets/Rectangle10.png'
+import Rectangle11 from '../assets/Rectangle11.png'
 import * as Progress from 'react-native-progress';
+
 
 
 const GetStartedScreen3 = ({navigation}) => {
@@ -10,21 +14,28 @@ const GetStartedScreen3 = ({navigation}) => {
     const[progress,setProgress]=useState(0);
 useEffect(()=>{
   setTimeout(() => {
-    setProgress(0.4)
+    setProgress(1)
   }, 200);
 })
 
   return (
-    <>
-        <View>
+        <View style={styles.container}>
       <View style={styles.topContainer}>
-      <Text style={styles.progressTitle}>1/3</Text>
+      <Text style={styles.progressTitle}>3/3</Text>
     <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
       </View>
-      <View style={styles.columnStyle}>
-      <Image style={styles.side} source={Rectangle4} />
-      <Image style={styles.square} source={Rectangle6} />
+      <View style={{flexDirection: 'row'}}>
+      <View style={{flex: 1}}>
+      <Image style={{width:'60%', aspectRatio:2, margin:4  }} source={Rectangle5} resizeMode="contain"/>
+      <Image style={{width:'100%', aspectRatio:3, margin:4}} source={Rectangle10} resizeMode="contain"/>
       </View>
+
+      <View style={{flex: 1}}>
+      <Image style={{width:'100%', aspectRatio:1, margin:4 }} source={Rectangle11} resizeMode="contain"/>
+     
+      </View>
+      </View>
+
      <View style={styles.topContainer}>
      <Text style={styles.title}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ligula urna, accumsan ac est.</Text>
       {/* <Text style={styles.subTitle}>Take the worlds best courses from top universities</Text> */}
@@ -40,11 +51,9 @@ useEffect(()=>{
        </TouchableOpacity>
       </View>
       <View>
-      
      </View>
-
     </View>
-    </>
+    
   )
 }
 
@@ -114,14 +123,14 @@ const styles = StyleSheet.create({
       flexDirection: "row",
     },
     square: {
-      width: '70%',
-      height: 300,
-      margin: 4,
+      width: '100%',
+      height: '100%',
+     // margin: 4,
     },
     side:{
-      width:'30%',
-      height: 300,
-      margin:4,
+      width:'100%',
+      height: '50%',
+    //  margin:4,
     },
     loginBtn:{
       display:'flex',
