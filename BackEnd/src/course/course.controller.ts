@@ -10,10 +10,10 @@ import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 export class CourseController {
   constructor(private readonly courseService: CourseService) {}
 
-  @Post()
-  create(@Body() createCourseDto: CreateCourseDto) {
-    return this.courseService.create(createCourseDto);
-  }
+  // @Post()
+  // create(@Body() createCourseDto: CreateCourseDto) {
+  //   return this.courseService.create(createCourseDto);
+  // }
 
   @Get()
   findAll() {

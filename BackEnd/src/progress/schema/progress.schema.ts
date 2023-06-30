@@ -2,29 +2,37 @@ import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { Document } from 'mongoose';
 
-export type VideoDocument = Video & Document;
+export type ProgressDocument = Progress & Document;
 
 @Schema()
-export class Video {
+export class Progress {
   @ApiProperty()
   @Prop()
   id: string;
 
   @ApiProperty()
   @Prop()
-  name: string;
+  userId: string;
 
   @ApiProperty()
   @Prop()
-  img: string;
+  courseId: string;
 
   @ApiProperty()
   @Prop()
-  url: string;
+  courseName: string;
 
   @ApiProperty()
   @Prop()
-  chapterId: string;
+  currChapterIdx: number;
+
+  @ApiProperty()
+  @Prop()
+  currVideoIdx: number;
+
+  @ApiProperty()
+  @Prop()
+  progress: number;
 }
 
-export const VideoSchema = SchemaFactory.createForClass(Video);
+export const ProgressSchema = SchemaFactory.createForClass(Progress);

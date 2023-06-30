@@ -4,6 +4,7 @@ import { UpdateCourseDto } from './dto/update-course.dto';
 import { Course, CourseDocument } from './schema/course.schema';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
+import { CourseTag } from 'src/common/CourseTag';
 
 @Injectable()
 export class CourseService {
@@ -15,6 +16,14 @@ export class CourseService {
 
   findAll() {
     return this.courseModel.find();
+  }
+
+  findByTags(tags: CourseTag[]): Promise<Course[]> {
+    return this.courseModel.find({ tags: { $in: tags } });
+  }
+
+  getOtherCourses(courseWithTagIds: string[]): Promise<Course[]> {
+    return this.courseModel.find({ id: { $nin: courseWithTagIds } });
   }
 
   findOne(id: string) {
