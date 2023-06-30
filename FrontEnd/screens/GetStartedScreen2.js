@@ -17,7 +17,7 @@ useEffect(()=>{
   setTimeout(() => {
     setProgress(0.6)
     video.current.playAsync();
-  }, 2000);
+  }, 100);
 })
 
   return (
