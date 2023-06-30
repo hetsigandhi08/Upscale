@@ -13,13 +13,13 @@ export class HomeService {
   ) {}
 
   async getHome(req: any): Promise<GetHomeDto> {
-    const progresses = await this.progressService.findByUser(req.user.id);
+    const progresses = await this.progressService.findByUser(req.user.userId);
 
     let totalProgress = 0;
     if (progresses.length > 0) {
       let sumProgress = 0;
       progresses.forEach((progress) => (sumProgress += progress.progress));
-      totalProgress = Math.floor(sumProgress / (progresses.length * 100));
+      totalProgress = Math.floor(sumProgress / progresses.length);
     }
 
     const user = await this.userService.findOne(req.user.userId);
