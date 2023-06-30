@@ -1,9 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateChapterDto {
+export class SearchDto {
   @ApiProperty()
   name: string;
-
-  @ApiProperty()
-  courseId: string;
 }
