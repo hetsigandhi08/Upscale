@@ -35,7 +35,7 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="GetStarted1">
+      <Stack.Navigator initialRouteName="Tab">
       <Stack.Screen name = "GetStarted1" options = {{headerShown: false}} component = {GetStartedScreen1} />
       <Stack.Screen name = "GetStarted2" options = {{headerShown: false}} component = {GetStartedScreen2} />
       <Stack.Screen name="Home" options={{headerShown: false}} component={HomeScreen} />
@@ -47,7 +47,7 @@ export default function App() {
       <Stack.Screen  name="OnBoardingScreen2" options={{headerShown: false}} component={OnBoardingScreen2} />
       <Stack.Screen  name="OnBoardingScreen3" options={{headerShown: false}} component={OnBoardingScreen3} />
       </Stack.Navigator>
-      <StatusBar backgroundColor='#FFFFFF' style="dark"/>
+      <StatusBar />
     </NavigationContainer>
   );
 }
