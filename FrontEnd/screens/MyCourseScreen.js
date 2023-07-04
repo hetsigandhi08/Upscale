@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View,TouchableOpacity,Image} from 'react-native'
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import apple from '../assets/apple.png'
 import slack from '../assets/slack.png'
 import Discord from '../assets/Discord.png'
 
@@ -72,9 +71,7 @@ const styles = StyleSheet.create({
       display:'flex',
       justifyContent:'space-between',
       marginTop:'auto',
-      gap:5,
-      
-      
+      gap:5,  
     },
     title:{
       fontSize:20,
