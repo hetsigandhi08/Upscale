@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity } from 'react-native'
 import React, { useState,useEffect } from 'react'
-import Rectangle5 from '../assets/Rectangle5.png'
-import Rectangle10 from '../assets/Rectangle10.png'
-import Rectangle11 from '../assets/Rectangle11.png'
+import Rectangle4 from '../assets/Rectangle5.jpg'
+import Rectangle6 from '../assets/Rectangle10.jpg'
+import Rectangle11 from '../assets/Rectangle11.jpg'
 import * as Progress from 'react-native-progress';
 
 
@@ -12,31 +12,26 @@ const GetStartedScreen3 = ({navigation}) => {
     const[progress,setProgress]=useState(0);
 useEffect(()=>{
   setTimeout(() => {
-    setProgress(1)
+    setProgress(0.9)
   }, 200);
 })
 
   return (
-        <View style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.topContainer}>
       <Text style={styles.progressTitle}>3/3</Text>
     <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
       </View>
-      <View style={{display:'flex',flexDirection:'row',gap:10,paddingTop:20}}>
-      
-      <View style={{display:'flex',gap:10}}>
-      <Image style={{width:230,borderRadius:5}} source={Rectangle5}/>
-      <Image style={{width:230,borderRadius:5}} source={Rectangle10} />
+      <View style={{display:'flex',flexDirection:'row',gap:10}}>
+      <View style={styles.columnStyle}>
+      <Image style={styles.square}  source={Rectangle4} />
+      <Image style={styles.rect}  source={Rectangle6} />
       </View>
-
-      <View >
-      <Image style={{borderRadius:5}} source={Rectangle11} resizeMode="contain"/>
-     
-      </View>
+        <Image style={styles.side} source={Rectangle11}/>
       </View>
 
      <View style={styles.topContainer}>
-     <Text style={styles.title}>Unleash your Potential: ignite learning, fuel success!</Text>
+     <Text style={styles.title}>Unleash Your Potential Ignite Learning, Fuel Success!</Text>
       {/* <Text style={styles.subTitle}>Take the worlds best courses from top universities</Text> */}
      </View>
      <View>
@@ -45,14 +40,14 @@ useEffect(()=>{
       </TouchableOpacity>
      </View>
      <View style={{display:"flex",flexDirection:"row"}}>
-      <Text style={styles.subTitle}>Already have an account </Text><TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
+      <Text style={styles.subTitle}>Already have an account?  </Text><TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
       <Text style={styles.subLogin}> Login</Text>
        </TouchableOpacity>
       </View>
       <View>
      </View>
-    </View>
-    
+
+      </View>
   )
 }
 
@@ -119,17 +114,26 @@ const styles = StyleSheet.create({
     columnStyle:{
       // flex: 1,
       // alignItems: "center",
-      flexDirection: "row",
+      flexDirection: "column",
+      gap:10,
     },
     square: {
-      width: '100%',
-      height: '100%',
-     // margin: 4,
+      width: 230,
+      height: 154,
+      borderRadius:5,
+      // margin: 4,
+    },
+    rect:{
+      width:230,
+      height: 99,
+      borderRadius:5,
+      // margin:4,
     },
     side:{
-      width:'100%',
-      height: '50%',
-    //  margin:4,
+      width:80,
+      height: 263,
+      borderRadius:5,
+      // margin:4,
     },
     loginBtn:{
       display:'flex',
