@@ -4,13 +4,19 @@ import React from 'react'
 
 const CourseDetailsScreen = () => {
   return (
+    
     <View style={styles.container}>
 
-
+      <View style={styles.headContainer}>
       <TouchableOpacity style={styles.backButton}>
       <Ionicons name="ios-arrow-back" size={24} color="black" />
       </TouchableOpacity>
+      <Text style={styles.headTitle}>
+        Course Details
+      </Text>
+      </View>
 
+      
       <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.courseContainer}>
         <Text style={styles.title}>
@@ -102,19 +108,34 @@ const styles = StyleSheet.create({
         backgroundColor:'#FAFCFB',
         flex:1,
         // paddingHorizontal:30,
-        paddingTop:40,
-        gap:20,
+        // paddingTop:40,
+        // gap:20,
       },
+    headContainer:{
+        backgroundColor:"#FFFFFF",
+        display:"flex",
+        gap:15,
+        paddingBottom:20,
+        paddingLeft:30,
+        paddingTop:50,
+        borderBottomLeftRadius:10,
+        borderBottomRightRadius:10,
+    },
+    headTitle:{
+        fontSize:26,
+        fontFamily:'SourceSans3-SemiBold',
+    },
     scrollContainer:{
         display:'flex',
         alignItems:'center',
         gap:20,
         paddingHorizontal:20,
         paddingBottom:20,
+        paddingTop:20,
       },
     backButton:{
-        marginTop:15,
-        marginLeft:20,
+        // marginTop:15,
+        // marginLeft:20,
     },
     courseContainer:{
         display:'flex',
