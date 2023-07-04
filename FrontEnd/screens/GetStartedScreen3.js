@@ -6,6 +6,7 @@ import Rectangle11 from '../assets/Rectangle11.jpg'
 import * as Progress from 'react-native-progress';
 
 
+
 const GetStartedScreen3 = ({navigation}) => {
 
     const[progress,setProgress]=useState(0);
@@ -18,7 +19,7 @@ useEffect(()=>{
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
-      <Text style={styles.progressTitle}>1/3</Text>
+      <Text style={styles.progressTitle}>3/3</Text>
     <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
       </View>
       <View style={{display:'flex',flexDirection:'row',gap:10}}>
@@ -28,12 +29,13 @@ useEffect(()=>{
       </View>
         <Image style={styles.side} source={Rectangle11}/>
       </View>
+
      <View style={styles.topContainer}>
      <Text style={styles.title}>Unleash Your Potential Ignite Learning, Fuel Success!</Text>
       {/* <Text style={styles.subTitle}>Take the worlds best courses from top universities</Text> */}
      </View>
      <View>
-     <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('GetStarted2')}} >
+     <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('OnBoardingScreen1')}} >
           <Text style={styles.loginText}>Get Started</Text>
       </TouchableOpacity>
      </View>
@@ -43,14 +45,13 @@ useEffect(()=>{
        </TouchableOpacity>
       </View>
       <View>
-      
      </View>
 
       </View>
   )
 }
 
-export default GetStartedScreen3
+export default GetStartedScreen3;
 
 const styles = StyleSheet.create({
 
@@ -147,7 +148,5 @@ const styles = StyleSheet.create({
   loginText:{
     color:'#FEFEFE',
     fontFamily:'SourceSans3-Regular',
-  }
-  
-
+  } 
 })
