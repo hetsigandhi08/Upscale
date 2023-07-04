@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity } from 'react-native'
 import React, { useState,useEffect } from 'react'
-import Rectangle4 from '../assets/Rectangle4.jpg'
-import Rectangle6 from '../assets/Rectangle6.jpg'
 import Rectangle5 from '../assets/Rectangle5.png'
 import Rectangle10 from '../assets/Rectangle10.png'
 import Rectangle11 from '../assets/Rectangle11.png'
@@ -24,20 +22,21 @@ useEffect(()=>{
       <Text style={styles.progressTitle}>3/3</Text>
     <Progress.Bar progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
       </View>
-      <View style={{flexDirection: 'row'}}>
-      <View style={{flex: 1}}>
-      <Image style={{width:'60%', aspectRatio:2, margin:4  }} source={Rectangle5} resizeMode="contain"/>
-      <Image style={{width:'100%', aspectRatio:3, margin:4}} source={Rectangle10} resizeMode="contain"/>
+      <View style={{display:'flex',flexDirection:'row',gap:10,paddingTop:20}}>
+      
+      <View style={{display:'flex',gap:10}}>
+      <Image style={{width:230,borderRadius:5}} source={Rectangle5}/>
+      <Image style={{width:230,borderRadius:5}} source={Rectangle10} />
       </View>
 
-      <View style={{flex: 1}}>
-      <Image style={{width:'100%', aspectRatio:1, margin:4 }} source={Rectangle11} resizeMode="contain"/>
+      <View >
+      <Image style={{borderRadius:5}} source={Rectangle11} resizeMode="contain"/>
      
       </View>
       </View>
 
      <View style={styles.topContainer}>
-     <Text style={styles.title}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ligula urna, accumsan ac est.</Text>
+     <Text style={styles.title}>Unleash your Potential: ignite learning, fuel success!</Text>
       {/* <Text style={styles.subTitle}>Take the worlds best courses from top universities</Text> */}
      </View>
      <View>
