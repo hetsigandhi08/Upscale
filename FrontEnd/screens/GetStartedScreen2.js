@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity, Button } from 'react-native'
 import React, { useState,useEffect, useRef } from 'react'
-import Rectangle10 from '../assets/Rectangle10.png'
-import Rectangle11 from '../assets/Rectangle11.png'
 import * as Progress from 'react-native-progress';
 import vid from "../assets/video.mp4"
 import poster from '../assets/Poster.png'
@@ -40,7 +38,7 @@ useEffect(()=>{
      </View>
      <View>
      <TouchableOpacity style={styles.loginBtn} onPress={()=>{
-      navigation.navigate('OnBoardingScreen1')
+      navigation.navigate('GetStarted3')
       video.current.pauseAsync();
       }} >
           <Text style={styles.loginText}>Get Started</Text>
