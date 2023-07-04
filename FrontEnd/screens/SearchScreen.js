@@ -1,3 +1,4 @@
+
 import { StyleSheet, Text, View,TouchableOpacity,TextInput,TouchableWithoutFeedback,Keyboard} from 'react-native'
 import React,{useState} from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -6,6 +7,20 @@ import SearchBar from '../components/SearchBar';
 
 const SearchScreen = () => {
   
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native'
+import React, {useState, useEffect} from 'react'
+
+
+const SearchScreen = () => {
+
+  const[loader,setLoader] = useState(true)
+
+    useEffect(()=>{
+      setTimeout(() => {
+        setLoader(false)
+      },2000);
+    })
+    
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
     <View style={styles.container}>
@@ -23,6 +38,7 @@ const SearchScreen = () => {
       <Text style={styles.ClearButton}>Clear
      </Text>
      </TouchableOpacity>
+     {loader ? <ActivityIndicator size="small" /> : <Text>Search screen</Text>}
     </View>
     <View style={styles.recentSearches}>
       <View style={styles.border}>
@@ -190,7 +206,4 @@ border:{
   width:"100%",
   borderBottomColor:"#313131"
 }
-
-
-   
 })
