@@ -3,6 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 import { UserRegisterDto } from './dto/user-register.dto';
 import { UserService } from 'src/user/user.service';
 import * as bcrypt from 'bcrypt';
+import { User } from 'src/user/schema/user.schema';
 
 @Injectable()
 export class AuthService {
@@ -10,13 +11,13 @@ export class AuthService {
 
   async signIn(email: string, pass: string) {
     const user = await this.verfifyUser(email, pass);
-    const payload = { email: user.email, userId: user.id };
+    const payload = { userId: user['_id'] };
     return {
       access_token: await this.jwtService.signAsync(payload),
     };
   }
 
-  async verfifyUser(email: string, pass: string) {
+  async verfifyUser(email: string, pass: string): Promise<User> {
     const user = await this.userService.findByEmail(email);
     if (!user) {
       throw new BadRequestException('User not exist');
