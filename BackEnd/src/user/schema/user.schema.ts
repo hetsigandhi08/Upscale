@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { Document } from 'mongoose';
+import { CourseTag } from 'src/common/CourseTag';
 
 export type UserDocument = User & Document;
 
@@ -17,6 +18,10 @@ export class User {
   @ApiProperty()
   @Prop()
   password: string;
+
+  @ApiProperty()
+  @Prop()
+  tags: CourseTag[];
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
