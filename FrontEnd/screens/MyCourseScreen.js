@@ -1,6 +1,5 @@
 
-import { StyleSheet, Text, View,TouchableOpacity,Image} from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View,TouchableOpacity,Image, ActivityIndicator} from 'react-native'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import slack from '../assets/slack.png'
 import Discord from '../assets/Discord.png'
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
     display:'flex',
     flex:1,
     backgroundColor:'#FAFCFB',
-        alignItems:'flex-start',
+        alignItems:'center',
         justifyContent:"space-around",
         padding:20
       },
