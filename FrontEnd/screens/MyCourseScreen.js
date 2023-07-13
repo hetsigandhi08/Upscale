@@ -1,4 +1,3 @@
-
 import { StyleSheet, Text, View,TouchableOpacity,Image, ActivityIndicator} from 'react-native'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import slack from '../assets/slack.png'

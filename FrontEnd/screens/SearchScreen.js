@@ -1,4 +1,3 @@
-
 import { StyleSheet, Text, View,TouchableOpacity,TextInput,TouchableWithoutFeedback,Keyboard, ActivityIndicator} from 'react-native'
 import React,{useState, useEffect} from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -32,7 +31,6 @@ const SearchScreen = () => {
       <Text style={styles.ClearButton}>Clear
      </Text>
      </TouchableOpacity>
-     {/* {loader ? <ActivityIndicator size="small" /> : <Text>Search screen</Text>} */}
     </View>
     <View style={styles.recentSearches}>
       <View style={styles.border}>
@@ -101,7 +99,6 @@ const SearchScreen = () => {
     
   )
 }
-
 export default SearchScreen
 const styles = StyleSheet.create({
   container:{
