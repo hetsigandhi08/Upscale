@@ -148,5 +148,6 @@ const styles = StyleSheet.create({
   loginText:{
     color:'#FEFEFE',
     fontFamily:'SourceSans3-Regular',
-  } 
+  },
+  
 })
