@@ -39,10 +39,11 @@ const CourseDetailsScreen = () => {
 
       <View style={styles.detailsContainer}>
           
-          
+      <View style={{width:"100%",display:"flex",alignItems:"center"}}>
           <Text style={styles.courseTitle}>
           Course details
           </Text>
+          </View>
 
           <View style={styles.courseSubContainer}>
           <Text style={styles.courseSubTitle}>•</Text> 
@@ -64,32 +65,85 @@ const CourseDetailsScreen = () => {
           <Text style={styles.courseSubTitle}>Be able to use Python for data science and machine learning.</Text>
           </View>
 
-          <View style={styles.line}></View>
+          {/* <View style={styles.line}></View> */}
 
+      </View>
 
-          <Text style={styles.courseTitle}>
+      <View style={styles.detailsContainer}>
+      
+      <View style={{width:"100%",display:"flex",alignItems:"center"}}>
+      <Text style={styles.courseTitle}>
           Ratings and Reviews
           </Text>
+      </View>    
 
-          <View style={styles.courseSubContainer}>
-          <Text style={styles.courseSubTitle}>•</Text> 
-          <Text style={styles.courseSubTitle}>You will learn automation, game, app and web development, data science and machine learning all using Python.</Text>
-          </View>
+         <View style={styles.subReviewContainer}>
 
-          <View style={styles.courseSubContainer}>
-          <Text style={styles.courseSubTitle}>•</Text> 
-          <Text style={styles.courseSubTitle}>You will learn automation, game, app and web development, data science and machine learning all using Python.</Text>
-          </View>
+         <Text style={styles.reviewText}>
+         Lorem ipsum dolor sit amet consectetur. Diam dolor vel turpis sagittis lacus purus. Ultricies magna tortor ultricies tellus. Vel lectus facilisi massa euismod sagittis quam risus.
+         </Text>
 
-          <View style={styles.courseSubContainer}>
-          <Text style={styles.courseSubTitle}>•</Text> 
-          <Text style={styles.courseSubTitle}>You will learn automation, game, app and web development, data science and machine learning all using Python.</Text>
-          </View>
+         <View style={styles.reviewProfileContainer}>
+         <Image style={styles.profile} />
+         <View>
+            <Text style={styles.profileName}>
+                Harish K
+            </Text>
+            <Text style={styles.profileDesignation}>
+                visual designer
+            </Text>
+         </View>
+         </View>
+         </View>
 
-          <View style={styles.courseSubContainer}>
-          <Text style={styles.courseSubTitle}>•</Text> 
-          <Text style={styles.courseSubTitle}>You will learn automation, game, app and web development, data science and machine learning all using Python.</Text>
-          </View>
+
+
+         <View style={styles.subReviewContainer}>
+
+         <Text style={styles.reviewText}>
+         Lorem ipsum dolor sit amet consectetur. Diam dolor vel turpis sagittis lacus purus. Ultricies magna tortor ultricies tellus. Vel lectus facilisi massa euismod sagittis quam risus.
+         </Text>
+
+         <View style={styles.reviewProfileContainer}>
+         <Image style={styles.profile} />
+         <View>
+            <Text style={styles.profileName}>
+                Harish K
+            </Text>
+            <Text style={styles.profileDesignation}>
+                visual designer
+            </Text>
+         </View>
+         </View>
+
+         </View>
+
+
+
+         <View style={styles.subReviewContainer}>
+
+         <Text style={styles.reviewText}>
+         Lorem ipsum dolor sit amet consectetur. Diam dolor vel turpis sagittis lacus purus. Ultricies magna tortor ultricies tellus. Vel lectus facilisi massa euismod sagittis quam risus.
+         </Text>
+
+         <View style={styles.reviewProfileContainer}>
+         <Image style={styles.profile} />
+         <View>
+            <Text style={styles.profileName}>
+                Harish K
+            </Text>
+            <Text style={styles.profileDesignation}>
+                visual designer
+            </Text>
+         </View>
+         </View>
+
+         </View>
+
+
+         <TouchableOpacity style={styles.commentBtn}  >
+          <Text style={styles.commentText}>Add Comment</Text>
+      </TouchableOpacity>
 
       </View>
 
@@ -140,7 +194,7 @@ const styles = StyleSheet.create({
     courseContainer:{
         display:'flex',
         width:'100%',
-        height:290,
+        // height:290,
         backgroundColor:"#E2EAFC",
         borderRadius:10,
         paddingHorizontal:20,
@@ -150,7 +204,8 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize:26,
-        fontFamily:'SourceSans3-SemiBold'
+        fontFamily:'SourceSans3-SemiBold',
+        marginRight:100,
     },
     subTitle:{
         fontSize:14,
@@ -160,6 +215,7 @@ const styles = StyleSheet.create({
     },
     thumbnail:{
         width:"100%",
+        height:200,
         display:"flex",
         flex:1,
         borderRadius:10,
@@ -198,6 +254,7 @@ const styles = StyleSheet.create({
         display:'flex',
         flexDirection:'row',
         gap:10,
+        paddingHorizontal:10,
     },
     courseSubTitle:{
         fontSize:12,
@@ -210,5 +267,55 @@ const styles = StyleSheet.create({
         height:1,
         borderTopColor:"#000000",
         borderTopWidth:0.5,
+    },
+    subReviewContainer:{
+        borderBottomWidth:1,
+        borderBottomColor:"#BBBBBB",
+        padding:15,
+        gap:15,
+    },
+    reviewText:{
+        fontSize:16,
+        fontWeight:'400',
+        fontFamily:'SourceSans3-Regular',
+    },
+    reviewProfileContainer:{
+        display:'flex',
+        flexDirection:'row',
+        gap:15,
+    },
+    profile:{
+        width:45,
+        height:45,
+        backgroundColor:"#D9D9D9",
+        borderRadius:50,
+    },
+    profileName:{
+        fontSize:16,
+        fontWeight:'400',
+        fontFamily:'SourceSans3-Bold',
+    },
+    profileDesignation:{
+        fontSize:14,
+        fontWeight:'400',
+        fontFamily:'SourceSans3-Regular',
+        color:'#929292',
+    },
+    commentBtn:{
+        display:'flex',
+        alignItems:'center',
+        flexDirection:'row',
+        justifyContent:'center',
+        width:'100%',
+        height:47,
+        borderWidth:1,
+        borderColor:"#031D44",
+        borderRadius:42,
+    },
+    commentText:{
+        color:'#031D44',
+        fontFamily:'SourceSans3-Regular',
     }
+
+
 })
