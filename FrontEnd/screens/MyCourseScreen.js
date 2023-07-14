@@ -1,13 +1,10 @@
-
-import { StyleSheet, Text, View,TouchableOpacity,Image, ActivityIndicator} from 'react-native'
-import Ionicons from '@expo/vector-icons/Ionicons';
-import slack from '../assets/slack.png'
-import Discord from '../assets/Discord.png'
+import { StyleSheet, Text, View,TouchableOpacity,Image, ActivityIndicator, ScrollView} from 'react-native'
 import React, {useEffect, useState} from 'react'
-
+import MyCourseCard from '../components/MyCourseCard';
 
 const MyCourseScreen = () => {
 
+  
   const[loader,setLoader] = useState(true)
 
   useEffect(()=>{
@@ -17,9 +14,26 @@ const MyCourseScreen = () => {
   })
 
   return (
-    <View style={styles.container}>
-   {loader ? <ActivityIndicator size="small" /> : <Text>My Course screen</Text>}
-  </View>
+    <View style={loader? styles.activityContainer :styles.container}>
+      {loader ? <ActivityIndicator size="small" /> :
+   <>
+      <View style={styles.headContainer}>
+      <Text style={styles.headTitle}>
+        My Courses
+      </Text>
+      </View>
+
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
+
+       <MyCourseCard/>
+       <MyCourseCard/>
+       <MyCourseCard/>
+       <MyCourseCard/>
+       <MyCourseCard/>
+
+      </ScrollView>
+    </>  }
+    </View>
   )
 
 }
@@ -29,56 +43,35 @@ export default MyCourseScreen
 const styles = StyleSheet.create({
   container:{
     display:'flex',
-    flex:1,
     backgroundColor:'#FAFCFB',
-        alignItems:'center',
-        justifyContent:"space-around",
-        padding:20
-      },
-      loginGoogle:{
-        display:'flex',
-        flexDirection:'row',
-        gap: 9,
-        alignItems:'center',
-        justifyContent:'center',
-        width:263,
-        height:47,
-        backgroundColor:'#031D44',
-        borderRadius:42,
+    flex:1,
     },
-    loginText:{
-      color:'#FEFEFE',
-      fontFamily:'SourceSans3-Regular',
-  },
-    backButton:{
-      marginTop:30,
-      alignSelf:'flex-start',
-      padding:10
-      
-    },
-    bottomContainer:{
+    activityContainer:{
       display:'flex',
-      justifyContent:'space-between',
-      marginTop:'auto',
-      gap:5,  
-    },
-    title:{
-      fontSize:20,
-      fontFamily:'SourceSans3-SemiBold'
-  },
-    bottomContainer2:{
-      display:'flex',
-      justifyContent:'space-between',
-      marginTop:'auto',
-      gap:15,
-      marginLeft:10,
+      flex:1,
+      backgroundColor:'#FAFCFB',
       alignItems:'center',
-      marginTop:10
+      justifyContent:"center"
     },
-    bottomTitle:{
-      fontSize:20,
+    headContainer:{
+      backgroundColor:"#FFFFFF",
+      display:"flex",
+      gap:15,
+      paddingBottom:20,
+      paddingLeft:30,
+      paddingTop:70,
+      borderBottomLeftRadius:10,
+      borderBottomRightRadius:10,
+    },
+    headTitle:{
+      fontSize:26,
       fontFamily:'SourceSans3-SemiBold',
-      alignItems:'flex-start'
-    }
-
+    },
+    scrollContainer:{
+      display:"flex",
+      gap:20,
+      alignItems:'center',
+      paddingHorizontal:20,
+      paddingVertical:25,
+    },
 })
