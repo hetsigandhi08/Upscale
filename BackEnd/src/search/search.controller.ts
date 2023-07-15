@@ -9,11 +9,6 @@ import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
 export class SearchController {
   constructor(private readonly searchService: SearchService) {}
 
-  // @Get()
-  // findAll() {
-  //   return this.searchService.findAll();
-  // }
-
   @Get('recent')
   findRecentSearch() {
     return this.searchService.findRecentSearch();
@@ -23,6 +18,5 @@ export class SearchController {
   findOne(@Param('name') name: string) {
     return this.searchService.findOne(name);
   }
-
 
 }
