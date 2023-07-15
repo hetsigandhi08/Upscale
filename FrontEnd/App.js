@@ -15,8 +15,7 @@ import GetStartedScreen1 from './screens/GetStartedScreen1';
 import GetStartedScreen2 from './screens/GetStartedScreen2';
 import GetStartedScreen3 from './screens/GetStartedScreen3';
 import { NavigationContainer } from '@react-navigation/native';
-
-
+import RecoveryMailScreen from './screens/RecoveryMailScreen';
 const Stack = createNativeStackNavigator();
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -48,6 +47,8 @@ export default function App() {
       <Stack.Screen  name="OnBoardingScreen1" options={{headerShown: false}} component={OnBoardingScreen1} />
       <Stack.Screen  name="OnBoardingScreen2" options={{headerShown: false}} component={OnBoardingScreen2} />
       <Stack.Screen  name="OnBoardingScreen3" options={{headerShown: false}} component={OnBoardingScreen3} />
+      <Stack.Screen  name="RecoveryMail" options={{headerShown: false}} component={RecoveryMailScreen} />
+
       </Stack.Navigator>
       <StatusBar />
     </NavigationContainer>
