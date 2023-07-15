@@ -1,0 +1,189 @@
+{
+	"Cloud Computing": [
+		{
+			"Overview of Cloud Computing": [
+				{
+					"Definition and essential characteristics of Cloud Computing": {
+						"url": "https://www.youtube.com/watch?v=JyO5Gatb-cQ",
+						"thumbnail": "https://img.youtube.com/vi/JyO5Gatb-cQ/maxresdefault.jpg",
+						"duration": 350,
+						"channel": "Theax Webinars "
+					}
+				},
+				{
+					"History and evolution of Cloud computing": {
+						"url": "https://www.youtube.com/watch?v=Bkx8Egjm2mw",
+						"thumbnail": "https://img.youtube.com/vi/Bkx8Egjm2mw/maxresdefault.jpg",
+						"duration": 264,
+						"channel": "Theax Webinars"
+					}
+				},
+				{
+					"Key Cloud Service Providers and Their Services": {
+						"url": "https://www.youtube.com/watch?v=1ERdeg8Sfv4",
+						"thumbnail": "https://img.youtube.com/vi/1ERdeg8Sfv4/maxresdefault.jpg",
+						"duration": 280,
+						"channel": "Lucid Software"
+					}
+				},
+				{
+					"Cloud adoption and transformation": {
+						"url": "https://www.youtube.com/watch?v=1WvMfj_RRT4",
+						"thumbnail": "https://img.youtube.com/vi/1WvMfj_RRT4/maxresdefault.jpg",
+						"duration": 115,
+						"channel": "IBM Technology"
+					}
+				},
+				{
+					"Internet of Things in the Cloud": {
+						"url": "https://www.youtube.com/watch?v=hHvMan9HWYI",
+						"thumbnail": "https://img.youtube.com/vi/hHvMan9HWYI/maxresdefault.jpg",
+						"duration": 1122,
+						"channel": "ENGINEERING TUTORIAL"
+					}
+				},
+				{
+					"Artificial Intelligence on the Cloud": {
+						"url": "https://www.youtube.com/watch?v=iDbKKSOucJ0",
+						"thumbnail": "https://img.youtube.com/vi/iDbKKSOucJ0/maxresdefault.jpg",
+						"duration": 219,
+						"channel": "Hitechies Your Startup Tech Insights"
+					}
+				}
+				
+			]
+		},
+		{
+			"Cloud Computing Models": [
+				{
+					"Overview of Cloud Service Models": {
+						"url": "https://www.youtube.com/watch?v=boY2i6qhPr8",
+						"thumbnail": "https://img.youtube.com/vi/boY2i6qhPr8/maxresdefault.jpg",
+						"duration": 594 ,
+						"channel": "Simplilearn"
+					}
+				},
+				{
+					"IaaS - Infrastructure as a Service": {
+						"url": "https://www.youtube.com/watch?v=XRdmfo4M_YA",
+						"thumbnail": "https://img.youtube.com/vi/XRdmfo4M_YA/maxresdefault.jpg",
+						"duration": 486,
+						"channel": "IBM Technology"
+					}
+				},
+				{
+					"PaaS - Platform as a Service": {
+						"url": "https://www.youtube.com/watch?v=QAbqJzd0PEE",
+						"thumbnail": "https://img.youtube.com/vi/QAbqJzd0PEE/maxresdefault.jpg",
+						"duration": 397,
+						"channel": "IBM Technology"
+					}
+				},
+				{
+					"SaaS - Platform as a Service": {
+						"url": "https://www.youtube.com/watch?v=20QUNgFIrK0",
+						"thumbnail": "https://img.youtube.com/vi/20QUNgFIrK0/maxresdefault.jpg",
+						"duration": 322,
+						"channel": "IBM Technology"
+					}
+				}
+			]
+		},
+		{
+			"Components of a Cloud Computing": [
+				{
+					"Overview of Cloud Infrastructure": {
+						"url": "https://www.youtube.com/watch?v=X43KVeWVkSY",
+						"thumbnail": "https://img.youtube.com/vi/X43KVeWVkSY/maxresdefault.jpg",
+						"duration": 853,
+						"channel": "Simplilearn"
+					}
+				},
+				{
+					"Virtualization and Virtual Machines Explained": {
+						"url": "https://www.youtube.com/watch?v=FZR0rG3HKIk",
+						"thumbnail": "https://img.youtube.com/vi/FZR0rG3HKIk/maxresdefault.jpg",
+						"duration": 319 ,
+						"channel": "IBM Technology"
+					}
+				}
+			]
+		},
+		{
+			"Emergent Trends in Cloud Computing": [
+				{
+					"Hybrid Multi-cloud": {
+						"url": "https://www.youtube.com/watch?v=qkj5W98Xdvw",
+						"thumbnail": "https://img.youtube.com/vi/qkj5W98Xdvw/maxresdefault.jpg",
+						"duration": 814,
+						"channel": "TechWorld with Nana"
+					}
+				},
+				{
+					"Serverless Computing": {
+						"url": "https://www.youtube.com/watch?v=vxJobGtqKVM",
+						"thumbnail": "https://img.youtube.com/vi/vxJobGtqKVM/maxresdefault.jpg",
+						"duration": 401,
+						"channel": "IBM Technology"
+					}
+				},
+				{
+					"Cloud Native Applications": {
+						"url": "https://www.youtube.com/watch?v=fp9_ubiKqFU",
+						"thumbnail": "https://img.youtube.com/vi/fp9_ubiKqFU/maxresdefault.jpg",
+						"duration": 276,
+						"channel": "IBM Technology"
+					}
+				}
+			]
+		},
+		{
+			"Cloud Security and Monitoring": [
+				{
+					"Overview of Cloud Security": {
+						"url": "https://www.youtube.com/watch?v=jI8IKpjiCSM",
+						"thumbnail": "https://img.youtube.com/vi/jI8IKpjiCSM/maxresdefault.jpg",
+						"duration": 616,
+						"channel": "IBM Technology"
+					}
+				},
+				{
+					"Identity and Access Management": {
+						"url": "https://www.youtube.com/watch?v=gsgdAyGhV0o",
+						"thumbnail": "https://img.youtube.com/vi/gsgdAyGhV0o/maxresdefault.jpg",
+						"duration": 550,
+						"channel": "Simplilearn"
+					}
+				},
+				{
+					"Union by Rank": {
+						"url": "https://www.youtube.com/watch?v=wY8cmFY4ua8",
+						"thumbnail": "https://img.youtube.com/vi/wY8cmFY4ua8/maxresdefault.jpg",
+						"duration": 257,
+						"channel": "Google Cloud Tech"
+					}
+				}
+			]
+		},
+		{
+			"Cloud Networking": [
+				{
+					"Overview of Cloud Networking": {
+						"url": "https://www.youtube.com/watch?v=WmyiE27uKOo",
+						"thumbnail": "https://img.youtube.com/vi/WmyiE27uKOo/maxresdefault.jpg",
+						"duration": 785,
+						"channel": "Cisco Data Center and Cloud Made Easy"
+					}
+				},
+				{
+					"Application and Traffic Patterns": {
+						"url": "https://www.youtube.com/watch?v=cxYHugyNTP0",
+						"thumbnail": "https://img.youtube.com/vi/cxYHugyNTP0/maxresdefault.jpg",
+						"duration": 20422,
+						"channel": "Hussein Awad"
+					}
+				}
+			]
+		}
+	]
+}

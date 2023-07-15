@@ -1,0 +1,216 @@
+{
+	"Artificial Intelligence": [
+		{
+			"Introduction to Deep Learning and Neural Networks": [
+				{
+					"Introduction to Deep Learning": {
+						"url": "https://youtu.be/6M5VXKLf4D4",
+						"thumbnail": "https://img.youtube.com/vi/6M5VXKLf4D4/sddefault.jpg",
+						"duration": 351,
+						"channel": "Simplilearn "
+					}
+				},
+				{
+					"Introduction to Neural Networks": {
+						"url": "https://youtu.be/aircAruvnKk",
+						"thumbnail": "https://img.youtube.com/vi/aircAruvnKk/maxresdefault.jpg",
+						"duration": 1153,
+						"channel": "3Blue1Brown"
+					}
+				}
+			]
+		},
+		{
+			"Artificial Neural Networks": [
+				{
+					"Gradient Descent": {
+						"url": "https://youtu.be/IHZwWFHWa-w",
+						"thumbnail": "https://img.youtube.com/vi/IHZwWFHWa-w/maxresdefault.jpg",
+						"duration": 1260,
+						"channel": "3Blue1Brown"
+					}
+				},
+				{
+					"Backpropagation": {
+						"url": "https://youtu.be/Ilg3gGewQ5U",
+						"thumbnail": "https://img.youtube.com/vi/Ilg3gGewQ5U/maxresdefault.jpg",
+						"duration": 833,
+						"channel": "3Blue1Brown"
+					}
+				},
+				{
+					"Vanishing Gradient": {
+						"url": "https://youtu.be/qO_NLVjD6zE",
+						"thumbnail": "https://img.youtube.com/vi/qO_NLVjD6zE/maxresdefault.jpg",
+						"duration": 462,
+						"channel": "deeplizard"
+					}
+				}
+			]
+		},
+		{
+			"Keras and Deep Learning Libraries": [
+				{
+					"Deep Learning Libraries": {
+						"url": "https://youtu.be/zOzazSNAfZk",
+						"thumbnail": "https://img.youtube.com/vi/zOzazSNAfZk/maxresdefault.jpg",
+						"duration": 118,
+						"channel": "DeepLearning.TV"
+					}
+				},
+				{
+					"Regression Models with Keras": {
+						"url": "https://youtu.be/wNhBUC6X5-E",
+						"thumbnail": "https://img.youtube.com/vi/wNhBUC6X5-E/maxresdefault.jpg",
+						"duration": 321,
+						"channel": "Jeff Heaton"
+					}
+				},
+				{
+					"Classification Models with Keras": {
+						"url": "https://youtu.be/DjQFwJGnRDY",
+						"thumbnail": "https://img.youtube.com/vi/DjQFwJGnRDY/maxresdefault.jpg",
+						"duration": 403,
+						"channel": "TensorFlow"
+					}
+				}
+			]
+		},
+		{
+			"Deep Learning Models": [
+				{
+					"Shallow Versus Deep Neural Networks": {
+						"url": "https://youtu.be/xldc7DOvZ80",
+						"thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFMh7tHdexn37qyeEhOvzqiWENLQlPuwJCw&usqp=CAU",
+						"duration": 103,
+						"channel": "Ideas & Inspiration"
+					}
+				},
+				{
+					"Convolutional Neural Networks": {
+						"url": "https://youtu.be/YRhxdVk_sIs",
+						"thumbnail": "https://img.youtube.com/vi/YRhxdVk_sIs/maxresdefault.jpg",
+						"duration": 516,
+						"channel": "deeplizard"
+					}
+				},
+				{
+					"Recurrent Neural Networks": {
+						"url": "https://youtu.be/AsNTP8Kwu80",
+						"thumbnail": "https://img.youtube.com/vi/AsNTP8Kwu80/maxresdefault.jpg",
+						"duration": 996,
+						"channel": "StatQuest with Josh Starmer"
+					}
+				},
+				{
+					"Autoencoders": {
+						"url": " https://youtu.be/3jmcHZq3A5s",
+						"thumbnail": "https://img.youtube.com/vi/3jmcHZq3A5s/maxresdefault.jpg",
+						"duration": 630,
+						"channel": "WelcomeAIOverlords"
+					}
+				}
+			]
+		},
+		{
+			"Introduction to Machine Learning": [
+				{
+					"Introduction to Machine Learning": {
+						"url": "https://youtu.be/ukzFI9rgwfU",
+						"thumbnail": "https://img.youtube.com/vi/ukzFI9rgwfU/maxresdefault.jpg",
+						"duration": 472,
+						"channel": "Simplilearn"
+					}
+				},
+				{
+					"Python for Machine Learning": {
+						"url": "https://youtu.be/7eh4d6sabA0",
+						"thumbnail": "https://img.youtube.com/vi/7eh4d6sabA0/maxresdefault.jpg",
+						"duration": 2982,
+						"channel": "Programming with Mosh"
+					}
+				}
+			]
+		},
+		{
+			"Regression": [
+				{
+					"Introduction to Regression": {
+						"url": "https://youtu.be/0m-rs2M7K-Y",
+						"thumbnail": "https://img.youtube.com/vi/0m-rs2M7K-Y/maxresdefault.jpg",
+						"duration": 2716,
+						"channel": "DATAtab"
+					}
+				},
+				{
+					"Simple Linear Regression": {
+						"url": "https://youtu.be/owI7zxCqNY0",
+						"thumbnail": "https://img.youtube.com/vi/owI7zxCqNY0/maxresdefault.jpg",
+						"duration": 808,
+						"channel": "dataminingincae"
+					}
+				}
+			]
+		},
+		{
+			"Clustering": [
+				{
+					"Introduction to Clustering": {
+						"url": "https://youtu.be/vmIkSCiZpWY",
+						"thumbnail": "https://img.youtube.com/vi/vmIkSCiZpWY/maxresdefault.jpg",
+						"duration": 2519,
+						"channel": "Simplilearn"
+					}
+				},
+				{
+					"Intro to k-Means": {
+						"url": "https://youtu.be/_S5tvagaQRU",
+						"thumbnail": "ttps://youtu.be/_S5tvagaQRU",
+						"duration": 916,
+						"channel": "Shokoufeh Mirzaei"
+					}
+				}
+			]
+		},
+		{
+			"Supervised Learning Modules": [
+				{
+					"Introduction to Convolutional Neural Networks (CNNs)": {
+						"url": "https://youtu.be/YRhxdVk_sIs",
+						"thumbnail": "https://img.youtube.com/vi/YRhxdVk_sIs/maxresdefault.jpg",
+						"duration": 516,
+						"channel": "deeplizard"
+					}
+				},
+				{
+					"Convolutional Neural Networks (CNNs) Architecture": {
+						"url": "https://youtu.be/VF4BDE7uqY0",
+						"thumbnail": "https://img.youtube.com/vi/VF4BDE7uqY0/maxresdefault.jpg",
+						"duration": 916,
+						"channel": "Coding Lane"
+					}
+				}
+			]
+		},
+		{
+			"Unsupervised Learning Modules": [
+				{
+					"Introduction to Restricted Boltzmann Machines": {
+						"url": "https://youtu.be/Fkw0_aAtwIw",
+						"thumbnail": "https://img.youtube.com/vi/Fkw0_aAtwIw/maxresdefault.jpg",
+						"duration": 2217,
+						"channel": "Serrano.Academy"
+					}
+				},
+				{
+					"Restricted Boltzmann Machines (RBMs)": {
+						"url": "https://youtu.be/puux7KZQfsE",
+						"thumbnail": "https://img.youtube.com/vi/puux7KZQfsE/maxresdefault.jpg",
+						"duration": 291,
+						"channel": "DeepLearning.TV"
+					}
+				}
+			]
+		}
+	]
+}
