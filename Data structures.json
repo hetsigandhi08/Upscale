@@ -1,7 +1,7 @@
 {
 	"Data Structures": [
 		{
-			"Basic Data Structures"
+			"Basic Data Structures":[
 				{
 					"Arrays": {
 						"url": "https://www.youtube.com/watch?v=NptnmWvkbTw",
@@ -38,7 +38,7 @@
 					"Queues": {
 						"url": "https://www.youtube.com/watch?v=nqXaPZi99JI",
 						"thumbnail": "https://img.youtube.com/vi/nqXaPZi99JI/maxresdefault.jpg",
-						"duration": 606
+						"duration": 606,
 						"channel": "Bro Code"
 					}
 				},
@@ -54,7 +54,7 @@
 					"Tree Traversal": {
 						"url": "https://www.youtube.com/watch?v=IpyCqRmaKW4",
 						"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sorted_binary_tree_ALL_RGB.svg/293px-Sorted_binary_tree_ALL_RGB.svg.png",
-						"duration": 534
+						"duration": 534,
 						"channel": "GeeksforGeeks"
 					}
 				}
