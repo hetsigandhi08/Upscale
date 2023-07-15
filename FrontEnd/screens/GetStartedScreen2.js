@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity, Button } from 'react-native'
 import React, { useState,useEffect, useRef } from 'react'
-import Rectangle10 from '../assets/Rectangle10.png'
-import Rectangle11 from '../assets/Rectangle11.png'
 import * as Progress from 'react-native-progress';
 import vid from "../assets/video.mp4"
 import poster from '../assets/Poster.png'
@@ -28,19 +26,19 @@ useEffect(()=>{
       </View>
       <TouchableOpacity onPress={() =>status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()}>
       <View style={styles.columnStyle}>
-      <Video style={styles.square} ref={video} isLooping source={vid} resizeMode={ResizeMode.COVER} posterSource={poster}/>
+      <Video style={styles.square} ref={video} isLooping source={vid} resizeMode={ResizeMode.COVER} />
 
       {/* <Image style={styles.side} source={Rectangle10} />
       <Image style={styles.square} source={Rectangle11} /> */}
       </View>
       </TouchableOpacity>
      <View style={styles.topContainer}>
-     <Text style={styles.title}>Get suggestions from the best partners available on social media</Text>
+     <Text style={styles.title}>Unlock Your Learning Potential, Anytime, Anywhere!</Text>
       {/* <Text style={styles.subTitle}>Take the worlds best courses from top universities</Text> */}
      </View>
      <View>
      <TouchableOpacity style={styles.loginBtn} onPress={()=>{
-      navigation.navigate('OnBoardingScreen1')
+      navigation.navigate('GetStarted3')
       video.current.pauseAsync();
       }} >
           <Text style={styles.loginText}>Get Started</Text>

@@ -1,23 +1,92 @@
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, TouchableWithoutFeedback,Keyboard } from 'react-native'
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, TouchableWithoutFeedback,Keyboard,Alert} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import apple from '../assets/apple.png'
 import google from '../assets/google.png'
 import * as Progress from 'react-native-progress';
-
+import url from '../constant/Constant'
+import axios from 'axios'
 
 const OnBoardingScreen1 = ({ navigation }) => {
 
     const [emailFocusState,setEmailFocusState] = useState(false);
     const [passwordFocusState,setPasswordFocusState] = useState(false);
     const [confirmPasswordFocusState,setConfirmPasswordFocusState] = useState(false)
- 
+    const [emailValue, setEmailValue] = useState({
+      value:"",
+      valid:true,
+    });
+    const [passwordValue, setPasswordValue] = useState("");
+    const[confirmPasswordValue,setConfirmPasswordValue]=useState("");
   const[progress,setProgress]=useState(0);
-
+    const[showElement,setShowElement]=useState(false);
+    const[passwordElement,setPasswordElement]=useState(false);
+    const[loginIndicator,setLoginIndicator]=useState(false);
+    const[showEmail,setShowEmail]=useState(false)
     useEffect(()=>{
       setTimeout(() => {
         setProgress(0.1)
       }, 200);
     })
+
+    const emailValidate = (text)=>{
+      let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+
+      if(reg.test(text)){
+        setEmailValue({value:text,valid:true})
+        console.log(emailValue);
+      }else{
+        setEmailValue({value:text,valid:false})
+      }
+    }
+
+    const validatePassword = (password) => {
+      const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.{10,})/;
+      return regex.test(password);
+    }
+    
+    const login = async()=>{
+      setLoginIndicator(true)
+      await axios.post(url+"api/auth/register",{email:emailValue.value,password:passwordValue})
+      .then((res)=>{
+        console.log(res.data)
+        navigation.navigate("Login")
+      })
+      .catch((err)=>{
+        console.log(err)
+        Alert.alert("User already exists","Please enter a diffrent email address");
+    })
+
+      setTimeout(()=>{
+        setLoginIndicator(false)
+      },1000)
+  }
+
+    const handleSubmit=()=>{
+      setShowEmail(false);
+      setShowElement(false);
+      setPasswordElement(false);
+      if(emailValue.value){
+        
+        if(confirmPasswordValue===passwordValue){
+          
+          if(validatePassword(passwordValue)){
+            login()
+          }
+          else{
+            setPasswordElement(true)
+          }
+          
+        }
+        else{
+          setShowElement(true);
+        }
+      }
+      else{
+        console.log("hello");
+        setShowEmail(true);
+      }
+      
+    }
   return (
 
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -32,10 +101,17 @@ const OnBoardingScreen1 = ({ navigation }) => {
     </View>
 
     <View style={styles.inputContainer}>
-      <TextInput style={emailFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Email Address' autoComplete='email' onBlur={()=>setEmailFocusState(false)} onFocus={()=>setEmailFocusState(true)}/>
-      <TextInput style={passwordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Create Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setPasswordFocusState(false)} onFocus={()=>setPasswordFocusState(true)}/>
-      <TextInput style={confirmPasswordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Confirm Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setConfirmPasswordFocusState(false)} onFocus={()=>setConfirmPasswordFocusState(true)}/>
-      <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('OnBoardingScreen2')}} >
+    {showEmail&&<Text style={styles.error}>Please Enter a valid email address</Text>}
+    {showElement&&<Text style={styles.error}>Password does not match</Text>}
+    
+    {passwordElement&&<Text style={styles.error}>Password should contain one atleast small letter,one capital letter ,one special character and should be atleast 10 characters </Text>}
+    <TextInput onChangeText={emailValidate} style={emailFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Email Address' autoComplete='email' autoCapitalize="none" returnKeyType="next" onBlur={()=>setEmailFocusState(false)} onFocus={()=>setEmailFocusState(true)}/>
+    <TextInput onChangeText={(e)=>setPasswordValue(e)} style={passwordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Enter Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setPasswordFocusState(false)} onFocus={()=>setPasswordFocusState(true)}/>
+    <TextInput onChangeText={(e)=>setConfirmPasswordValue(e)} style={confirmPasswordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Confirm Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setConfirmPasswordFocusState(false)} onFocus={()=>setConfirmPasswordFocusState(true)}/>
+      
+      {/* <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('OnBoardingScreen2')}} > */}
+      <TouchableOpacity style={styles.loginBtn} onPress={handleSubmit} >
+
           <Text style={styles.loginText}>Sign Up</Text>
       </TouchableOpacity>
     </View>
@@ -163,5 +239,11 @@ const styles = StyleSheet.create({
         height:47,
         backgroundColor:'#000000',
         borderRadius:42,
+    },
+    error:{
+      color:'red',
+      alignSelf:'center',
+      fontFamily:'SourceSans3-SemiBold',
+      fontWeight:'400',
     }
   })

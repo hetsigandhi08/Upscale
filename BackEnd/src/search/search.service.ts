@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Search, SearchDocument } from './schema/search.schema';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
+import { Course, CourseDocument } from 'src/course/schema/course.schema';
 
 @Injectable()
 export class SearchService {
