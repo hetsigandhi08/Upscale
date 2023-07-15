@@ -13,6 +13,10 @@ export class User {
 
   @ApiProperty()
   @Prop()
+  name: string;
+
+  @ApiProperty()
+  @Prop()
   email: string;
 
   @ApiProperty()
