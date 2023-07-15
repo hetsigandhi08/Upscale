@@ -12,7 +12,7 @@ const RecoveryCodeScreen = ({ navigation }) => {
     } else {
       // Code for submitting the recovery code goes here
       console.log(`Recovery code submitted: ${recoveryCode}`);
-      alert('Recovery code successfully  submitted !');
+      alert('Recovery code submitted successfully!');
       setRecoveryCode('');
     }
   };
