@@ -68,8 +68,7 @@
 
     "react-native-timeline-flatlist": "^0.8.0",
 
-    "react-native-web": "~0.18.11"
-
+    "react-native-web": "~0.18.11",
   },
 
   "devDependencies": {

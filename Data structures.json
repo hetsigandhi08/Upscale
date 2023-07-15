@@ -1,0 +1,188 @@
+{
+	"Data Structures": [
+		{
+			"Basic Data Structures":[
+				{
+					"Arrays": {
+						"url": "https://www.youtube.com/watch?v=NptnmWvkbTw",
+						"thumbnail": "https://img.youtube.com/vi/NptnmWvkbTw/maxresdefault.jpg",
+						"duration": 428,
+						"channel": "The Coding Train "
+					}
+				},
+				{
+					"Singly-Linked Lists": {
+						"url": "https://www.youtube.com/watch?v=R9PTBwOzceo&list=PLBlnK6fEyqRi3-lvwLGzcaquOs5OBTCww",
+						"thumbnail": "https://img.youtube.com/vi/R9PTBwOzceo/maxresdefault.jpg",
+						"duration": 380,
+						"channel": "Neso Academy"
+					}
+				},
+				{
+					"Doubly-Linked Lists": {
+						"url": "https://www.youtube.com/watch?v=e9NG_a6Z0mg",
+						"thumbnail": "https://img.youtube.com/vi/e9NG_a6Z0mg/maxresdefault.jpg",
+						"duration": 182,
+						"channel": "Neso Academy"
+					}
+				},
+				{
+					"Stacks": {
+						"url": "https://www.youtube.com/watch?v=I37kGX-nZEI",
+						"thumbnail": "https://img.youtube.com/vi/I37kGX-nZEI/maxresdefault.jpg",
+						"duration": 513,
+						"channel": "Neso Academy"
+					}
+				},
+				{
+					"Queues": {
+						"url": "https://www.youtube.com/watch?v=nqXaPZi99JI",
+						"thumbnail": "https://img.youtube.com/vi/nqXaPZi99JI/maxresdefault.jpg",
+						"duration": 606,
+						"channel": "Bro Code"
+					}
+				},
+				{
+					"Trees": {
+						"url": "https://www.youtube.com/watch?v=YAdLFsTG70w",
+						"thumbnail": "https://img.youtube.com/vi/YAdLFsTG70w/maxresdefault.jpg",
+						"duration": 1756,
+						"channel": "Jenny's Lectures CS IT"
+					}
+				},
+				{
+					"Tree Traversal": {
+						"url": "https://www.youtube.com/watch?v=IpyCqRmaKW4",
+						"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sorted_binary_tree_ALL_RGB.svg/293px-Sorted_binary_tree_ALL_RGB.svg.png",
+						"duration": 534,
+						"channel": "GeeksforGeeks"
+					}
+				}
+			]
+		},
+		{
+			"Dynamic Arrays and Amortized Analysis": [
+				{
+					"Dynamic Arrays": {
+						"url": "https://www.youtube.com/watch?v=axsplPtoQF0w",
+						"thumbnail": "https://img.youtube.com/vi/axsplPtoQF0/maxresdefault.jpg",
+						"duration": 826,
+						"channel": "CodeBeauty"
+					}
+				},
+				{
+					"Amortized Analysis: Aggregate Method": {
+						"url": "https://www.youtube.com/watch?v=WIabUqbOFP0",
+						"thumbnail": "https://img.youtube.com/vi/WIabUqbOFP0/maxresdefault.jpg",
+						"duration": 788,
+						"channel": "Uzair Javed Akhtar"
+					}
+				},
+				{
+					"Amortized Analysis: Banker's Method": {
+						"url": "https://www.youtube.com/watch?v=VgLh4_4Bkhc",
+						"thumbnail": "https://img.youtube.com/vi/VgLh4_4Bkhc/maxresdefault.jpg",
+						"duration": 2320,
+						"channel": "Algorithms Lab"
+					}
+				}
+			]
+		},
+		{
+			"Priority Queues and Disjoint Sets": [
+				{
+					"Priority Queue Introduction": {
+						"url": "https://www.youtube.com/watch?v=wptevk0bshY",
+						"thumbnail": "https://img.youtube.com/vi/wptevk0bshY/maxresdefault.jpg",
+						"duration": 797,
+						"channel": "WilliamFiset"
+					}
+				},
+				{
+					"Binary Trees": {
+						"url": "https://www.youtube.com/watch?v=oSWTXtMglKE",
+						"thumbnail": "https://img.youtube.com/vi/oSWTXtMglKE/maxresdefault.jpg",
+						"duration": 597,
+						"channel": "HackerRank"
+					}
+				}
+			]
+		},
+		{
+			"Sorting": [
+				{
+					"Heap Sort": {
+						"url": "https://www.youtube.com/watch?v=MtQL_ll5KhQ",
+						"thumbnail": "https://img.youtube.com/vi/MtQL_ll5KhQ/maxresdefault.jpg",
+						"duration": 119,
+						"channel": "GeeksforGeeks"
+					}
+				},
+				{
+					"Merge Sort": {
+						"url": "https://www.youtube.com/watch?v=unxAnJBy12Q&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop&index=23",
+						"thumbnail": "https://img.youtube.com/vi/unxAnJBy12Q/maxresdefault.jpg",
+						"duration": 1284,
+						"channel": "Apna College"
+					}
+				},
+				{
+					"Merge Sort": {
+						"url": "https://www.youtube.com/watch?v=QXum8HQd_l4&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop&index=24",
+						"thumbnail": "https://img.youtube.com/vi/QXum8HQd_l4/maxresdefault.jpg",
+						"duration": 1409,
+						"channel": "Apna College"
+					}
+				}
+			]
+		},
+		{
+			"Binary Trees": [
+				{
+					"Binary Tree": {
+						"url": "https://www.youtube.com/watch?v=-DzowlcaUmE",
+						"thumbnail": "https://img.youtube.com/vi/-DzowlcaUmE/maxresdefault.jpg",
+						"duration": 4933,
+						"channel": "Apna College"
+					}
+				},
+				{
+					"Trees for Disjoint Sets": {
+						"url": "https://www.youtube.com/watch?v=wU6udHRIkcc",
+						"thumbnail": "https://static.javatpoint.com/ds/images/heap-sort-algorithm6.png",
+						"duration": 1503,
+						"channel": "Abdul Bari"
+					}
+				},
+				{
+					"Union by Rank": {
+						"url": "https://www.youtube.com/watch?v=VHRhJWacxis",
+						"thumbnail": "https://img.youtube.com/vi/VHRhJWacxis/maxresdefault.jpg",
+						"duration": 395,
+						"channel": "WilliamFiset"
+					}
+				}
+			]
+		},
+		{
+			"Hash Tables": [
+				{
+					"Hashing with example": {
+						"url": "https://www.youtube.com/watch?v=W5q0xgxmRd8",
+						"thumbnail": "https://img.youtube.com/vi/W5q0xgxmRd8/maxresdefault.jpg",
+						"duration": 352,
+						"channel": "Gate Smashers"
+					}
+				},
+				{
+					"Hash Functions": {
+						"url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q",
+						"thumbnail": "https://img.youtube.com/vi/zeMa9sg-VJM/maxresdefault.jpg",
+						"duration": 833,
+						"channel": "Computer Science"
+					}
+				}
+			]
+		}
+	]
+}

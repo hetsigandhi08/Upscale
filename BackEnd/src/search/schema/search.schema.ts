@@ -8,7 +8,11 @@ export type SearchDocument = Search & Document;
 export class Search {
   @ApiProperty()
   @Prop()
-  name: string;
+  courseName: string;
+
+  @ApiProperty()
+  @Prop()
+  count: number;
 }
 
 export const SearchSchema = SchemaFactory.createForClass(Search);
