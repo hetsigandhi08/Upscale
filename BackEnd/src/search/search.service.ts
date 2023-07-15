@@ -20,7 +20,7 @@ export class SearchService {
 
   async findOne(name: string) {
     // LIke: name%
-    const foundCourses = await this.courseModel.find({name: {$regex: name, $options: 'i'}})
+    const foundCourses = await this.courseModel.find({name: {$regex: '.*'+name+'.*', $options: 'i'}})
     const searchModels = await this.searchModel.find({courseName: {$in: foundCourses.map(c => c.name)}});
     const addNewSearches: Search[] = [];
     foundCourses.forEach(course => {
