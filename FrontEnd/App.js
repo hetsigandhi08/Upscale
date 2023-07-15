@@ -18,6 +18,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import RecoveryMailScreen from './screens/RecoveryMailScreen';
 import RecoveryCodeScreen from './screens/RecoveryCodeScreen';
 import ChangePasswordScreen from './screens/ChangePasswordScreen';
+
 const Stack = createNativeStackNavigator();
 export default function App() {
   const [fontsLoaded] = useFonts({
