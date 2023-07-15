@@ -43,7 +43,9 @@ export class SearchService {
     }
 
     if (searchModels.length) {
-      this.searchModel.updateMany(searchModels);
+      searchModels.forEach((s) => {
+        this.searchModel.findByIdAndUpdate(s.id, { count: s.count });
+      });
     }
 
     return foundCourses;
