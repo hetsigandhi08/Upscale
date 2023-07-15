@@ -73,6 +73,19 @@ const HomeScreen = () => {
       />
 
       </View>
+
+      <View style={styles.TopInstructorContainer}>
+        <Text style={styles.title}>Top Courses</Text>
+
+        <FlatList
+        contentContainerStyle={{display:'flex',gap:10}} 
+        horizontal 
+        showsHorizontalScrollIndicator={false}
+        data={DATA}
+        renderItem={({item}) => <InstructorCard/> }
+      />
+
+      </View>
       </>
        )}
 
