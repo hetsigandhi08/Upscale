@@ -15,6 +15,7 @@ export class ForgetPasswordController {
     try {
       var isEmailSent =
         await this.forgetPasswordService.sendEmailForgotPassword(email);
+
       if (isEmailSent) {
         throw new BadRequestException('Login.Email_Resent', null);
       } else {
