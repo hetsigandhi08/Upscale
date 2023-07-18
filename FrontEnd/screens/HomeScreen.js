@@ -2,19 +2,34 @@ import { StyleSheet, Text, TouchableOpacity, View, ScrollView, FlatList, Activit
 import React, {useState, useEffect} from 'react'
 import * as Progress from 'react-native-progress';
 import InstructorCard from '../components/InstructorCard';
+import axios from 'axios';
+import url from '../constant/Constant';
 
 const HomeScreen = () => {
-
+  var au = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGIzNWZkYTEyYWZmZjFjMzY5YzczOTQiLCJpYXQiOjE2ODk2OTIxMzQsImV4cCI6MTY5MjI4NDEzNH0.eAsBdxfrQIUOQB4y6rqPs1WAtQcrNmdxyYVQRuP8Wo4'
   const[progress,setProgress]=useState(0.3);
-  const[loader,setLoader] = useState(true)
+  const[loader,setLoader] = useState(true);
+  const[recentCourseData, setRecentCourseData] = useState([])
 
+  var DATA;
+
+  const recentCourseAPI =async()=>{
+    await axios.get(url+"api/search/recent",{headers:{
+      Authorization:au
+    }}).then((res)=>{
+      // console.log(res.data)
+      setRecentCourseData(res.data)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
     useEffect(()=>{
+      recentCourseAPI();
       setTimeout(() => {
         setLoader(false)
       },2000);
-    })
-
-    const DATA = [1,2,2,3];
+      // console.log(recentCourseData)
+    },[recentCourseData])
 
   return (
     <ScrollView contentContainerStyle={loader ? styles.activityContainer :styles.container}>
@@ -62,30 +77,30 @@ const HomeScreen = () => {
 
 
       <View style={styles.TopInstructorContainer}>
-        <Text style={styles.title}>Top Instructor channels</Text>
+        <Text style={styles.title}>Recent Courses</Text>
 
         <FlatList
         contentContainerStyle={{display:'flex',gap:10}} 
         horizontal 
         showsHorizontalScrollIndicator={false}
-        data={DATA}
-        renderItem={({item}) => <InstructorCard/> }
+        data={recentCourseData}
+        renderItem={({item}) => <InstructorCard courseName={item.courseName} thumbnail={item.courseImg} /> }
       />
 
       </View>
 
-      <View style={styles.TopInstructorContainer}>
+      {/* <View style={styles.TopInstructorContainer}>
         <Text style={styles.title}>Top Courses</Text>
 
         <FlatList
         contentContainerStyle={{display:'flex',gap:10}} 
         horizontal 
         showsHorizontalScrollIndicator={false}
-        data={DATA}
-        renderItem={({item}) => <InstructorCard/> }
+        data={recentCourseData}
+        renderItem={({item}) => <InstructorCard courseName={item.courseName}/> }
       />
 
-      </View>
+      </View> */}
       </>
        )}
 

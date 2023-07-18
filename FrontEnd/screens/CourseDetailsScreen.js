@@ -9,7 +9,7 @@ const CourseDetailsScreen = () => {
 
       <View style={styles.headContainer}>
       <TouchableOpacity style={styles.backButton}>
-      <Ionicons name="ios-arrow-back" size={24} color="black" />
+      <Ionicons name="ios-arrow-back" size={24} color="#311E70" />
       </TouchableOpacity>
       <Text style={styles.headTitle}>
         Course Details
@@ -168,16 +168,19 @@ const styles = StyleSheet.create({
     headContainer:{
         backgroundColor:"#FFFFFF",
         display:"flex",
+        flexDirection:"row",
+        alignItems:"center",
         gap:15,
         paddingBottom:20,
-        paddingLeft:30,
-        paddingTop:50,
+        paddingLeft:10,
+        paddingTop:70,
         borderBottomLeftRadius:10,
         borderBottomRightRadius:10,
     },
     headTitle:{
         fontSize:26,
         fontFamily:'SourceSans3-SemiBold',
+        color:"#311E70"
     },
     scrollContainer:{
         display:'flex',
@@ -195,7 +198,7 @@ const styles = StyleSheet.create({
         display:'flex',
         width:'100%',
         // height:290,
-        backgroundColor:"#E2EAFC",
+        backgroundColor:"#D1D1D1",
         borderRadius:10,
         paddingHorizontal:20,
         paddingTop:20,
@@ -229,7 +232,7 @@ const styles = StyleSheet.create({
         width:263,
         height:47,
         // backgroundColor:'#5237b0',
-        backgroundColor:"#031D44",
+        backgroundColor:"#7045FF",
         borderRadius:42,
     },
     roadMapText:{
@@ -309,11 +312,11 @@ const styles = StyleSheet.create({
         width:'100%',
         height:47,
         borderWidth:1,
-        borderColor:"#031D44",
+        borderColor:"#7045FF",
         borderRadius:42,
     },
     commentText:{
-        color:'#031D44',
+        color:'#7045FF',
         fontFamily:'SourceSans3-Regular',
     }
 

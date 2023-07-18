@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
           textAlignVertical: 'center',
           alignContent: 'center',
     fontFamily:'SourceSans3-Regular',
+    textDecorationLine:'underline',
     color:"#5E60CE"},
   subTitle:{
    
@@ -118,11 +119,13 @@ const styles = StyleSheet.create({
     width: '70%',
     height: 300,
     margin: 4,
+    borderRadius:5
   },
   side:{
     width:'30%',
     height: 300,
     margin:4,
+    borderRadius:5
   },
   loginBtn:{
     display:'flex',
