@@ -33,7 +33,7 @@ export class SearchService {
       if (searchModel) {
         searchModel.count++;
       } else {
-        addNewSearches.push({ courseName: course.name, count: 1 , courseImg: course.img} as Search);
+        addNewSearches.push({ courseName: course.name, count: 1, courseImg: course.img} as Search);
       }
     });
 
