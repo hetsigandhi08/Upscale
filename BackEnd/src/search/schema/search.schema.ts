@@ -12,6 +12,10 @@ export class Search {
 
   @ApiProperty()
   @Prop()
+  courseId: string;
+
+  @ApiProperty()
+  @Prop()
   count: number;
 
   @ApiProperty()
