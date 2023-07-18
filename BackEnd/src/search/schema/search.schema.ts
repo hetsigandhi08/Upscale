@@ -13,6 +13,11 @@ export class Search {
   @ApiProperty()
   @Prop()
   count: number;
+
+  @ApiProperty()
+  @Prop()
+  courseImg: string;
+
 }
 
 export const SearchSchema = SchemaFactory.createForClass(Search);
