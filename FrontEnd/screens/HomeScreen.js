@@ -13,6 +13,7 @@ const HomeScreen = ({navigation}) => {
   const recentCourseAPI =async()=>{
     await axios.get(url+"api/search/recent",{headers:{
       Authorization:au,
+      
     }
   }).then((res)=>{
       // console.log(res.data)

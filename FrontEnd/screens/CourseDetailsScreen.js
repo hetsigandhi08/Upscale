@@ -11,6 +11,7 @@ const CourseDetailsScreen = ({ navigation, route }) => {
     const courseDetailsApi= async()=>{
         await axios.get(url+`api/course/${_courseId}`,{headers:{
             Authorization:au,
+            
         }}).then((res)=>{
             // console.log(res.data)
             setCourseData(res.data)
