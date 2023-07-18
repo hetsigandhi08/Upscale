@@ -1,3 +1,4 @@
+
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import Rectangle4 from '../assets/Rectangle5.jpg'
@@ -15,6 +16,7 @@ const GetStartedScreen3 = ({ navigation }) => {
       setProgress(0.9)
     }, 200);
   })
+
 
   return (
     <View style={styles.container}>
@@ -47,7 +49,7 @@ const GetStartedScreen3 = ({ navigation }) => {
       <View>
       </View>
 
-    </View>
+      </View>
   )
 }
 
@@ -97,6 +99,7 @@ const styles = StyleSheet.create({
             textAlignVertical: 'center',
             alignContent: 'center',
       fontFamily:'SourceSans3-Regular',
+      textDecorationLine:'underline',
       color:"#5E60CE"},
     subTitle:{
      
@@ -149,5 +152,5 @@ const styles = StyleSheet.create({
     color:'#FEFEFE',
     fontFamily:'SourceSans3-Regular',
   },
-  
 })
+

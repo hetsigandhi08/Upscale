@@ -6,7 +6,6 @@ import { Course, CourseDocument } from 'src/course/schema/course.schema';
 
 @Injectable()
 export class SearchService {
-  // eslint-disable-next-line prettier/prettier
   constructor(
     @InjectModel(Search.name) private searchModel: Model<SearchDocument>,
     @InjectModel(Course.name) private courseModel: Model<CourseDocument>,
@@ -17,11 +16,11 @@ export class SearchService {
   }
 
   findRecentSearch() {
-    return this.searchModel.find().sort({ count: -1 }).limit(10);
+    return this.searchModel.find().sort({ count: -1 }).limit(5);
   }
 
   async findOne(search: string) {
-    // LIke: name%
+    // Like: name%
     const foundCourses = await this.courseModel.find({
       name: { $regex: search + '.*', $options: 'i' },
     });
@@ -34,7 +33,14 @@ export class SearchService {
       if (searchModel) {
         searchModel.count++;
       } else {
-        addNewSearches.push({ courseName: course.name, count: 1 } as Search);
+
+        addNewSearches.push({
+          courseId: course['_id'],
+          courseName: course.name,
+          count: 1,
+          courseImg: course.img,
+        } as Search);
+
       }
     });
 

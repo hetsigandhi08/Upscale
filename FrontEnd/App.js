@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useFonts } from 'expo-font';
 import BottomTabScreen from './screens/BottomTabScreen';
 import LoginScreen from './screens/LoginScreen'
@@ -15,10 +15,15 @@ import GetStartedScreen1 from './screens/GetStartedScreen1';
 import GetStartedScreen2 from './screens/GetStartedScreen2';
 import GetStartedScreen3 from './screens/GetStartedScreen3';
 import { NavigationContainer } from '@react-navigation/native';
-
+import RecoveryMailScreen from './screens/RecoveryMailScreen';
+// import RecoveryCodeScreen from './screens/RecoveryCodeScreen';
+import ChangePasswordScreen from './screens/ChangePasswordScreen';
+import CourseVideoScreen from './screens/CourseVideoScreen';
+// import * as Keychain from 'react-native-keychain';
 
 const Stack = createNativeStackNavigator();
-export default function App() {
+export default function App () {
+  const [intialScreen, setInitialScreen] = useState("GetStarted1");
   const [fontsLoaded] = useFonts({
     'SourceSans3-SemiBold': require('./assets/fonts/SourceSans3-SemiBold.ttf'),
     'SourceSans3-Regular': require('./assets/fonts/SourceSans3-Regular.ttf'),
@@ -34,9 +39,26 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
+  // var credentials;
+  // useEffect(async()=>{
+  //   credentials= await Keychain.getGenericPassword();
+  // },[])
+
+  // try {
+  //   // Retreive the credentials
+  //   if (credentials) {
+  //     console.log('Credentials successfully loaded for user ' + credentials.username);
+
+  //   } else {
+  //     console.log('No credentials stored')
+  //   }
+  // } catch (error) {
+  //   console.log('Keychain couldn\'t be accessed!', error);
+  // }
+  // await Keychain.resetGenericPassword()
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Tab">
+      <Stack.Navigator initialRouteName="CourseVideo">
       <Stack.Screen name = "GetStarted1" options = {{headerShown: false}} component = {GetStartedScreen1} />
       <Stack.Screen name = "GetStarted2" options = {{headerShown: false}} component = {GetStartedScreen2} />
       <Stack.Screen name = "GetStarted3" options = {{headerShown: false}} component = {GetStartedScreen3} />
@@ -48,6 +70,11 @@ export default function App() {
       <Stack.Screen  name="OnBoardingScreen1" options={{headerShown: false}} component={OnBoardingScreen1} />
       <Stack.Screen  name="OnBoardingScreen2" options={{headerShown: false}} component={OnBoardingScreen2} />
       <Stack.Screen  name="OnBoardingScreen3" options={{headerShown: false}} component={OnBoardingScreen3} />
+      <Stack.Screen  name="RecoveryMail" options={{headerShown: false}} component={RecoveryMailScreen} />
+      {/* <Stack.Screen  name="RecoveryCode" options={{headerShown: false}} component={RecoveryCodeScreen} /> */}
+      <Stack.Screen  name="ChangePassword" options={{headerShown: false}} component={ChangePasswordScreen} />
+      <Stack.Screen name='CourseVideo' options={{headerShown: false}} component={CourseVideoScreen}/>
+
       </Stack.Navigator>
       <StatusBar />
     </NavigationContainer>
