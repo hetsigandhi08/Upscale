@@ -37,6 +37,7 @@ export class SearchService {
           courseId: course['_id'],
           courseName: course.name,
           count: 1,
+          courseImg: course.img,
         } as Search);
       }
     });
