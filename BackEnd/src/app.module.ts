@@ -8,6 +8,9 @@ import { AuthModule } from './auth/auth.module';
 import { SearchModule } from './search/search.module';
 import { HomeModule } from './home/home.module';
 import { ProgressModule } from './progress/progress.module';
+import { MailerModule } from '@nestjs-modules/mailer/dist';
+import { ForgetPasswordModule } from './forgetPassword/forgetPassword.module';
+
 require('dotenv').config();
 
 @Module({
@@ -19,6 +22,19 @@ require('dotenv').config();
     SearchModule,
     HomeModule,
     ProgressModule,
+    MailerModule.forRoot({
+      transport: {
+        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
+        auth: {
+          user: 'asesummer2023@gmail.com',
+          pass: 'hzxfwwgwalkjfftz',
+        },
+      },
+    }),
+    ForgetPasswordModule,
   ],
   controllers: [AppController],
   providers: [AppService],

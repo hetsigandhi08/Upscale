@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
             textAlignVertical: 'center',
             alignContent: 'center',
       fontFamily:'SourceSans3-Regular',
+      textDecorationLine:'underline',
       color:"#5E60CE"},
     subTitle:{
      

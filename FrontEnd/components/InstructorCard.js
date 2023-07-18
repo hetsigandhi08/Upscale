@@ -2,20 +2,20 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import thumb from '../assets/thumbnail.jpeg'
 
-const InstructorCard = () => {
+const InstructorCard = ({courseName, thumbnail}) => {
+  // console.log(courseName)
   return (
     <View>
       <TouchableOpacity>
           <View style={styles.InsCardContainer}>
 
-             <Image style={styles.imageContainer} source={thumb} />
-
-             <Text style={styles.cardHead}>
-              Varun Mayya
-             </Text>
+             <Image style={styles.imageContainer} source={{uri:thumbnail}} />
 
              <Text style={styles.CardSubTitle}>
-             Tech.AI.Programming
+             COURSE
+             </Text>
+             <Text style={styles.cardHead}>
+              {courseName}
              </Text>
           </View>
 

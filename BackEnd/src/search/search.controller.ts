@@ -1,7 +1,8 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post } from '@nestjs/common';
 import { SearchService } from './search.service';
 
 import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
+import { SearchDto } from './dto/search.dto';
 
 @ApiTags('Search')
 @ApiBearerAuth()
@@ -14,9 +15,14 @@ export class SearchController {
     return this.searchService.findRecentSearch();
   }
 
-  @Get(':name')
-  findOne(@Param('name') name: string) {
-    return this.searchService.findOne(name);
-  }
+  // @Get(':name')
+  // findOne(@Param('name') name: string) {
+  //   return this.searchService.findOne(name);
+  // }
 
+  @HttpCode(HttpStatus.OK)
+  @Post()
+  search(@Body() dto: SearchDto) {
+    return this.searchService.findOne(dto.keyword);
+  }
 }

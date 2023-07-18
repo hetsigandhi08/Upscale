@@ -5,6 +5,7 @@ import google from '../assets/google.png'
 import * as Progress from 'react-native-progress';
 import url from '../constant/Constant'
 import axios from 'axios'
+// import * as Keychain from 'react-native-keychain';
 
 const OnBoardingScreen1 = ({ navigation }) => {
 
@@ -50,6 +51,7 @@ const OnBoardingScreen1 = ({ navigation }) => {
       .then((res)=>{
         console.log(res.data)
         navigation.navigate("Login")
+        // await Keychain.setGenericPassword(emailValue.value, passwordValue);
       })
       .catch((err)=>{
         console.log(err)
