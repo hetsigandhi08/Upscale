@@ -20,19 +20,54 @@ export class ForgetPasswordService {
     if (!userFromDb)
       throw new HttpException('LOGIN.USER_NOT_FOUND', HttpStatus.NOT_FOUND);
 
-    //var tokenModel = await this.createForgetPasswordToken(email);
     var newPasswordToken = (Math.floor(Math.random() * 900000) + 100000)
       .toString;
-    this.mailService.sendMail({
-      from: 'gandhi58@uwindsor.ca',
-      to: email,
-      subject: 'Forgot Password',
-      text: 'Forgot Password',
-      html:
-        'Hi! <br><br> If you have requested to reset your password<br><br>' +
-        'Your Reset OTP is ' +
-        newPasswordToken,
+
+    const nodemailer = require('nodemailer');
+
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+      auth: {
+        user: 'asesummer2023@gmail.com',
+        pass: 'hzxfwwgwalkjfftz',
+      },
     });
+    const sendEmail = (email, token) => {
+      const mailOptions = {
+        from: 'asesummer2023@gmail.com',
+        to: email,
+        subject: 'Forgot Password',
+        text: 'Forgot Password',
+        html:
+          'Hi! <br><br> If you have requested to reset your password<br><br>' +
+          'Your Reset OTP is ' +
+          newPasswordToken,
+      };
+
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log('Error in sending email  ' + error);
+          return true;
+        } else {
+          console.log('Email sent: ' + info.response);
+          return false;
+        }
+      });
+    };
+
+    // this.mailService.sendMail({
+    //   from: 'gandhi58@uwindsor.ca',
+    //   to: email,
+    //   subject: 'Forgot Password',
+    //   text: 'Forgot Password',
+    //   html:
+    //     'Hi! <br><br> If you have requested to reset your password<br><br>' +
+    //     'Your Reset OTP is ' +
+    //     newPasswordToken,
+    // });
     return true;
   }
 }

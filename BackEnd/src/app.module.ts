@@ -30,7 +30,7 @@ require('dotenv').config();
         secure: true,
         auth: {
           user: 'asesummer2023@gmail.com',
-          pass: 'szoexzxacpknlsig',
+          pass: 'hzxfwwgwalkjfftz',
         },
       },
     }),

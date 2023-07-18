@@ -45,7 +45,7 @@ export class ProgressService {
     let progress = await this.findByCourse(req.user.userId, dto.courseId);
     if (progress) {
       await this.progressModel.findOneAndUpdate(
-        { id: progress["_id"] },
+        { id: progress.id },
         {
           currChapterIdx: dto.chapterIdx,
           currVideoIdx: dto.videoIdx,

@@ -16,7 +16,7 @@ export class SearchService {
   }
 
   findRecentSearch() {
-    return this.searchModel.find().sort({ count: -1 }).limit(10);
+    return this.searchModel.find().sort({ count: -1 }).limit(5);
   }
 
   async findOne(search: string) {
