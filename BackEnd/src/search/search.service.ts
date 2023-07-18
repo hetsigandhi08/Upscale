@@ -6,7 +6,6 @@ import { Course, CourseDocument } from 'src/course/schema/course.schema';
 
 @Injectable()
 export class SearchService {
-  // eslint-disable-next-line prettier/prettier
   constructor(
     @InjectModel(Search.name) private searchModel: Model<SearchDocument>,
     @InjectModel(Course.name) private courseModel: Model<CourseDocument>,
@@ -21,7 +20,7 @@ export class SearchService {
   }
 
   async findOne(search: string) {
-    // LIke: name%
+    // Like: name%
     const foundCourses = await this.courseModel.find({
       name: { $regex: search + '.*', $options: 'i' },
     });
