@@ -16,7 +16,7 @@ export class SearchService {
   }
 
   findRecentSearch() {
-    return this.searchModel.find().sort({ count: -1 }).limit(10);
+    return this.searchModel.find().sort({ count: -1 }).limit(5);
   }
 
   async findOne(search: string) {
@@ -33,7 +33,7 @@ export class SearchService {
       if (searchModel) {
         searchModel.count++;
       } else {
-        addNewSearches.push({ courseName: course.name, count: 1 } as Search);
+        addNewSearches.push({ courseName: course.name, count: 1 , courseImg: course.img} as Search);
       }
     });
 
