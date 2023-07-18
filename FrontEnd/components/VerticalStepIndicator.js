@@ -34,7 +34,7 @@ export default function VerticalStepIndicator({data,navigation}) {
   const [currentPage, setCurrentPage] = useState(0);
   const [load,setLoad] = useState(false)
 
-    const [courseData, setCourseData] = useState([{name:"hi"}])
+    const [courseData, setCourseData] = useState([])
 
   useEffect(()=>{
     axios.get(url+`api/course/${data}`,{headers:{
