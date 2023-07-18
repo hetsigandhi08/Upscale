@@ -25,6 +25,7 @@ export class ProgressService {
     if (dto.chapterIdx >= course.chapters.length) {
       throw new BadRequestException('Chapter index invalid');
     }
+
     if (dto.videoIdx >= course.chapters[dto.chapterIdx].videos.length) {
       throw new BadRequestException('Video index invalid');
     }
@@ -43,11 +44,14 @@ export class ProgressService {
     const currProgress = Math.floor((currTotalVideo / totalVideos) * 100);
     let progress = await this.findByCourse(req.user.userId, dto.courseId);
     if (progress) {
-      await this.progressModel.findOneAndUpdate({id: progress.id}, {
-        currChapterIdx: dto.chapterIdx,
-        currVideoIdx: dto.videoIdx,
-        progress: currProgress
-      })
+      await this.progressModel.findOneAndUpdate(
+        { id: progress.id },
+        {
+          currChapterIdx: dto.chapterIdx,
+          currVideoIdx: dto.videoIdx,
+          progress: currProgress,
+        },
+      );
     } else {
       progress = {
         courseId: dto.courseId,
