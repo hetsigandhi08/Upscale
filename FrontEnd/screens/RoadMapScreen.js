@@ -1,16 +1,35 @@
 import { StyleSheet, Text, View,TouchableOpacity,Image, ScrollView} from 'react-native'
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import slack from '../assets/slack.png'
 import Discord from '../assets/Discord.png'
 import VerticalStepIndicator from '../components/VerticalStepIndicator';
+import axios from 'axios';
+import {url,au} from '../constant/Constant';
 
-const RoadMapScreen = () => {
+const RoadMapScreen = ({navigation,route}) => {
+  const [_courseId] = useState(route.params._courseId);
+    const [courseData, setCourseData] = useState({})
+    const courseDetailsApi= async()=>{
+      await axios.get(url+`api/course/${_courseId}`,{headers:{
+          Authorization:au
+      }}).then((res)=>{
+          // console.log(res.data)
+          setCourseData(res.data)
+        }).catch((err)=>{
+          console.log(err)
+        })
+  }
+
+  useEffect(()=>{
+      courseDetailsApi();
+      // console.log(courseData.chapters)
+  },[courseData])
   return (
     <View style={styles.container}>
     
     <View style={styles.headContainer}>
-      <TouchableOpacity style={styles.backButton}>
+      <TouchableOpacity onPress={()=>navigation.goBack()} style={styles.backButton}>
       <Ionicons name="ios-arrow-back" size={24} color="#311E70" />
       </TouchableOpacity>
       <Text style={styles.headTitle}>
@@ -21,10 +40,12 @@ const RoadMapScreen = () => {
 
    <View style={styles.container2}>
    
-   <Text style={styles.bottomTitle} >React and Redux roadmap</Text>
+   <Text style={styles.bottomTitle} >
+    {courseData.name}
+   </Text>
     
     <View style={{display:"flex",flex:1}}>
-        <VerticalStepIndicator/>
+        <VerticalStepIndicator data={_courseId} navigation={navigation}/>
     </View>
 
 
@@ -89,7 +110,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#FAFCFB',
         alignItems:'flex-start',
         justifyContent:"space-around",
-        paddingHorizontal:30,
+        paddingHorizontal:40,
         paddingTop:5,
         paddingBottom:5,
         gap:20

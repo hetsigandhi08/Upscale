@@ -58,7 +58,7 @@ export default function App () {
   // await Keychain.resetGenericPassword()
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="CourseVideo">
+      <Stack.Navigator initialRouteName="Tab">
       <Stack.Screen name = "GetStarted1" options = {{headerShown: false}} component = {GetStartedScreen1} />
       <Stack.Screen name = "GetStarted2" options = {{headerShown: false}} component = {GetStartedScreen2} />
       <Stack.Screen name = "GetStarted3" options = {{headerShown: false}} component = {GetStartedScreen3} />

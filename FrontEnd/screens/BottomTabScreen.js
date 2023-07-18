@@ -12,7 +12,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 const Tab = createBottomTabNavigator();
 const BottomTabScreen = () => {
   return (
-    <NavigationContainer independent={true}>
+    // <NavigationContainer independent={true}>
        <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
@@ -38,7 +38,7 @@ const BottomTabScreen = () => {
         <Tab.Screen name="My Course" options={{headerShown: false}} component={MyCourseScreen} />
         <Tab.Screen name="Profile" options={{headerShown: false}} component={ProfileScreen} />
       </Tab.Navigator>
-    </NavigationContainer>
+    // </NavigationContainer>
   )
 }
 
