@@ -27,7 +27,7 @@ const BottomTabScreen = () => {
             }else if (route.name === 'My Course') {
               iconName = focused ? 'book' : 'book-outline';
             }
-            return <Ionicons name={iconName} size={size} color={color} />;
+            return <Ionicons name={iconName} size={size} color={color} />
           },
           tabBarActiveTintColor: '#031D44',
           tabBarInactiveTintColor: 'gray',

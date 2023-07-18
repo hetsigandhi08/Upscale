@@ -12,6 +12,7 @@
     "@expo/ngrok": "^4.1.1",
     "@freakycoder/react-native-helpers": "^2.0.2",
     "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/material-top-tabs": "^6.6.3",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "axios": "^1.4.0",
@@ -32,6 +33,7 @@
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
     "react-native-step-indicator": "^1.0.3",
+    "react-native-tab-view": "^3.5.2",
     "react-native-timeline-flatlist": "^0.8.0",
     "react-native-web": "~0.18.11"
   },

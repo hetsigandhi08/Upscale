@@ -9,13 +9,19 @@ const RoadMapScreen = () => {
   return (
     <View style={styles.container}>
     
-    <TouchableOpacity style={styles.backButton}>
-  <Ionicons name="ios-arrow-back" size={24} color="black" />
-  </TouchableOpacity>
-   
+    <View style={styles.headContainer}>
+      <TouchableOpacity style={styles.backButton}>
+      <Ionicons name="ios-arrow-back" size={24} color="#311E70" />
+      </TouchableOpacity>
+      <Text style={styles.headTitle}>
+        Roadmap
+      </Text>
+      </View>
+
+
    <View style={styles.container2}>
-   <Text style={styles.title}>React and Redux</Text>
    
+   <Text style={styles.bottomTitle} >React and Redux roadmap</Text>
     
     <View style={{display:"flex",flex:1}}>
         <VerticalStepIndicator/>
@@ -55,18 +61,35 @@ const styles = StyleSheet.create({
         display:'flex',
         flex:1,
         backgroundColor:'#FAFCFB',
-        alignItems:'flex-start',
-        justifyContent:"space-around",
-        paddingHorizontal:20,
-        paddingVertical:30
+        // alignItems:'flex-start',
+        // justifyContent:"space-around",
+        // paddingHorizontal:20,
+        paddingBottom:20
       },
+      headContainer:{
+        backgroundColor:"#FFFFFF",
+        display:"flex",
+        flexDirection:"row",
+        alignItems:"center",
+        gap:15,
+        paddingBottom:20,
+        paddingLeft:10,
+        paddingTop:70,
+        borderBottomLeftRadius:10,
+        borderBottomRightRadius:10,
+    },
+    headTitle:{
+        fontSize:26,
+        fontFamily:'SourceSans3-SemiBold',
+        color:"#311E70"
+    },
       container2:{
         display:'flex',
         flex:1,
         backgroundColor:'#FAFCFB',
         alignItems:'flex-start',
         justifyContent:"space-around",
-        paddingHorizontal:20,
+        paddingHorizontal:30,
         paddingTop:5,
         paddingBottom:5,
         gap:20
@@ -80,19 +103,19 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         width:263,
         height:47,
-        backgroundColor:'#031D44',
+        backgroundColor:'#7045FF',
         borderRadius:42,
     },
     loginText:{
       color:'#FEFEFE',
       fontFamily:'SourceSans3-Regular',
   },
-    backButton:{
-      marginTop:30,
-      alignSelf:'flex-start',
-      padding:10
+    // backButton:{
+    //   marginTop:30,
+    //   alignSelf:'flex-start',
+    //   padding:10
       
-    },
+    // },
     bottomContainer:{
       display:'flex',
       justifyContent:'space-between',

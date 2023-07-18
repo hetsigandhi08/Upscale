@@ -4,6 +4,7 @@ import apple from '../assets/apple.png'
 import google from '../assets/google.png'
 import url from '../constant/Constant'
 import axios from 'axios'
+// import * as Keychain from 'react-native-keychain';
 
 const LoginScreen = ({ navigation }) => {
 
@@ -23,6 +24,7 @@ const LoginScreen = ({ navigation }) => {
         await axios.post(url+"api/auth/login",{email:emailValue.value,password:passwordValue})
         .then((res)=>{
           console.log(res.data)
+          // await Keychain.setGenericPassword(emailValue.value, passwordValue);
           navigation.navigate("Tab")
         })
         .catch((err)=>{
