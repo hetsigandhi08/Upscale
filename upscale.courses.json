@@ -1,0 +1,627 @@
+[
+  {
+    "_id": {
+      "$oid": "649d8dd052f0bbfc8dd52fcd"
+    },
+    "name": "Data Structures",
+    "img": "",
+    "created_at": {
+      "$date": "2023-06-29T14:00:00.000Z"
+    },
+    "chapters": [
+      {
+        "name": "Basic Data Structures",
+        "videos": [
+          {
+            "name": "Arrays",
+            "url": "https://www.youtube.com/watch?v=NptnmWvkbTw",
+            "thumbnail": "https://img.youtube.com/vi/NptnmWvkbTw/maxresdefault.jpg",
+            "duration": 428,
+            "channel": "The Coding Train"
+          },
+          {
+            "name": "Singly-Linked Lists",
+            "url": "https://www.youtube.com/watch?v=R9PTBwOzceo&list=PLBlnK6fEyqRi3-lvwLGzcaquOs5OBTCww",
+            "thumbnail": "https://img.youtube.com/vi/R9PTBwOzceo/maxresdefault.jpg",
+            "duration": 380,
+            "channel": "Neso Academy"
+          },
+          {
+            "name": "Doubly-Linked Lists",
+            "url": "https://www.youtube.com/watch?v=e9NG_a6Z0mg",
+            "thumbnail": "https://img.youtube.com/vi/e9NG_a6Z0mg/maxresdefault.jpg",
+            "duration": 182,
+            "channel": "Neso Academy"
+          },
+          {
+            "name": "Stacks",
+            "url": "https://www.youtube.com/watch?v=I37kGX-nZEI",
+            "thumbnail": "https://img.youtube.com/vi/I37kGX-nZEI/maxresdefault.jpg",
+            "duration": 513,
+            "channel": "Neso Academy"
+          },
+          {
+            "name": "Queues",
+            "url": "https://www.youtube.com/watch?v=nqXaPZi99JI",
+            "thumbnail": "https://img.youtube.com/vi/nqXaPZi99JI/maxresdefault.jpg",
+            "duration": 606,
+            "channel": "Bro Code"
+          },
+          {
+            "name": "Trees",
+            "url": "https://www.youtube.com/watch?v=YAdLFsTG70w",
+            "thumbnail": "https://img.youtube.com/vi/YAdLFsTG70w/maxresdefault.jpg",
+            "duration": 1756,
+            "channel": "Jenny's Lectures CS IT"
+          },
+          {
+            "name": "Tree Traversal",
+            "url": "https://www.youtube.com/watch?v=IpyCqRmaKW4",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sorted_binary_tree_ALL_RGB.svg/293px-Sorted_binary_tree_ALL_RGB.svg.png",
+            "duration": 534,
+            "channel": "GeeksforGeeks"
+          }
+        ]
+      },
+      {
+        "name": "Dynamic Arrays and Amortized Analysis",
+        "videos": [
+          {
+            "name": "Dynamic Arrays",
+            "url": "https://www.youtube.com/watch?v=axsplPtoQF0w",
+            "thumbnail": "https://img.youtube.com/vi/axsplPtoQF0/maxresdefault.jpg",
+            "duration": 826,
+            "channel": "CodeBeauty"
+          },
+          {
+            "name": "Amortized Analysis: Aggregate Method",
+            "url": "https://www.youtube.com/watch?v=WIabUqbOFP0",
+            "thumbnail": "https://img.youtube.com/vi/WIabUqbOFP0/maxresdefault.jpg",
+            "duration": 788,
+            "channel": "Uzair Javed Akhtar"
+          },
+          {
+            "name": "Amortized Analysis: Banker's Method",
+            "url": "https://www.youtube.com/watch?v=VgLh4_4Bkhc",
+            "thumbnail": "https://img.youtube.com/vi/VgLh4_4Bkhc/maxresdefault.jpg",
+            "duration": 2320,
+            "channel": "Algorithms Lab"
+          }
+        ]
+      },
+      {
+        "name": "Priority Queues and Disjoint Sets",
+        "videos": [
+          
+             {
+              "name": "Priority Queue Introduction",
+              "url": "https://www.youtube.com/watch?v=wptevk0bshY",
+              "thumbnail": "https://img.youtube.com/vi/wptevk0bshY/maxresdefault.jpg",
+              "duration": 797,
+              "channel": "WilliamFiset"
+            },
+          {
+            "name": "Trees for Disjoint Sets",
+						"url": "https://www.youtube.com/watch?v=wU6udHRIkcc",
+						"thumbnail": "https://static.javatpoint.com/ds/images/heap-sort-algorithm6.png",
+						"duration": 1503,
+						"channel": "Abdul Bari"
+            }
+          
+        ]
+      },
+      {
+        "name": "Sorting",
+        "videos": [
+          {
+           
+              "name": "Heap Sort",
+              "url": "https://www.youtube.com/watch?v=MtQL_ll5KhQ",
+              "thumbnail": "https://img.youtube.com/vi/MtQL_ll5KhQ/maxresdefault.jpg",
+              "duration": 119,
+              "channel": "GeeksforGeeks"
+            
+          },
+          {
+           
+              "name": "Merge Sort",
+              "url": "https://www.youtube.com/watch?v=unxAnJBy12Q&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop&index=23",
+              "thumbnail": "https://img.youtube.com/vi/unxAnJBy12Q/maxresdefault.jpg",
+              "duration": 1284,
+              "channel": "Apna College"
+            
+          },
+          {
+              "name": "Quick Sort",
+              "url": "https://www.youtube.com/watch?v=QXum8HQd_l4&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop&index=24",
+              "thumbnail": "https://img.youtube.com/vi/QXum8HQd_l4/maxresdefault.jpg",
+              "duration": 1409,
+              "channel": "Apna College"
+            }
+          
+        ]
+      },
+      {
+        "name": "Binary Trees",
+        "videos": [{
+					
+            "name": "Binary Tree",
+						"url": "https://www.youtube.com/watch?v=-DzowlcaUmE",
+						"thumbnail": "https://img.youtube.com/vi/-DzowlcaUmE/maxresdefault.jpg",
+						"duration": 4933,
+						"channel": "Apna College"
+					
+				},
+				
+				{
+            "name": "Union by Rank",
+						"url": "https://www.youtube.com/watch?v=VHRhJWacxis",
+						"thumbnail": "https://img.youtube.com/vi/VHRhJWacxis/maxresdefault.jpg",
+						"duration": 395,
+						"channel": "WilliamFiset"
+					
+				}]
+      },
+      {
+        "name": "Hash Tables",
+        "videos": [{
+					
+            "name": "Hashing with example",
+						"url": "https://www.youtube.com/watch?v=W5q0xgxmRd8",
+						"thumbnail": "https://img.youtube.com/vi/W5q0xgxmRd8/maxresdefault.jpg",
+						"duration": 352,
+						"channel": "Gate Smashers"
+					
+				},
+				{
+            "name": "Hash Functions",
+						"url": "https://www.youtube.com/watch?v=KyUTuwz_b7Q",
+						"thumbnail": "https://img.youtube.com/vi/zeMa9sg-VJM/maxresdefault.jpg",
+						"duration": 833,
+						"channel": "Computer Science"
+					
+				}]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "649d8e4452f0bbfc8dd52fcf"
+    },
+    "name": "Cloud Computing",
+    "img": "",
+    "created_at": {
+      "$date": "2023-06-29T14:01:00.000Z"
+    },
+    "chapters": [
+      {
+        "name": "Overview of Cloud Computing",
+        "videos": [
+          [
+            {
+              "name": "Definition and essential characteristics of Cloud Computing",
+              "url": "https://www.youtube.com/watch?v=JyO5Gatb-cQ",
+              "thumbnail": "https://img.youtube.com/vi/JyO5Gatb-cQ/maxresdefault.jpg",
+              "duration": 350,
+              "channel": "Theax Webinars"
+            },
+            {
+              "name": "History and evolution of Cloud computing",
+              "url": "https://www.youtube.com/watch?v=Bkx8Egjm2mw",
+              "thumbnail": "https://img.youtube.com/vi/Bkx8Egjm2mw/maxresdefault.jpg",
+              "duration": 264,
+              "channel": "Theax Webinars"
+              
+            },
+            {
+              "name": "Key Cloud Service Providers and Their Services",
+              "url": "https://www.youtube.com/watch?v=1ERdeg8Sfv4",
+              "thumbnail": "https://img.youtube.com/vi/1ERdeg8Sfv4/maxresdefault.jpg",
+              "duration": 280,
+              "channel": "Lucid Software"
+             
+            },
+            {
+              "name": "Cloud adoption and transformation",
+              "url": "https://www.youtube.com/watch?v=1WvMfj_RRT4",
+              "thumbnail": "https://img.youtube.com/vi/1WvMfj_RRT4/maxresdefault.jpg",
+              "duration": 115,
+              "channel": "IBM Technology"
+             
+            },
+            {
+              "name": "Internet of Things in the Cloud",
+              "url": "https://www.youtube.com/watch?v=hHvMan9HWYI",
+              "thumbnail": "https://img.youtube.com/vi/hHvMan9HWYI/maxresdefault.jpg",
+              "duration": 1122,
+              "channel": "ENGINEERING TUTORIAL"
+              
+            },
+            {
+              "name": "Artificial Intelligence on the Cloud",
+              "url": "https://www.youtube.com/watch?v=iDbKKSOucJ0",
+              "thumbnail": "https://img.youtube.com/vi/iDbKKSOucJ0/maxresdefault.jpg",
+              "duration": 219,
+              "channel": "Hitechies Your Startup Tech Insights"
+              
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Cloud Computing Models",
+        "videos": [
+          {
+            "name": "Overview of Cloud Service Models",
+            "url": "https://www.youtube.com/watch?v=boY2i6qhPr8",
+            "thumbnail": "https://img.youtube.com/vi/boY2i6qhPr8/maxresdefault.jpg",
+            "duration": 594,
+            "channel": "Simplilearn"
+           
+          },
+          {
+            "name" : "IaaS - Infrastructure as a Service",
+            "url": "https://www.youtube.com/watch?v=XRdmfo4M_YA",
+            "thumbnail": "https://img.youtube.com/vi/XRdmfo4M_YA/maxresdefault.jpg",
+            "duration": 486,
+            "channel": "IBM Technology"
+            
+          },
+          {
+            "name": "PaaS - Platform as a Service",
+            "url": "https://www.youtube.com/watch?v=QAbqJzd0PEE",
+            "thumbnail": "https://img.youtube.com/vi/QAbqJzd0PEE/maxresdefault.jpg",
+            "duration": 397,
+            "channel": "IBM Technology"
+            
+          },
+          {
+            "name": "SaaS - Platform as a Service",
+            "url": "https://www.youtube.com/watch?v=20QUNgFIrK0",
+            "thumbnail": "https://img.youtube.com/vi/20QUNgFIrK0/maxresdefault.jpg",
+            "duration": 322,
+            "channel": "IBM Technology"
+            
+          }
+        ]
+      },
+      {
+        "name": "Components of a Cloud Computing",
+        "videos": [
+          {
+            "name": "Overview of Cloud Infrastructure",
+            "url": "https://www.youtube.com/watch?v=X43KVeWVkSY",
+            "thumbnail": "https://img.youtube.com/vi/X43KVeWVkSY/maxresdefault.jpg",
+            "duration": 853,
+            "channel": "Simplilearn"
+          }, {
+              "name" :  "Virtualization and Virtual Machines Explained",
+              "url": "https://www.youtube.com/watch?v=FZR0rG3HKIk",
+              "thumbnail": "https://img.youtube.com/vi/FZR0rG3HKIk/maxresdefault.jpg",
+              "duration": 319 ,
+              "channel": "IBM Technology"
+            }
+        ]
+      },
+      {
+        "name": "Emergent Trends in Cloud Computing",
+        "videos": [{
+					
+            "name": "Hybrid Multi-cloud",
+						"url": "https://www.youtube.com/watch?v=qkj5W98Xdvw",
+						"thumbnail": "https://img.youtube.com/vi/qkj5W98Xdvw/maxresdefault.jpg",
+						"duration": 814,
+						"channel": "TechWorld with Nana"
+				},
+				{
+            "name": "Serverless Computing",
+						"url": "https://www.youtube.com/watch?v=vxJobGtqKVM",
+						"thumbnail": "https://img.youtube.com/vi/vxJobGtqKVM/maxresdefault.jpg",
+						"duration": 401,
+						"channel": "IBM Technology"
+				},
+					{
+            "name": "Cloud Native Applications",
+						"url": "https://www.youtube.com/watch?v=fp9_ubiKqFU",
+						"thumbnail": "https://img.youtube.com/vi/fp9_ubiKqFU/maxresdefault.jpg",
+						"duration": 276,
+						"channel": "IBM Technology"
+					}
+				]
+      },
+      {
+        "name": "Cloud Security and Monitoring",
+        "videos": [
+          {
+              "name":"Identity and Access Management",
+              "url": "https://www.youtube.com/watch?v=jI8IKpjiCSM",
+              "thumbnail": "https://img.youtube.com/vi/jI8IKpjiCSM/maxresdefault.jpg",
+              "duration": 616,
+              "channel": "IBM Technology"
+          },
+          {
+              "name": "Identity and Access Management",
+              "url": "https://www.youtube.com/watch?v=gsgdAyGhV0o",
+              "thumbnail": "https://img.youtube.com/vi/gsgdAyGhV0o/maxresdefault.jpg",
+              "duration": 550,
+              "channel": "Simplilearn"
+          },
+          {
+              "name" : "Union by Rank",
+              "url": "https://www.youtube.com/watch?v=wY8cmFY4ua8",
+              "thumbnail": "https://img.youtube.com/vi/wY8cmFY4ua8/maxresdefault.jpg",
+              "duration": 257,
+              "channel": "Google Cloud Tech"
+          }
+        ]
+      },
+      {
+        "name": "Cloud Networking",
+        "videos": [
+          {
+              "name":  "Overview of Cloud Networking",
+              "url": "https://www.youtube.com/watch?v=WmyiE27uKOo",
+              "thumbnail": "https://img.youtube.com/vi/WmyiE27uKOo/maxresdefault.jpg",
+              "duration": 785,
+              "channel": "Cisco Data Center and Cloud Made Easy" 
+          },
+          {
+              "name": "Application and Traffic Patterns",
+              "url": "https://www.youtube.com/watch?v=cxYHugyNTP0",
+              "thumbnail": "https://img.youtube.com/vi/cxYHugyNTP0/maxresdefault.jpg",
+              "duration": 20422,
+              "channel": "Hussein Awad"
+            
+          }
+        ]
+      }
+      
+            
+    ]
+  },
+  {
+    "name": "Artificial Intelligence",
+    "img": "",
+    "created_at": {
+      "$date": "2023-06-30T14:01:00.000Z"
+    },
+    "chapters": [
+      {
+        "name": "Introduction to Deep Learning and Neural Networks",
+        "videos": [
+          {
+            "name": "Introduction to Deep Learning",
+              "url": "https://youtu.be/6M5VXKLf4D4",
+              "thumbnail": "https://img.youtube.com/vi/6M5VXKLf4D4/sddefault.jpg",
+              "duration": 351,
+              "channel": "Simplilearn "
+            
+          },
+          {
+            "name": "Introduction to Neural Networks",
+              "url": "https://youtu.be/aircAruvnKk",
+              "thumbnail": "https://img.youtube.com/vi/aircAruvnKk/maxresdefault.jpg",
+              "duration": 1153,
+              "channel": "3Blue1Brown"
+            }
+        ]
+      },
+      {
+        "name":"Artificial Neural Networks",
+       "videos": [
+          {
+            "name": "Gradient Descent",
+              "url": "https://youtu.be/IHZwWFHWa-w",
+              "thumbnail": "https://img.youtube.com/vi/IHZwWFHWa-w/maxresdefault.jpg",
+              "duration": 1260,
+              "channel": "3Blue1Brown"
+            }
+          ,
+          {
+            "name": "Backpropagation",
+              "url": "https://youtu.be/Ilg3gGewQ5U",
+              "thumbnail": "https://img.youtube.com/vi/Ilg3gGewQ5U/maxresdefault.jpg",
+              "duration": 833,
+              "channel": "3Blue1Brown"
+            }
+          ,
+          {
+            "Vanishing Gradient": {
+              "url": "https://youtu.be/qO_NLVjD6zE",
+              "thumbnail": "https://img.youtube.com/vi/qO_NLVjD6zE/maxresdefault.jpg",
+              "duration": 462,
+              "channel": "deeplizard"
+            }
+          }
+        ]
+
+      },
+      {
+       "name" : "Keras and Deep Learning Libraries" ,
+       "videos": [
+          {
+            "name": "Deep Learning Libraries",
+              "url": "https://youtu.be/zOzazSNAfZk",
+              "thumbnail": "https://img.youtube.com/vi/zOzazSNAfZk/maxresdefault.jpg",
+              "duration": 118,
+              "channel": "DeepLearning.TV"
+            }
+          ,
+          {
+            "name": "Regression Models with Keras",
+              "url": "https://youtu.be/wNhBUC6X5-E",
+              "thumbnail": "https://img.youtube.com/vi/wNhBUC6X5-E/maxresdefault.jpg",
+              "duration": 321,
+              "channel": "Jeff Heaton"
+            
+          },
+          {
+            "name": "Classification Models with Keras",
+              "url": "https://youtu.be/DjQFwJGnRDY",
+              "thumbnail": "https://img.youtube.com/vi/DjQFwJGnRDY/maxresdefault.jpg",
+              "duration": 403,
+              "channel": "TensorFlow"
+            }
+          
+        ]
+      },
+      {
+
+       "name" : "Deep Learning Models",
+        "videos" : [
+          {
+            "name": "Shallow Versus Deep Neural Networks",
+              "url": "https://youtu.be/xldc7DOvZ80",
+              "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFFMh7tHdexn37qyeEhOvzqiWENLQlPuwJCw&usqp=CAU",
+              "duration": 103,
+              "channel": "Ideas & Inspiration"
+            
+          },
+          {
+            "name": "Convolutional Neural Networks",
+              "url": "https://youtu.be/YRhxdVk_sIs",
+              "thumbnail": "https://img.youtube.com/vi/YRhxdVk_sIs/maxresdefault.jpg",
+              "duration": 516,
+              "channel": "deeplizard"
+            
+          },
+          {
+            "name": "Recurrent Neural Networks",
+              "url": "https://youtu.be/AsNTP8Kwu80",
+              "thumbnail": "https://img.youtube.com/vi/AsNTP8Kwu80/maxresdefault.jpg",
+              "duration": 996,
+              "channel": "StatQuest with Josh Starmer"
+            
+          },
+          {
+            "name": "Autoencoders",
+              "url": " https://youtu.be/3jmcHZq3A5s",
+              "thumbnail": "https://img.youtube.com/vi/3jmcHZq3A5s/maxresdefault.jpg",
+              "duration": 630,
+              "channel": "WelcomeAIOverlords"
+            
+          }
+        ]
+
+      },
+      {
+
+        "Introduction to Machine Learning": [
+          {
+            "name": "Introduction to Machine Learning",
+              "url": "https://youtu.be/ukzFI9rgwfU",
+              "thumbnail": "https://img.youtube.com/vi/ukzFI9rgwfU/maxresdefault.jpg",
+              "duration": 472,
+              "channel": "Simplilearn"
+            
+          },
+          {
+            "name": "Python for Machine Learning",
+              "url": "https://youtu.be/7eh4d6sabA0",
+              "thumbnail": "https://img.youtube.com/vi/7eh4d6sabA0/maxresdefault.jpg",
+              "duration": 2982,
+              "channel": "Programming with Mosh"
+            }
+          
+        ]
+      },
+      {
+       "name" : "Regression",
+       "videos" : [
+          {
+            "name": "Introduction to Regression",
+              "url": "https://youtu.be/0m-rs2M7K-Y",
+              "thumbnail": "https://img.youtube.com/vi/0m-rs2M7K-Y/maxresdefault.jpg",
+              "duration": 2716,
+              "channel": "DATAtab"
+            
+          },
+          {
+            "name": "Simple Linear Regression",
+              "url": "https://youtu.be/owI7zxCqNY0",
+              "thumbnail": "https://img.youtube.com/vi/owI7zxCqNY0/maxresdefault.jpg",
+              "duration": 808,
+              "channel": "dataminingincae"
+            }
+          
+        ]
+
+
+      },
+      {
+       "name" : "Clustering",
+        "videos": [
+          {
+            "name": "Introduction to Clustering",
+              "url": "https://youtu.be/vmIkSCiZpWY",
+              "thumbnail": "https://img.youtube.com/vi/vmIkSCiZpWY/maxresdefault.jpg",
+              "duration": 2519,
+              "channel": "Simplilearn"
+            
+          },
+          {
+            "name": "Intro to k-Means",
+              "url": "https://youtu.be/_S5tvagaQRU",
+              "thumbnail": "ttps://youtu.be/_S5tvagaQRU",
+              "duration": 916,
+              "channel": "Shokoufeh Mirzaei"
+            
+          }
+        ]
+      },
+      {
+
+       "name" : "Supervised Learning Modules",
+        "videos" : [
+          {
+            "name": "Introduction to Convolutional Neural Networks (CNNs)",
+              "url": "https://youtu.be/YRhxdVk_sIs",
+              "thumbnail": "https://img.youtube.com/vi/YRhxdVk_sIs/maxresdefault.jpg",
+              "duration": 516,
+              "channel": "deeplizard"
+            
+          },
+          {
+            "name": "Convolutional Neural Networks (CNNs) Architecture",
+              "url": "https://youtu.be/VF4BDE7uqY0",
+              "thumbnail": "https://img.youtube.com/vi/VF4BDE7uqY0/maxresdefault.jpg",
+              "duration": 916,
+              "channel": "Coding Lane"
+            }
+          
+        ]
+
+      },
+      {
+
+       "name" : "Unsupervised Learning Modules", 
+        "videos": [
+          {
+            "name": "Introduction to Restricted Boltzmann Machines",
+              "url": "https://youtu.be/Fkw0_aAtwIw",
+              "thumbnail": "https://img.youtube.com/vi/Fkw0_aAtwIw/maxresdefault.jpg",
+              "duration": 2217,
+              "channel": "Serrano.Academy"
+            
+          },
+          {
+            "name": "Restricted Boltzmann Machines (RBMs)",
+              "url": "https://youtu.be/puux7KZQfsE",
+              "thumbnail": "https://img.youtube.com/vi/puux7KZQfsE/maxresdefault.jpg",
+              "duration": 291,
+              "channel": "DeepLearning.TV"
+            }
+          
+        ]
+
+      }
+    ]
+  }
+   
+    
+  
+  
+
+
+  
+]
