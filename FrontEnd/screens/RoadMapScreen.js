@@ -6,10 +6,12 @@ import Discord from '../assets/Discord.png'
 import VerticalStepIndicator from '../components/VerticalStepIndicator';
 import axios from 'axios';
 import {url,au} from '../constant/Constant';
+import { useSelector } from 'react-redux';
 
 const RoadMapScreen = ({navigation,route}) => {
   const [_courseId] = useState(route.params._courseId);
     const [courseData, setCourseData] = useState({})
+    const value = useSelector((state) => state.course.data);
     const courseDetailsApi= async()=>{
       await axios.get(url+`api/course/${_courseId}`,{headers:{
           Authorization:au

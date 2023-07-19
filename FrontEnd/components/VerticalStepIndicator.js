@@ -32,9 +32,10 @@ const stepIndicatorStyles = {
 
 export default function VerticalStepIndicator({data,navigation}) {
   const [currentPage, setCurrentPage] = useState(0);
-  const [load,setLoad] = useState(false)
+  const [count,setCount] = useState(1)
 
     const [courseData, setCourseData] = useState([])
+
 
   useEffect(()=>{
     axios.get(url+`api/course/${data}`,{headers:{
@@ -42,26 +43,27 @@ export default function VerticalStepIndicator({data,navigation}) {
           }}).then((res)=>{
               // console.log(res.data)
               setCourseData(res.data.chapters)
+              setCount(res.data.chapters.length)
             }).catch((err)=>{
               console.log(err)
             })
   })
 
+  // console.log(typeof(count))
+
 
   return (
-    <>
-       { courseData && <StepIndicator
+    <StepIndicator
         customStyles={stepIndicatorStyles}
-        stepCount={courseData.length}
+        stepCount={count}
         direction="vertical"
         currentPosition={currentPage}
         labels={courseData.map((item) => item.name)}
         onPress={(num)=>{
           setCurrentPage(num)
-          navigation.navigate('CourseVideo')
+          navigation.navigate('CourseVideo',{_courseId:data})
         }}
-      /> }
-        </>
+      /> 
       
   );
 }
