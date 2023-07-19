@@ -3,10 +3,14 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
 import {url,au} from '../constant/Constant';
+import { useDispatch, useSelector } from 'react-redux';
+import { setData } from '../redux/courseDataSlice';
 
 const CourseDetailsScreen = ({ navigation, route }) => {
     const [_courseId] = useState(route.params._courseId);
     const [courseData, setCourseData] = useState({})
+
+    const dispatch = useDispatch();
     
     const courseDetailsApi= async()=>{
         await axios.get(url+`api/course/${_courseId}`,{headers:{
@@ -15,6 +19,8 @@ const CourseDetailsScreen = ({ navigation, route }) => {
         }}).then((res)=>{
             // console.log(res.data)
             setCourseData(res.data)
+            dispatch(setData(JSON.parse(JSON.stringify(res.data))))
+            
           }).catch((err)=>{
             console.log(err)
           })
