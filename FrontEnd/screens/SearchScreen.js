@@ -1,29 +1,55 @@
-import { StyleSheet, Text, View,TouchableOpacity,TextInput,TouchableWithoutFeedback,Keyboard, ActivityIndicator} from 'react-native'
-import React,{useState, useEffect} from 'react';
+import { StyleSheet, Text, View,TouchableOpacity,TextInput,TouchableWithoutFeedback,Keyboard, ActivityIndicator,Button,Alert} from 'react-native'
+import React,{useState, useEffect,useRef} from 'react';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import SearchBar from '../components/SearchBar';
+import axios from 'axios'
 
-
-const SearchScreen = () => {
+import { au,url } from '../constant/Constant';
+const SearchScreen = ({navigation}) => {
 
   const[loader,setLoader] = useState(true)
-
     useEffect(()=>{
       setTimeout(() => {
         setLoader(false)
       },2000);
     })
-    
+    const textInputRef = useRef(null);
+
+  
+    const handleClick= async(data)=>{
+      console.log("hello");
+      await axios.post(url+"api/search",{keyword:data},{headers:{Authorization:au}})
+      .then((res)=>{
+        //console.log(res.data)
+       navigation.navigate("Searchpage",{
+        itemId: 86,
+        otherParam: res.data,
+      })
+        // await Keychain.setGenericPassword(emailValue.value, passwordValue);
+      })
+      .catch((err)=>{
+        console.log(err)
+        Alert.alert("Search error");
+    })
+    }
+    const checkClick=(data)=>{
+      console.log(data);
+    }
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
     <View style={styles.container}>
-    <TouchableOpacity style={styles.backButton}>
-    <Ionicons name="ios-arrow-back" size={24} color="black" />
-    </TouchableOpacity>
-    <View style={styles.bottomContainer}>
-    <Text style={styles.title}>Search</Text>
+    <View style={styles.headContainer}>
+      <Text style={styles.headTitle}>
+        Search
+      </Text>
+      </View>
     
-    <SearchBar></SearchBar>
+    
+    
+    <View style={styles.bottomContainer}>
+    
+    
+    <SearchBar style={styles.SearchBar} getData={handleClick} ></SearchBar>
    
     <View style={styles.topSearch}>
     <Text style={styles.topSearchText}>Top Searches</Text>
@@ -105,7 +131,7 @@ const styles = StyleSheet.create({
     display:'flex',
     flex:1,
 backgroundColor:'#FAFCFB',
-    padding:20,
+   
     // borderColor:"#0000000",
     // borderWidth:1
   },
@@ -114,6 +140,7 @@ backgroundColor:'#FAFCFB',
     gap:20,
 backgroundColor:'#FAFCFB',
     padding:20,
+    paddingTop:50
   },
   backButton:{
     marginTop:30,
@@ -124,6 +151,9 @@ backgroundColor:'#FAFCFB',
     fontSize:20,
     fontFamily:'SourceSans3-SemiBold',
     marginBottom:10
+},
+SearchBar:{
+  paddingTop:40
 },
 topSearch:{
   display:'flex',
@@ -152,7 +182,7 @@ categoriesButton:{
   display:'flex',
   alignItems:'center',
   justifyContent:'center',
-  width:150,
+  width:160,
   height:50,
   backgroundColor:'#031D44',
   borderRadius:15,
@@ -196,5 +226,19 @@ border:{
   borderBottomWidth:1,
   width:"100%",
   borderBottomColor:"#313131"
+},
+headContainer:{
+  backgroundColor:"#FFFFFF",
+  display:"flex",
+  gap:15,
+  paddingBottom:20,
+  paddingLeft:30,
+  paddingTop:70,
+  borderBottomLeftRadius:10,
+  borderBottomRightRadius:10,
+},
+headTitle:{
+  fontSize:26,
+  fontFamily:'SourceSans3-SemiBold',
 }
 })

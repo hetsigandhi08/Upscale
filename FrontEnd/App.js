@@ -18,11 +18,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import RecoveryMailScreen from './screens/RecoveryMailScreen';
 // import RecoveryCodeScreen from './screens/RecoveryCodeScreen';
 import ChangePasswordScreen from './screens/ChangePasswordScreen';
+import SearchScreen from './screens/SearchScreen';
+import SearchPage from './screens/SearchPage';
 import CourseVideoScreen from './screens/CourseVideoScreen';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 // import * as Keychain from 'react-native-keychain';
 
+import CourseVideoScreen from './screens/CourseVideoScreen'
 const Stack = createNativeStackNavigator();
 export default function App () {
   const [intialScreen, setInitialScreen] = useState("GetStarted1");
@@ -77,6 +80,8 @@ export default function App () {
       {/* <Stack.Screen  name="RecoveryCode" options={{headerShown: false}} component={RecoveryCodeScreen} /> */}
       <Stack.Screen  name="ChangePassword" options={{headerShown: false}} component={ChangePasswordScreen} />
       <Stack.Screen name='CourseVideo' options={{headerShown: false}} component={CourseVideoScreen}/>
+      <Stack.Screen  name="SearchScreen" options={{headerShown: false}} component={SearchScreen} />
+      <Stack.Screen  name="Searchpage" options={{headerShown: false}} component={SearchPage} />
 
       </Stack.Navigator>
       <StatusBar />
