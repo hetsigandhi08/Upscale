@@ -1,14 +1,41 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios';
+import {url,au} from '../constant/Constant';
+import { useDispatch, useSelector } from 'react-redux';
+import { setData } from '../redux/courseDataSlice';
 
-const CourseDetailsScreen = () => {
+const CourseDetailsScreen = ({ navigation, route }) => {
+    const [_courseId] = useState(route.params._courseId);
+    const [courseData, setCourseData] = useState({})
+
+    const dispatch = useDispatch();
+    
+    const courseDetailsApi= async()=>{
+        await axios.get(url+`api/course/${_courseId}`,{headers:{
+            Authorization:au,
+            
+        }}).then((res)=>{
+            // console.log(res.data)
+            setCourseData(res.data)
+            dispatch(setData(JSON.parse(JSON.stringify(res.data))))
+            
+          }).catch((err)=>{
+            console.log(err)
+          })
+    }
+
+    useEffect(()=>{
+        courseDetailsApi();
+    },[courseData])
+
   return (
     
     <View style={styles.container}>
 
       <View style={styles.headContainer}>
-      <TouchableOpacity style={styles.backButton}>
+      <TouchableOpacity onPress={()=>navigation.goBack()} style={styles.backButton}>
       <Ionicons name="ios-arrow-back" size={24} color="#311E70" />
       </TouchableOpacity>
       <Text style={styles.headTitle}>
@@ -20,19 +47,19 @@ const CourseDetailsScreen = () => {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.courseContainer}>
         <Text style={styles.title}>
-        React and Redux Course 
+        {courseData.name}
         </Text>
 
         <Text style={styles.subTitle}>
         By Andrew carson
         </Text>
 
-        <Image style={styles.thumbnail} source={{uri:"https://miro.medium.com/v2/resize:fit:1200/0*YH6w5EXfjQpHTl8R"}} />
+        <Image style={styles.thumbnail} source={{uri:courseData.img}} />
 
       </View>
 
       
-      <TouchableOpacity style={styles.roadMapBtn} >
+      <TouchableOpacity onPress={()=>navigation.navigate('RoadMap',{_courseId:_courseId})} style={styles.roadMapBtn} >
           <Text style={styles.roadMapText}>See Roadmap</Text> 
       </TouchableOpacity>
 

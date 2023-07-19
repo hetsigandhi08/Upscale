@@ -37,6 +37,7 @@ const BottomTabScreen = () => {
         <Tab.Screen name="My Course" options={{headerShown: false}} component={MyCourseScreen} />
         <Tab.Screen name="Profile" options={{headerShown: false}} component={ProfileScreen} />
       </Tab.Navigator>
+
   )
 }
 

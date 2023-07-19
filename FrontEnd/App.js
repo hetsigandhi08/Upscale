@@ -20,6 +20,10 @@ import RecoveryMailScreen from './screens/RecoveryMailScreen';
 import ChangePasswordScreen from './screens/ChangePasswordScreen';
 import SearchScreen from './screens/SearchScreen';
 import SearchPage from './screens/SearchPage';
+import CourseVideoScreen from './screens/CourseVideoScreen';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+// import * as Keychain from 'react-native-keychain';
 
 import CourseVideoScreen from './screens/CourseVideoScreen'
 const Stack = createNativeStackNavigator();
@@ -58,6 +62,7 @@ export default function App () {
   // }
   // await Keychain.resetGenericPassword()
   return (
+    <Provider store={store} >
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Tab">
       <Stack.Screen name = "GetStarted1" options = {{headerShown: false}} component = {GetStartedScreen1} />
@@ -81,6 +86,7 @@ export default function App () {
       </Stack.Navigator>
       <StatusBar />
     </NavigationContainer>
+    </Provider>
   );
 }
 

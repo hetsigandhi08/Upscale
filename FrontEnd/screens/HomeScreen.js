@@ -3,20 +3,19 @@ import React, {useState, useEffect} from 'react'
 import * as Progress from 'react-native-progress';
 import InstructorCard from '../components/InstructorCard';
 import axios from 'axios';
-import url from '../constant/Constant';
+import {url,au} from '../constant/Constant';
 
-const HomeScreen = () => {
-  var au = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGIzNWZkYTEyYWZmZjFjMzY5YzczOTQiLCJpYXQiOjE2ODk2OTIxMzQsImV4cCI6MTY5MjI4NDEzNH0.eAsBdxfrQIUOQB4y6rqPs1WAtQcrNmdxyYVQRuP8Wo4'
+const HomeScreen = ({navigation}) => {
   const[progress,setProgress]=useState(0.3);
   const[loader,setLoader] = useState(true);
   const[recentCourseData, setRecentCourseData] = useState([])
 
-  var DATA;
-
   const recentCourseAPI =async()=>{
     await axios.get(url+"api/search/recent",{headers:{
-      Authorization:au
-    }}).then((res)=>{
+      Authorization:au,
+      
+    }
+  }).then((res)=>{
       // console.log(res.data)
       setRecentCourseData(res.data)
     }).catch((err)=>{
@@ -84,7 +83,7 @@ const HomeScreen = () => {
         horizontal 
         showsHorizontalScrollIndicator={false}
         data={recentCourseData}
-        renderItem={({item}) => <InstructorCard courseName={item.courseName} thumbnail={item.courseImg} /> }
+        renderItem={({item}) => <InstructorCard navigation={navigation} courseName={item.courseName} thumbnail={item.courseImg} courseId={item.courseId} /> }
       />
 
       </View>

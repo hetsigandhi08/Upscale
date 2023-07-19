@@ -2,11 +2,11 @@ import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import thumb from '../assets/thumbnail.jpeg'
 
-const InstructorCard = ({courseName, thumbnail}) => {
+const InstructorCard = ({courseName, thumbnail, courseId, navigation}) => {
   // console.log(courseName)
   return (
     <View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate('CourseDetails',{_courseId:courseId})}>
           <View style={styles.InsCardContainer}>
 
              <Image style={styles.imageContainer} source={{uri:thumbnail}} />
