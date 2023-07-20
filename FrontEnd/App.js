@@ -25,7 +25,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 // import * as Keychain from 'react-native-keychain';
 
-import CourseVideoScreen from './screens/CourseVideoScreen'
+
 const Stack = createNativeStackNavigator();
 export default function App () {
   const [intialScreen, setInitialScreen] = useState("GetStarted1");

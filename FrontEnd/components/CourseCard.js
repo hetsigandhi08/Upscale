@@ -6,7 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 const CourseCard = ({courseName,navigation,id}) => {
   return (
     <View>
-      <TouchableOpacity onPress={()=>{navigation.navigate('CourseDetails',)}}>
+      <TouchableOpacity onPress={()=>{navigation.navigate('CourseDetails', {_courseId:id})}}>
         <View style={styles.container}> 
 
         
