@@ -1,22 +1,15 @@
 version: '3'
 services:
-  nodejs: 
-    build: ./
-    # image: upscale/nodejs
-    container_name: apps
-    ports:
-      - 3000:3000
-    networks:
-      - mynet
   nginx: 
     build: ./nginx
     # image: upscale/nginx
     container_name: nginx
     ports:
       - 80:80
-    networks:
-      - mynet
 
-networks:
-  mynet:
-    driver: bridge
+  nodejs: 
+    build: ./
+    # image: upscale/nodejs
+    container_name: apps
+    # ports:
+    #   - 3000:3000
