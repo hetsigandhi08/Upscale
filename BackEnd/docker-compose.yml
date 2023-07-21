@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nodejs: 
+    build: ./
+    # image: upscale/nodejs
+    container_name: apps
+  nginx: 
+    build: ./nginx
+    # image: upscale/nginx
+    container_name: nginx
+    ports:
+      - 80:80
