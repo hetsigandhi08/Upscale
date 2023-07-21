@@ -8,7 +8,7 @@ const ContentScreen = () => {
 
   return (
     <>
-      <FlatList 
+      {/* <FlatList 
         contentContainerStyle={{display:'flex',gap:10}} 
         showsHorizontalScrollIndicator={false}
         nestedScrollEnabled 
@@ -16,7 +16,10 @@ const ContentScreen = () => {
         data={value.chapters}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({item,index}) => <ContentVideoCard indexSub={index} title={item.name} data={item.videos} /> }
-      />
+      /> */}
+      {
+        value.chapters.map((item,index)=> (<ContentVideoCard indexSub={index} title={item.name} data={item.videos} key={index} />))
+      }
     </>
   )
 }

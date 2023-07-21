@@ -7,32 +7,35 @@ const FaqScreen = () => {
   const menu =[
     { 
       title: 'How to access the Course details', 
-      data: 'Biryani also known as biriyani, biriani, birani or briyani, is a mixed rice dish with its origins among the Muslims of the Indian subcontinent. This dish is especially popular throughout the Indian subcontinent, as well as among the diaspora from the region. It is also prepared in other regions such as Iraqi Kurdistan.',
+      data: 'When you have successfully enrolled, you will usually receive an email from the course provider. If you have enrolled before the course starts, you will receive another email with a link to the course when it begins.',
     },
     { 
-      title: 'answers to common queries and concerns users may have about a product or service',
-      data: 'Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and various other ingredients (anchovies, olives, meat, etc.) baked at a high temperature, traditionally in a wood-fired oven. In formal settings, like a restaurant, pizza is eaten with knife and fork, but in casual settings it is cut into wedges to be eaten while held in the hand. Small pizzas are sometimes called pizzettas.'
+      title: 'What do Upscale courses include?',
+      data: 'Each Upscale course is created, owned and managed by the instructor(s). The foundation of each Upscale course are its lectures, which can include videos, slides, and text. In addition, instructors can add resources and various types of practice activities, as a way to enhance the learning experience of students.'
     },
     { 
-     title: 'Drinks',
-     data: 'A drink (or beverage) is a liquid intended for human consumption. In addition to their basic function of satisfying thirst, drinks play important roles in human culture. Common types of drinks include plain drinking water, milk, coffee, tea, hot chocolate, juice and soft drinks. In addition, alcoholic drinks such as wine, beer, and liquor, which contain the drug ethanol, have been part of human culture for more than 8,000 years.'
+     title: 'Do I have to start my Upscale course at a certain time? And how long do I have to complete it?',
+     data: 'There are no deadlines to begin or complete a course. Learn more about our Lifetime Access policy.'
     },
     { 
-      title: 'Deserts',
-      data: 'A dessert is typically the sweet course that concludes a meal in the culture of many countries, particularly Western culture. The course usually consists of sweet foods, but may include other items. The word "dessert" originated from the French word desservir "to clear the table" and the negative of the Latin word servire'
+      title: 'Where can I go for help?',
+      data: 'If you find you have a question about a paid course while you’re taking it, you can search for answers to your question in the Q&A or ask the instructor. Our Help Center has extensive information regarding Upscale’s various features, and articles with troubleshooting steps to help you quickly resolve any issues you encounter. Our support team is also happy to help.'
     },
   ]
 
   return ( 
     <View style={{gap:10}}>
       <Text style={styles.courseTitle}>FaqScreen</Text>
-      <FlatList
+      {/* <FlatList
         contentContainerStyle={{display:'flex',gap:10}} 
         nestedScrollEnabled 
         showsHorizontalScrollIndicator={false}
         data={menu}
         renderItem={({item}) =>  <Accordion title={item.title} data={item.data}/>}
-      />
+      /> */}
+      {
+        menu.map((item,index)=>(<Accordion title={item.title} data={item.data} key={index}/> ))
+      }
     </View>
   )
 }

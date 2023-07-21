@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import { View, TouchableOpacity, Text, StyleSheet, LayoutAnimation, Platform, UIManager} from "react-native";
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-const Accordion = ({data,title}) => {
+const Accordion = ({data,title,icon="ios-chevron-down"}) => {
   const [expand, setExpand] = useState(false);
   const toggleExpand=()=>{
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     setExpand(!expand)
+    console.log("2")
   }
   if (Platform.OS === 'android') {
     UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -15,7 +16,7 @@ const Accordion = ({data,title}) => {
     <View>
             <TouchableOpacity style={styles.row} onPress={toggleExpand}>
                 <Text style={[styles.title, styles.font]}>{title}</Text>
-                <Ionicons name={expand ? 'ios-chevron-up' : 'ios-chevron-down'} size={30} color={"#000000"} />
+                <Ionicons name={expand ? 'ios-chevron-up' : icon} size={30} color={"#000000"} />
             </TouchableOpacity>
             <View style={styles.parentHr}/>
             {

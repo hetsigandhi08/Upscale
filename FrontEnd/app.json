@@ -15,17 +15,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.harishdraco.Upscalefrontendproject"
     },
     "android": {
-      "softwareKeyboardLayoutMode" : "pan",
+      "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.harishdraco.Upscalefrontendproject"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "015973fc-2c67-4657-b4c4-171fd6bd53c5"
+      }
     }
   }
 }

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
       },
       cardHead:{
         marginLeft:5,
-        fontSize:18,
+        fontSize:16,
         fontFamily:'SourceSans3-SemiBold'
       },
       CardSubTitle:{

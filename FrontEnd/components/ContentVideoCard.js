@@ -22,7 +22,7 @@ const ContentVideoCard = ({title,data,indexSub}) => {
       <Text style={styles.courseTitle}>{title}</Text>
        
 
-       <FlatList
+       {/* <FlatList
         contentContainerStyle={{display:'flex',gap:10}} 
         showsHorizontalScrollIndicator={false}
         data={data}
@@ -38,7 +38,24 @@ const ContentVideoCard = ({title,data,indexSub}) => {
         <Ionicons  name="ios-play" size={24} color="black" />
         </TouchableOpacity> }
 
-       />
+       /> */}
+
+       {
+        data.map((item,index)=>(
+        <TouchableOpacity key={index} onPress={()=>{ dispatch(setCount({
+            subCourse:indexSub,
+            video:index
+        }))
+        console.log("1")}} style={styles.videoContainer}>
+        <View>
+        <Text numberOfLines={1} style={styles.videoTitle}>{item.name}</Text>
+        <Text style={styles.videoSubTitle}>{timeConvert(item.duration)}</Text>
+        </View>
+
+        <Ionicons  name="ios-play" size={24} color="black" />
+        </TouchableOpacity>
+        ))
+       }
       </View>
   )
 }
@@ -58,6 +75,7 @@ const styles = StyleSheet.create({
     videoTitle:{
         fontSize:14,
         color:"#090909",
+        width:240,
         fontFamily:'SourceSans3-SemiBold',
     },
     videoSubTitle:{
