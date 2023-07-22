@@ -1,0 +1,30 @@
+version: '3'
+services:
+  nginx: 
+    build: ./nginx
+    restart: always
+    # image: upscale/nginx
+    container_name: nginx
+    ports:
+      - 80:80
+
+  nodejs: 
+    build: ./
+    restart: always
+    # image: upscale/nodejs
+    container_name: apps
+    # ports:
+    #   - 3000:3000
+
+  redis:
+    image: redis:6.2
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --loglevel warning
+    volumes:
+      - cache:/data
+
+volumes:
+  cache:
+    driver: local
