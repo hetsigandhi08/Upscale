@@ -1,21 +1,15 @@
 import { StyleSheet, Text, View,TouchableOpacity,Image, ActivityIndicator, ScrollView} from 'react-native'
 import React, {useEffect, useState} from 'react'
 import MyCourseCard from '../components/MyCourseCard';
+import WrappedLoader from '../components/WrappedLoader';
+import { useSelector } from 'react-redux';
 
-const MyCourseScreen = () => {
+const MyCourseScreen = ({navigation}) => {
 
-  
-  const[loader,setLoader] = useState(true)
-
-  useEffect(()=>{
-    setTimeout(() => {
-      setLoader(false)
-    },2000);
-  })
+  const homeData = useSelector((state) => state.home.data);
 
   return (
-    <View style={loader? styles.activityContainer :styles.container}>
-      {loader ? <ActivityIndicator size="small" /> :
+
    <>
       <View style={styles.headContainer}>
       <Text style={styles.headTitle}>
@@ -25,20 +19,20 @@ const MyCourseScreen = () => {
 
       <ScrollView contentContainerStyle={styles.scrollContainer}>
 
-       <MyCourseCard/>
-       <MyCourseCard/>
-       <MyCourseCard/>
-       <MyCourseCard/>
-       <MyCourseCard/>
+       {
+        homeData.learningCourses.map((item,index)=>(
+          <MyCourseCard key={index} name={item.name} progress={item.progress} navigation={navigation} courseId={item.courseId} />
+        ))
+       }
 
       </ScrollView>
-    </>  }
-    </View>
+    </>  
+    
   )
 
 }
 
-export default MyCourseScreen
+export default WrappedLoader(MyCourseScreen);
 
 const styles = StyleSheet.create({
   container:{

@@ -15,6 +15,7 @@
     "@react-navigation/material-top-tabs": "^6.6.3",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
+    "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "expo": "~48.0.18",
     "expo-av": "~13.2.1",
@@ -33,9 +34,14 @@
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
     "react-native-step-indicator": "^1.0.3",
+    "react-native-svg": "^13.10.0",
     "react-native-tab-view": "^3.5.2",
     "react-native-timeline-flatlist": "^0.8.0",
-    "react-native-web": "~0.18.11"
+    "react-native-web": "~0.18.11",
+    "react-native-webview": "11.26.0",
+    "react-native-youtube-iframe": "^2.3.0",
+    "react-redux": "^8.1.1",
+    "expo-secure-store": "~12.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

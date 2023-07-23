@@ -6,31 +6,45 @@ import vid from "../assets/video.mp4";
 import OverviewScreen from './OverviewScreen';
 import ContentScreen from './ContentScreen';
 import FaqScreen from './FaqScreen';
+import axios from 'axios';
+import {url,au} from '../constant/Constant';
+import { useSelector } from 'react-redux';
+import YoutubeIframe from 'react-native-youtube-iframe';
 
-const CourseVideoScreen = () => {
-    const video = useRef(null);
+const CourseVideoScreen = ({navigation,route}) => {
+    const value = useSelector((state) => state.course.data);
+    const count = useSelector((state) => state.count.data);
+    const [_courseId] = useState(route.params._courseId);
     const [tabSelected, setTabSelected] = useState("overview")
-    useEffect(()=>{
-        setTimeout(() => {
-          video.current.playAsync();
-        }, 100);
-      })
+    
+    // var s = "https://www.youtube.com/watch?v=JyO5Gatb-cQ"
+    // console.log(s.split('=').pop());
+
+    // const arr = value.chapters[count.subCourse].videos[count.video].url.split('=').pop()
+
   return (
     <View style={{backgroundColor:"#FAFCFB",flex:1}}>
     <View style={styles.container}>
       <View style={styles.headContainer}>
-      <TouchableOpacity style={styles.backButton}>
+      <TouchableOpacity onPress={()=>navigation.goBack()} style={styles.backButton}>
       <Ionicons name="ios-arrow-back" size={24} color="#311E70" />
       </TouchableOpacity>
       <Text style={styles.headTitle}>
-        Name of Course
+        {value.name}
       </Text>
       </View>
-      <Video style={styles.videoContainer} ref={video} isLooping source={vid} resizeMode={ResizeMode.COVER} useNativeControls={true} />
+      {/* <Video style={styles.videoContainer} ref={video} source={{uri:"https://drive.google.com/uc?id=1yRo8xYE91Tn7Ep33-SKg0rcA2bvOadTX&export=download"}} resizeMode={ResizeMode.COVER} useNativeControls={true} /> */}
+
+      <YoutubeIframe 
+      height={240}
+      play={true}
+      videoId={value.chapters[count.subCourse].videos[count.video].url.split('=').pop()}
+      />  
+  
 
       <View style={styles.bottomContainer}>
          <Text style={styles.courseTitle}>
-         React Redux
+         {value.chapters[count.subCourse].videos[count.video].name}
          </Text>
          <View style={{display:'flex',flexDirection:'row',alignItems:'center',gap:10}}>
          <Ionicons name="ios-information-circle-sharp" size={24} color="#5C38D1" />
@@ -113,7 +127,7 @@ const styles = StyleSheet.create({
     bottomContainer:{
         display:'flex',
         paddingHorizontal:20,
-        paddingVertical:20,
+        paddingVertical:0,
         gap:10,
     },
     courseTitle:{

@@ -1,69 +1,25 @@
 import { StyleSheet, Text, View, ScrollView, FlatList } from 'react-native'
 import React from 'react'
 import ContentVideoCard from '../components/ContentVideoCard';
+import { useSelector } from 'react-redux';
 
 const ContentScreen = () => {
-
-  const data = [{
-    title:"Introduction",
-    data:[
-      {
-        name:"video no.1",
-        min:"12"
-      },
-      {
-        name:"video no.2",
-        min:"12"
-      },
-      {
-        name:"video no.12",
-        min:"12"
-      },
-      {
-        name:"video no.13",
-        min:"12"
-      },
-      {
-        name:"video no.14",
-        min:"12"
-      },
-    ]
-  },
-  {
-    title:"Fundamental",
-    data:[
-      {
-        name:"video no.1",
-        min:"12"
-      },
-      {
-        name:"video no.2",
-        min:"12"
-      },
-      {
-        name:"video no.12",
-        min:"12"
-      },
-      {
-        name:"video no.13",
-        min:"12"
-      },
-      {
-        name:"video no.14",
-        min:"12"
-      },
-    ]
-  }]
+  const value = useSelector((state) => state.course.data);
 
   return (
     <>
-      <FlatList 
+      {/* <FlatList 
         contentContainerStyle={{display:'flex',gap:10}} 
         showsHorizontalScrollIndicator={false}
         nestedScrollEnabled 
-        data={data}
-        renderItem={({item,key}) => <ContentVideoCard data={item.data} title={item.title} key={key}  /> }
-      />
+        needsOffscreenAlphaCompositing
+        data={value.chapters}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({item,index}) => <ContentVideoCard indexSub={index} title={item.name} data={item.videos} /> }
+      /> */}
+      {
+        value.chapters.map((item,index)=> (<ContentVideoCard indexSub={index} title={item.name} data={item.videos} key={index} />))
+      }
     </>
   )
 }

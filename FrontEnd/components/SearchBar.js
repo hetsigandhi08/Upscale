@@ -1,15 +1,25 @@
 import { StyleSheet, Text, View,TextInput,TouchableWithoutFeedback,Keyboard } from 'react-native'
 import React,{useState} from 'react'
 import { EvilIcons } from '@expo/vector-icons';
-const SearchBar = () => {
+const SearchBar = ({getData,goto,active}) => {
     const [searchFocusState,setSearchFocusState] = useState(false);
+    const[searchData,setSearchData]=useState("")
+
+    handleSubmit=()=>{
+       getData(searchData);
+      //console.log(searchData);
+    }
+    // handleGoto=()=>{
+    //   console.log("handled");
+    //   goto("hey");
+    // }
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+    // <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
     <View style={styles.searchContainer}>
-    <TextInput style={searchFocusState ? styles.searchInputFocused : styles.searchInput} placeholder='       Search for courses'  onBlur={()=>setSearchFocusState(false)} onFocus={()=>setSearchFocusState(true)}/>
-    <EvilIcons  style={styles.searchIcon} name="search" size={24} color="black" />
+    <TextInput onChangeText={(e)=>setSearchData(e)} style={searchFocusState ? styles.searchInputFocused : styles.searchInput} placeholder='       Search for courses'  onBlur={()=>setSearchFocusState(false)} onFocus={()=>setSearchFocusState(true)} onSubmitEditing={handleSubmit}  />
+    <EvilIcons  style={styles.searchIcon} name="search" size={24} color="black" onPress={handleSubmit} />
     </View>
-    </TouchableWithoutFeedback>
+    // </TouchableWithoutFeedback>
   )
 }
 
@@ -41,7 +51,7 @@ const styles = StyleSheet.create({
               flex:1
       },
       searchContainer: {
-        flex: 1,
+        // flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
         
@@ -51,7 +61,7 @@ const styles = StyleSheet.create({
           right: 10,
       },
       input: {
-        flex: 1,
+        // flex: 1,
         
       },  
 })

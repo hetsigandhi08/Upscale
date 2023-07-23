@@ -7,13 +7,12 @@ import ProfileScreen from './ProfileScreen';
 import SearchScreen from './SearchScreen';
 import MyCourseScreen from './MyCourseScreen';
 import Ionicons from '@expo/vector-icons/Ionicons';
-
+import SearchPage from './SearchPage';
 
 const Tab = createBottomTabNavigator();
 const BottomTabScreen = () => {
   return (
-    <NavigationContainer independent={true}>
-       <Tab.Navigator
+       <Tab.Navigator initialRouteName='Home'
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -38,7 +37,7 @@ const BottomTabScreen = () => {
         <Tab.Screen name="My Course" options={{headerShown: false}} component={MyCourseScreen} />
         <Tab.Screen name="Profile" options={{headerShown: false}} component={ProfileScreen} />
       </Tab.Navigator>
-    </NavigationContainer>
+
   )
 }
 
