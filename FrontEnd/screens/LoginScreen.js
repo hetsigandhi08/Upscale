@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, TouchableWi
 import React, { useState } from 'react'
 import apple from '../assets/apple.png'
 import google from '../assets/google.png'
-import url from '../constant/Constant'
+import {url} from '../constant/Constant'
 import axios from 'axios'
 // import * as Keychain from 'react-native-keychain';
 
