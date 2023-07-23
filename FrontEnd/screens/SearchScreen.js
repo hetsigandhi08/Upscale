@@ -18,13 +18,15 @@ const SearchScreen = ({navigation}) => {
 
   
     const handleClick= async(data)=>{
-      console.log("hello");
+      
       await axios.post(url+"api/search",{keyword:data},{headers:{Authorization:au}})
       .then((res)=>{
-        //console.log(res.data)
+       
        navigation.navigate("Searchpage",{
         itemId: 86,
         otherParam: res.data,
+        searchedWord:data
+        
       })
         // await Keychain.setGenericPassword(emailValue.value, passwordValue);
       })
