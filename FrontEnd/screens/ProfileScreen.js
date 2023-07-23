@@ -24,7 +24,7 @@ return (
           Settings
          </Text>
 
-         <TouchableOpacity style={styles.btnContainer}>
+         <TouchableOpacity onPress={()=>navigation.navigate("AccountInfo")} style={styles.btnContainer}>
          <View style={{display:'flex',flexDirection:'row',alignItems:'center',gap:10}}>
          <Ionicons name="person-circle-outline" size={24} color="black" />
          <Text>Account Information</Text>
