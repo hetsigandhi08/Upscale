@@ -38,7 +38,7 @@ const HomeScreen = ({navigation}) => {
 
   return (
     <View style={{flex:1}}>
-    <View style={{backgroundColor:"#FAFCFB",width:"100%",height:40}}></View>
+    <View style={{backgroundColor:"#FAFCFB",width:"100%",height:50}}></View>
     <ScrollView contentContainerStyle={styles.container}>
       
       <View style={styles.topContainer}>
