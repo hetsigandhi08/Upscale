@@ -111,11 +111,14 @@ const OnBoardingScreen1 = ({ navigation }) => {
     <TextInput onChangeText={(e)=>setPasswordValue(e)} style={passwordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Enter Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setPasswordFocusState(false)} onFocus={()=>setPasswordFocusState(true)}/>
     <TextInput onChangeText={(e)=>setConfirmPasswordValue(e)} style={confirmPasswordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Confirm Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setConfirmPasswordFocusState(false)} onFocus={()=>setConfirmPasswordFocusState(true)}/>
       
-      {/* <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('OnBoardingScreen2')}} > */}
-      <TouchableOpacity style={styles.loginBtn} onPress={handleSubmit} >
-
-          <Text style={styles.loginText}>Sign Up</Text>
+      <TouchableOpacity style={styles.signUpBtn} onPress={handleSubmit} >
+          <Text style={styles.signUpText}>Sign Up</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity style={styles.loginBtn} onPress={()=>{navigation.navigate('Login')}} >
+      <Text style={styles.loginText}>Login</Text>
+      </TouchableOpacity>
+
     </View>
 
     <View style={styles.bottomContainer}>
@@ -126,12 +129,12 @@ const OnBoardingScreen1 = ({ navigation }) => {
     </TouchableOpacity>
       <TouchableOpacity style={styles.loginGoogle}  >
           <Image style={{marginLeft:6}} source={google}/>
-          <Text style={styles.loginText}>Google</Text>
+          <Text style={styles.signUpText}>Google</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.loginApple} >
           <Image style={{marginBottom:4,marginRight:6}} source={apple}/>
-          <Text style={styles.loginText}>Apple</Text>
+          <Text style={styles.signUpText}>Apple</Text>
       </TouchableOpacity>
       </View>
 
@@ -197,18 +200,34 @@ const styles = StyleSheet.create({
         borderWidth:1,
         borderColor: '#5237C0'
     },
+    signUpBtn:{
+      display:'flex',
+      alignItems:'center',
+      justifyContent:'center',
+      width:263,
+      height:47,
+      backgroundColor:'#5237b0',
+      borderRadius:42,
+      marginTop:30
+  },
+  signUpText:{
+      color:'#FEFEFE',
+      fontFamily:'SourceSans3-Regular',
+  },
     loginBtn:{
         display:'flex',
         alignItems:'center',
         justifyContent:'center',
         width:263,
         height:47,
-        backgroundColor:'#5237b0',
+        // backgroundColor:'#5237b0',
+        borderColor:'#5237b0',
+        borderWidth:2,
         borderRadius:42,
-        marginTop:30
+        marginTop:10
     },
     loginText:{
-        color:'#FEFEFE',
+        color:'#5237b0',
         fontFamily:'SourceSans3-Regular',
     },
     bottomContainer:{

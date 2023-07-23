@@ -3,11 +3,20 @@ import React, { useState,useEffect } from 'react'
 import Rectangle4 from '../assets/Rectangle4.jpg'
 import Rectangle6 from '../assets/Rectangle6.jpg'
 import * as Progress from 'react-native-progress';
+import { getValueFor } from '../services/SecureStore';
 
 
 
 
 const GetStartedScreen1 = ({navigation}) => {
+
+
+  getValueFor("auth").then((res)=>{
+    if(res){
+      navigation.navigate('Tab')
+    }
+  })
+
 
 const[progress,setProgress]=useState(0);
 useEffect(()=>{

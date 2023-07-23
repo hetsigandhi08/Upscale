@@ -10,6 +10,7 @@ import fa2 from '../assets/Frame2.png'
 import {url,au} from '../constant/Constant';
 import WrappedLoader from '../components/WrappedLoader';
 import Accordion from '../components/Accordion';
+import { getValueFor } from '../services/SecureStore';
 
 const HomeScreen = ({navigation}) => {
   const[progress,setProgress]=useState(0.3);
@@ -28,6 +29,7 @@ const HomeScreen = ({navigation}) => {
       console.log(err)
     })
   }
+
     useEffect(()=>{
       recentCourseAPI();
       setTimeout(() => {
@@ -38,7 +40,7 @@ const HomeScreen = ({navigation}) => {
 
   return (
     <View style={{flex:1}}>
-    <View style={{backgroundColor:"#FAFCFB",width:"100%",height:40}}></View>
+    <View style={{backgroundColor:"#FAFCFB",width:"100%",height:50}}></View>
     <ScrollView contentContainerStyle={styles.container}>
       
       <View style={styles.topContainer}>

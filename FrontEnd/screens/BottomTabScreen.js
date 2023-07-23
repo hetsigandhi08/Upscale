@@ -12,7 +12,7 @@ import SearchPage from './SearchPage';
 const Tab = createBottomTabNavigator();
 const BottomTabScreen = () => {
   return (
-       <Tab.Navigator
+       <Tab.Navigator initialRouteName='Home'
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
