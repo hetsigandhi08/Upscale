@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import apple from '../assets/apple.png'
 import google from '../assets/google.png'
 import * as Progress from 'react-native-progress';
-import url from '../constant/Constant'
+import {url} from '../constant/Constant'
 import axios from 'axios'
 // import * as Keychain from 'react-native-keychain';
 
