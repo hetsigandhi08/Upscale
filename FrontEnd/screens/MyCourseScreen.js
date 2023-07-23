@@ -1,21 +1,12 @@
 import { StyleSheet, Text, View,TouchableOpacity,Image, ActivityIndicator, ScrollView} from 'react-native'
 import React, {useEffect, useState} from 'react'
 import MyCourseCard from '../components/MyCourseCard';
+import WrappedLoader from '../components/WrappedLoader';
 
 const MyCourseScreen = () => {
 
-  
-  const[loader,setLoader] = useState(true)
-
-  useEffect(()=>{
-    setTimeout(() => {
-      setLoader(false)
-    },2000);
-  })
-
   return (
-    <View style={loader? styles.activityContainer :styles.container}>
-      {loader ? <ActivityIndicator size="small" /> :
+
    <>
       <View style={styles.headContainer}>
       <Text style={styles.headTitle}>
@@ -32,13 +23,13 @@ const MyCourseScreen = () => {
        <MyCourseCard/>
 
       </ScrollView>
-    </>  }
-    </View>
+    </>  
+    
   )
 
 }
 
-export default MyCourseScreen
+export default WrappedLoader(MyCourseScreen);
 
 const styles = StyleSheet.create({
   container:{

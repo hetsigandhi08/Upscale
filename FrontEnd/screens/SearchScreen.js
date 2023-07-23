@@ -5,6 +5,7 @@ import SearchBar from '../components/SearchBar';
 import axios from 'axios'
 
 import { au,url } from '../constant/Constant';
+import WrappedLoader from '../components/WrappedLoader';
 const SearchScreen = ({navigation}) => {
 
   const[loader,setLoader] = useState(true)
@@ -36,8 +37,8 @@ const SearchScreen = ({navigation}) => {
       console.log(data);
     }
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-    <View style={styles.container}>
+    <TouchableWithoutFeedback style={styles.container} onPress={Keyboard.dismiss} accessible={false}>
+    <>
     <View style={styles.headContainer}>
       <Text style={styles.headTitle}>
         Search
@@ -120,12 +121,12 @@ const SearchScreen = ({navigation}) => {
     
     </View>
     </View>
-    </View>
+    </>
      </TouchableWithoutFeedback>
     
   )
 }
-export default SearchScreen
+export default WrappedLoader(SearchScreen);
 const styles = StyleSheet.create({
   container:{
     display:'flex',

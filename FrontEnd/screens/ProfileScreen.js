@@ -1,20 +1,11 @@
 import { StyleSheet, Text, View, ActivityIndicator, TouchableOpacity, ScrollView } from 'react-native'
 import Ionicons from '@expo/vector-icons/Ionicons';
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
+import WrappedLoader from '../components/WrappedLoader';
 
 const ProfileScreen = () => {
-
-  const[loader,setLoader] = useState(true)
-
-  useEffect(()=>{
-    setTimeout(() => {
-      setLoader(false)
-    },2000);
-  })
   
 return (
-  <View style={loader? styles.activityContainer :styles.container}>
-   {loader ? <ActivityIndicator size="small" /> :
    <>
       <View style={styles.headContainer}>
       {/* <TouchableOpacity style={styles.backButton}>
@@ -124,13 +115,11 @@ return (
       </ScrollView>
 
       </>
-      }
-  </View>
 )
 
 }
 
-export default ProfileScreen
+export default WrappedLoader(ProfileScreen);
 
 const styles = StyleSheet.create({
     container:{

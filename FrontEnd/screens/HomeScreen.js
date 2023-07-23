@@ -1,9 +1,15 @@
-import { StyleSheet, Text, TouchableOpacity, View, ScrollView, FlatList, ActivityIndicator } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView, FlatList, ActivityIndicator, Image } from 'react-native'
 import React, {useState, useEffect} from 'react'
 import * as Progress from 'react-native-progress';
 import InstructorCard from '../components/InstructorCard';
 import axios from 'axios';
+import fra from '../assets/Frame108.png'
+import fa from '../assets/Poster.png'
+import fa1 from '../assets/Frame1.png'
+import fa2 from '../assets/Frame2.png'
 import {url,au} from '../constant/Constant';
+import WrappedLoader from '../components/WrappedLoader';
+import Accordion from '../components/Accordion';
 
 const HomeScreen = ({navigation}) => {
   const[progress,setProgress]=useState(0.3);
@@ -11,7 +17,7 @@ const HomeScreen = ({navigation}) => {
   const[recentCourseData, setRecentCourseData] = useState([])
 
   const recentCourseAPI =async()=>{
-    await axios.get(url+"api/search/recent",{headers:{
+    await axios.get(url+"api/course",{headers:{
       Authorization:au,
       
     }
@@ -31,10 +37,10 @@ const HomeScreen = ({navigation}) => {
     },[recentCourseData])
 
   return (
-    <ScrollView contentContainerStyle={loader ? styles.activityContainer :styles.container}>
-      { loader ? <ActivityIndicator size="small"/> : 
+    <View style={{flex:1}}>
+    <View style={{backgroundColor:"#FAFCFB",width:"100%",height:40}}></View>
+    <ScrollView contentContainerStyle={styles.container}>
       
-      (<>
       <View style={styles.topContainer}>
       <Text style={styles.title}>Your progress</Text>
 
@@ -76,40 +82,102 @@ const HomeScreen = ({navigation}) => {
 
 
       <View style={styles.TopInstructorContainer}>
-        <Text style={styles.title}>Recent Courses</Text>
+        <Text style={styles.title}>Suggested Courses</Text>
 
         <FlatList
         contentContainerStyle={{display:'flex',gap:10}} 
         horizontal 
         showsHorizontalScrollIndicator={false}
         data={recentCourseData}
-        renderItem={({item}) => <InstructorCard navigation={navigation} courseName={item.courseName} thumbnail={item.courseImg} courseId={item.courseId} /> }
+        renderItem={({item}) => <InstructorCard navigation={navigation} courseName={item.name} thumbnail={item.img} courseId={item._id} /> }
       />
 
       </View>
 
-      {/* <View style={styles.TopInstructorContainer}>
-        <Text style={styles.title}>Top Courses</Text>
+      <View style={styles.ExploreCourseContainer}>
+      <Text style={styles.title}>Explore courses</Text>
 
-        <FlatList
-        contentContainerStyle={{display:'flex',gap:10}} 
-        horizontal 
-        showsHorizontalScrollIndicator={false}
-        data={recentCourseData}
-        renderItem={({item}) => <InstructorCard courseName={item.courseName}/> }
-      />
+      <Image style={{borderRadius:5,width:"100%",height:280}} source={fra} />
 
-      </View> */}
-      </>
-       )}
+      <View style={{gap:3}}>
+      <Text style={styles.MinTitle}>Demanding Skills</Text>
+      <Text style={styles.subTitle}>Click the sub categories to see more details about structure</Text>
+      </View> 
 
+      <Accordion title={"Machine Learning"} icon='ios-add-circle-outline' />
+      <Accordion title={"React and Redux"} icon='ios-add-circle-outline' />
+      <Accordion title={"Prompt Engineering"} icon='ios-add-circle-outline' />
+       
 
+      <View style={{gap:3}}>
+      <Text style={styles.MinTitle}>From Scratch</Text>
+      <Text style={styles.subTitle}>Click the sub categories to see more details about structure</Text>
 
+      <View style={{display:"flex",flexWrap:"wrap",maxHeight:400,gap:30,marginTop:10, flexDirection:"column"}}>
+
+      <TouchableOpacity style={{display:"flex",width:160,height:160,borderRadius:5,borderWidth:1,borderColor:"#D1D1D1",alignItems:"center",paddingTop:30}}>
+          <Image resizeMode='stretch' source={fa1} style={{width:30,height:30,marginBottom:30}}/>
+          <View style={{width:"100%",padding:10}}  >
+            <Text style={styles.Min2Title}>
+            Open CV and Tensor
+            </Text>
+            <Text style={styles.subTitle}>
+              4 Courses
+            </Text>
+            
+          </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={{display:"flex",width:160,height:160,borderRadius:5,borderWidth:1,borderColor:"#D1D1D1",alignItems:"center",paddingTop:30}}>
+          <Image resizeMode='stretch' source={fa2} style={{width:30,height:30,marginBottom:30}}/>
+          <View style={{width:"100%",padding:10}}  >
+            <Text style={styles.Min2Title}>
+            Prompt Engineering
+            </Text>
+            <Text style={styles.subTitle}>
+              4 Courses
+            </Text>
+            
+          </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={{display:"flex",width:160,height:160,borderRadius:5,borderWidth:1,borderColor:"#D1D1D1",alignItems:"center",paddingTop:30}}>
+          <Image resizeMode='stretch' source={fa2} style={{width:30,height:30,marginBottom:30}}/>
+          <View style={{width:"100%",padding:10}}  >
+            <Text style={styles.Min2Title}>
+            Open CV and Tensor
+            </Text>
+            <Text style={styles.subTitle}>
+              4 Courses
+            </Text>
+            
+          </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={{display:"flex",width:160,height:160,borderRadius:5,borderWidth:1,borderColor:"#D1D1D1",alignItems:"center",paddingTop:30}}>
+          <Image resizeMode='stretch' source={fa1} style={{width:30,height:30,marginBottom:30}}/>
+          <View style={{width:"100%",padding:10}}  >
+            <Text style={styles.Min2Title}>
+            Open CV and Tensor
+            </Text>
+            <Text style={styles.subTitle}>
+              4 Courses
+            </Text>
+            
+          </View>
+      </TouchableOpacity>
+
+      </View>
+      </View>  
+
+ 
+      </View>
     </ScrollView>
+    </View>
   )
 }
 
-export default HomeScreen
+export default WrappedLoader(HomeScreen);
 
 const styles = StyleSheet.create({
   container:{
@@ -117,10 +185,11 @@ const styles = StyleSheet.create({
     // flex:1,
     backgroundColor:'#FAFCFB',
     alignItems:'center',
-    paddingTop:80,
+    paddingTop:10,
     paddingLeft:20,
     // paddingRight:20,
-    gap:20
+    gap:20,
+    paddingBottom:50
     // fontFamily:'SourceSans3-SemiBold'
     // justifyContent:"center"
   },
@@ -165,4 +234,18 @@ const styles = StyleSheet.create({
     width:'100%',
     gap:20,
   },
+  ExploreCourseContainer:{
+    display:'flex',
+    width:'100%',
+    paddingRight:20,
+    gap:20,
+  },
+  MinTitle:{
+    fontSize:24,
+    fontFamily:'SourceSans3-SemiBold'
+  },
+  Min2Title:{
+    fontSize:16,
+    fontFamily:'SourceSans3-SemiBold'
+  }
 })

@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
     bottomContainer:{
         display:'flex',
         paddingHorizontal:20,
-        paddingVertical:20,
+        paddingVertical:0,
         gap:10,
     },
     courseTitle:{
