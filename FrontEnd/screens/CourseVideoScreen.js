@@ -12,22 +12,15 @@ import { useSelector } from 'react-redux';
 import YoutubeIframe from 'react-native-youtube-iframe';
 
 const CourseVideoScreen = ({navigation,route}) => {
-    const video = useRef(null);
     const value = useSelector((state) => state.course.data);
     const count = useSelector((state) => state.count.data);
     const [_courseId] = useState(route.params._courseId);
     const [tabSelected, setTabSelected] = useState("overview")
-    const [courseData, setCourseData] = useState({})
-    const [videoNo,setVideoNo] = useState(0);
-    const [subCourseNo,setSubCourseNo] = useState(0);
+    
+    // var s = "https://www.youtube.com/watch?v=JyO5Gatb-cQ"
+    // console.log(s.split('=').pop());
 
-    const arr = value.chapters[count.subCourse].videos[count.video].url.split('=').pop()
-
-    // useEffect(()=>{
-    //   setTimeout(() => {
-    //     video.current.playAsync();
-    //   }, 100);
-    // })
+    // const arr = value.chapters[count.subCourse].videos[count.video].url.split('=').pop()
 
   return (
     <View style={{backgroundColor:"#FAFCFB",flex:1}}>
@@ -45,7 +38,7 @@ const CourseVideoScreen = ({navigation,route}) => {
       <YoutubeIframe 
       height={240}
       play={true}
-      videoId={arr}
+      videoId={value.chapters[count.subCourse].videos[count.video].url.split('=').pop()}
       />  
   
 
