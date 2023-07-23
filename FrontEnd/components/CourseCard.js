@@ -3,7 +3,7 @@ import React from 'react'
 import machine_learning from '../assets/machine_learning.jpg';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
-const CourseCard = ({courseName,navigation,id}) => {
+const CourseCard = ({courseName,navigation,id,image}) => {
   return (
     <View>
       <TouchableOpacity onPress={()=>{navigation.navigate('CourseDetails', {_courseId:id})}}>
@@ -11,7 +11,7 @@ const CourseCard = ({courseName,navigation,id}) => {
 
         
         <View style={styles.imageContainer}>
-            <Image style={styles.image}  source={machine_learning}></Image>
+            <Image style={styles.image}  source={{uri:image}}></Image>
         </View>
 
         <View style={styles.rightContainer}>
