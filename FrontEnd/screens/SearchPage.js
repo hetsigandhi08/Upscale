@@ -3,17 +3,20 @@ import React,{useState,useEffect} from 'react'
 import CourseCard from '../components/CourseCard';
 import SearchBar from '../components/SearchBar';
 import SearchScreen from './SearchScreen';
-import axios from 'axios'
+import axios from 'axios';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { au,url } from '../constant/Constant';
-const SearchPage = ({ navigation , route}) => {
+const SearchPage = ({ navigation , route,}) => {
     const[loader,setLoader] = useState(true);
 
     const[showSearchScreen,setShowearchScreen]=useState(false);
-    const { itemId, otherParam } = route.params;
+    const { itemId, otherParam,searchedWord } = route.params;
+    const[resultsFound,setResultsFound]=useState(false);
   useEffect(()=>{
     setTimeout(() => {
       setLoader(false);
-      console.log(otherParam);
+    console.log(otherParam.length);
+      
     },2000);
   })
 //  gotoSearch=(data)=>{
@@ -22,13 +25,15 @@ const SearchPage = ({ navigation , route}) => {
 //  }
 
 const handleClick= async(data)=>{
-  console.log("hello");
+ 
   await axios.post(url+"api/search",{keyword:data},{headers:{Authorization:au}})
   .then((res)=>{
-    //console.log(res.data)
+    console.log(res.data.length);
+    
    navigation.navigate("Searchpage",{
     itemId: 86,
     otherParam: res.data,
+    searchedWord:data
   })
     // await Keychain.setGenericPassword(emailValue.value, passwordValue);
   })
@@ -42,10 +47,13 @@ const handleClick= async(data)=>{
       {loader ? <ActivityIndicator size="small" /> :
    <>
       <View style={styles.headContainer}>
+      <TouchableOpacity onPress={()=>navigation.goBack()} style={styles.backButton}>
+      <Ionicons name="ios-arrow-back" size={24} color="#311E70" />
+      </TouchableOpacity>
       <Text style={styles.headTitle}>
-        Search
+        Search results for
+        <Text>  '{searchedWord}'</Text>
       </Text>
-      
       </View>
       
       
@@ -54,7 +62,9 @@ const handleClick= async(data)=>{
       <ScrollView contentContainerStyle={styles.scrollContainer}>
   
       <SearchBar style={styles.SearchBar} getData={handleClick}></SearchBar>
-      {otherParam.map((data)=>(<CourseCard courseName={data.name} navigation={navigation} id={data._id} key={data._id} image={data.img}></CourseCard>))}
+      {otherParam!=0?(otherParam.map((data)=>(<CourseCard courseName={data.name} navigation={navigation} id={data._id} key={data._id} image={data.img}></CourseCard>)))
+:<Text>No results Found</Text>}
+      {/* {otherParam.map((data)=>(<CourseCard courseName={data.name} navigation={navigation} id={data._id} key={data._id} image={data.img}></CourseCard>))} */}
       </ScrollView>
       </TouchableWithoutFeedback>
       </View>
@@ -87,13 +97,15 @@ const styles = StyleSheet.create({
         },
         headContainer:{
           backgroundColor:"#FFFFFF",
-          display:"flex",
-          gap:15,
-          paddingBottom:20,
-          paddingLeft:30,
-          paddingTop:70,
-          borderBottomLeftRadius:10,
-          borderBottomRightRadius:10,
+        display:"flex",
+        flexDirection:"row",
+        alignItems:"center",
+        gap:15,
+        paddingBottom:10,
+        paddingLeft:10,
+        paddingTop:70,
+        borderBottomLeftRadius:10,
+        borderBottomRightRadius:10,
         },
         headTitle:{
           fontSize:26,

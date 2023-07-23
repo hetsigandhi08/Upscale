@@ -18,13 +18,15 @@ const SearchScreen = ({navigation}) => {
 
   
     const handleClick= async(data)=>{
-      console.log("hello");
+      
       await axios.post(url+"api/search",{keyword:data},{headers:{Authorization:au}})
       .then((res)=>{
-        //console.log(res.data)
+       
        navigation.navigate("Searchpage",{
         itemId: 86,
         otherParam: res.data,
+        searchedWord:data
+        
       })
         // await Keychain.setGenericPassword(emailValue.value, passwordValue);
       })
@@ -141,7 +143,7 @@ backgroundColor:'#FAFCFB',
     gap:20,
 backgroundColor:'#FAFCFB',
     padding:20,
-    paddingTop:50
+    paddingTop:20
   },
   backButton:{
     marginTop:30,
@@ -154,7 +156,7 @@ backgroundColor:'#FAFCFB',
     marginBottom:10
 },
 SearchBar:{
-  paddingTop:40
+  paddingTop:0
 },
 topSearch:{
   display:'flex',
@@ -232,7 +234,7 @@ headContainer:{
   backgroundColor:"#FFFFFF",
   display:"flex",
   gap:15,
-  paddingBottom:20,
+  paddingBottom:10,
   paddingLeft:30,
   paddingTop:70,
   borderBottomLeftRadius:10,
