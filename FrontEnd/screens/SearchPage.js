@@ -1,8 +1,10 @@
-import { StyleSheet, Text, View,ActivityIndicator,ScrollView, TouchableOpacity, TouchableWithoutFeedback ,Keyboard} from 'react-native'
+import { StyleSheet, Text, View,ActivityIndicator,ScrollView, TouchableOpacity, TouchableWithoutFeedback ,Keyboard,Image} from 'react-native'
 import React,{useState,useEffect} from 'react'
 import CourseCard from '../components/CourseCard';
 import SearchBar from '../components/SearchBar';
 import SearchScreen from './SearchScreen';
+import axios from 'axios'
+import { au,url } from '../constant/Constant';
 const SearchPage = ({ navigation , route}) => {
     const[loader,setLoader] = useState(true);
 
@@ -18,6 +20,23 @@ const SearchPage = ({ navigation , route}) => {
 //   console.log(data);
 //   navigation.navigate("SearchScreen");
 //  }
+
+const handleClick= async(data)=>{
+  console.log("hello");
+  await axios.post(url+"api/search",{keyword:data},{headers:{Authorization:au}})
+  .then((res)=>{
+    //console.log(res.data)
+   navigation.navigate("Searchpage",{
+    itemId: 86,
+    otherParam: res.data,
+  })
+    // await Keychain.setGenericPassword(emailValue.value, passwordValue);
+  })
+  .catch((err)=>{
+    console.log(err)
+    Alert.alert("Search error");
+})
+}
   return (
     <View style={loader? styles.activityContainer :styles.container}>
       {loader ? <ActivityIndicator size="small" /> :
@@ -34,8 +53,8 @@ const SearchPage = ({ navigation , route}) => {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
   
-      <SearchBar style={styles.SearchBar}></SearchBar>
-      {otherParam.map((data)=>(<CourseCard courseName={data.name} navigation={navigation} id={data._id}></CourseCard>))}
+      <SearchBar style={styles.SearchBar} getData={handleClick}></SearchBar>
+      {otherParam.map((data)=>(<CourseCard courseName={data.name} navigation={navigation} id={data._id} key={data._id} image={data.img}></CourseCard>))}
       </ScrollView>
       </TouchableWithoutFeedback>
       </View>
