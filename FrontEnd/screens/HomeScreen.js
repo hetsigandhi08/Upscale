@@ -2,41 +2,16 @@ import { StyleSheet, Text, TouchableOpacity, View, ScrollView, FlatList, Activit
 import React, {useState, useEffect} from 'react'
 import * as Progress from 'react-native-progress';
 import InstructorCard from '../components/InstructorCard';
-import axios from 'axios';
 import fra from '../assets/Frame108.png'
-import fa from '../assets/Poster.png'
 import fa1 from '../assets/Frame1.png'
 import fa2 from '../assets/Frame2.png'
-import {url,au} from '../constant/Constant';
 import WrappedLoader from '../components/WrappedLoader';
 import Accordion from '../components/Accordion';
-import { getValueFor } from '../services/SecureStore';
+import { useSelector } from 'react-redux';
 
 const HomeScreen = ({navigation}) => {
-  const[progress,setProgress]=useState(0.3);
-  const[loader,setLoader] = useState(true);
-  const[recentCourseData, setRecentCourseData] = useState([])
 
-  const recentCourseAPI =async()=>{
-    await axios.get(url+"api/course",{headers:{
-      Authorization:au,
-      
-    }
-  }).then((res)=>{
-      // console.log(res.data)
-      setRecentCourseData(res.data)
-    }).catch((err)=>{
-      console.log(err)
-    })
-  }
-
-    useEffect(()=>{
-      recentCourseAPI();
-      setTimeout(() => {
-        setLoader(false)
-      },2000);
-      // console.log(recentCourseData)
-    },[recentCourseData])
+  const homeData = useSelector((state) => state.home.data);
 
   return (
     <View style={{flex:1}}>
@@ -47,11 +22,11 @@ const HomeScreen = ({navigation}) => {
       <Text style={styles.title}>Your progress</Text>
 
       <View style={{display:"flex",flexDirection:"row",gap:10,alignItems:"center"}}>
-      <Text style={styles.title}>22%</Text><Text style={{fontFamily:'SourceSans3-SemiBold',color:"#929292",fontSize:16}}>Completed</Text>
+      <Text style={styles.title}>{homeData.totalProgress}%</Text><Text style={{fontFamily:'SourceSans3-SemiBold',color:"#929292",fontSize:16}}>Completed</Text>
       </View>
        
        <View style={{display:"flex",gap:7}}>
-      <Progress.Bar height={10} progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9'  borderWidth={0} animationType='timing' />
+      <Progress.Bar height={10} progress={(homeData.totalProgress)/100} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9'  borderWidth={0} animationType='timing' />
       <Text style={styles.subTitle}>Complete the pending courses to reach the milestone.</Text>
       </View>
       </View>
@@ -60,24 +35,19 @@ const HomeScreen = ({navigation}) => {
 
       <View style={styles.yourCourseContainer}>
       <Text style={styles.title}>Your courses</Text>
-      
-      <TouchableOpacity style={styles.boxShadow}>
+
+      {
+        homeData.learningCourses.map((item,index)=>
+      <TouchableOpacity key={index} style={styles.boxShadow} onPress={()=>navigation.navigate("CourseDetails",{_courseId:item.courseId})} >
       <Progress.Bar style={{borderRadius:10,borderColor:"#ABABAB",borderWidth:1}} height={100} progress={0.23} width={null} animated color='#CAF0F8'  unfilledColor='#FAFCFB'  borderWidth={0} animationType='timing'> 
       <View style={{position:'absolute',left:24,top:18}}>
-      <Text style={styles.title}>UX Design</Text>
-      <Text style={styles.subTitle}> 23% Completed</Text>
+      <Text style={styles.title}>{item.name}</Text>
+      <Text style={styles.subTitle}> {item.progress}% Completed</Text>
       </View>
       </Progress.Bar>
       </TouchableOpacity>
-
-      <TouchableOpacity style={styles.boxShadow}>
-      <Progress.Bar style={{borderRadius:10,borderColor:'#ABABAB',borderWidth:1}} height={100} progress={0.4} width={null} animated color='#FED9B7'  unfilledColor='#FAFCFB'  borderWidth={0} animationType='timing'> 
-      <View style={{position:'absolute',left:24,top:18}}>
-      <Text style={styles.title}>React and Redux</Text>
-      <Text style={styles.subTitle}> 40% Completed</Text>
-      </View>
-      </Progress.Bar>
-      </TouchableOpacity>
+        )
+      }
 
       </View>
 
@@ -90,7 +60,7 @@ const HomeScreen = ({navigation}) => {
         contentContainerStyle={{display:'flex',gap:10}} 
         horizontal 
         showsHorizontalScrollIndicator={false}
-        data={recentCourseData}
+        data={homeData.suggestionCourses}
         renderItem={({item}) => <InstructorCard navigation={navigation} courseName={item.name} thumbnail={item.img} courseId={item._id} /> }
       />
 

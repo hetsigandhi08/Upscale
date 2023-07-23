@@ -3,23 +3,22 @@ import React, {useState} from 'react'
 import * as Progress from 'react-native-progress';
 import thumb from '../assets/thumbnail.jpeg'
 
-const MyCourseCard = () => {
-    const[progress,setProgress]=useState(0.4);
+const MyCourseCard = ({name,progress,img,navigation,courseId}) => {
   return (
     <>
-       <TouchableOpacity style={[styles.cardContainer,styles.boxShadow]}>
+       <TouchableOpacity onPress={()=> navigation.navigate("CourseDetails",{_courseId:courseId})} style={[styles.cardContainer,styles.boxShadow]}>
             <View style={styles.cardTopContainer}>
               <Image style={styles.cardImage} source={thumb}/>
               <View style={styles.cardTopInnerContainer}>
-                <Text style={styles.cardTitle}>Machine learning Fundamentals</Text>
-                <Text style={styles.cardSubTitle} >By Varun Maaya</Text>
+                <Text style={styles.cardTitle}>{name}</Text>
+                <Text style={styles.cardSubTitle} >Course</Text>
               </View>
             </View>
 
 
             <View style={styles.cardBottomContainer}>
-              <Text style={styles.cardTitle}>22% Complete</Text>
-              <Progress.Bar height={12} style={{borderRadius:10}} progress={progress} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
+              <Text style={styles.cardTitle}>{progress}% Complete</Text>
+              <Progress.Bar height={12} style={{borderRadius:10}} progress={(progress)/100} width={null} animated color='#9CD681'  unfilledColor='#D9D9D9' borderWidth={0} animationType='timing' />
             </View>
        </TouchableOpacity>
     </>
@@ -31,7 +30,7 @@ export default MyCourseCard
 const styles = StyleSheet.create({
     cardContainer:{
         width:"100%",
-        height:135,
+        height:155,
         backgroundColor:"#FFFFFF",
         borderRadius:10,
         padding:15,
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
       },
       cardTopInnerContainer:{
         display:"flex",
-        gap:7,
+        gap:2,
         marginTop:8,
       },
       cardImage:{
@@ -61,11 +60,11 @@ const styles = StyleSheet.create({
         borderRadius:10,
       },
       cardTitle:{
-          fontSize:14,
+          fontSize:24,
           fontFamily:'SourceSans3-SemiBold',
       },
       cardSubTitle:{
-        fontSize:12,
+        fontSize:16,
         fontFamily:'SourceSans3-SemiBold',
         color:"#929292",
     },
