@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import courseDataReducer from './courseDataSlice'
 import countReducer from './countSlice'
+import homeDataReducer from './homeDataSlice'
 
 export const store = configureStore({
   reducer: {
     course: courseDataReducer,
-    count:countReducer
+    count:countReducer,
+    home:homeDataReducer
   }
 });

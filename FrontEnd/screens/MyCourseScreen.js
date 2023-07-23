@@ -2,8 +2,11 @@ import { StyleSheet, Text, View,TouchableOpacity,Image, ActivityIndicator, Scrol
 import React, {useEffect, useState} from 'react'
 import MyCourseCard from '../components/MyCourseCard';
 import WrappedLoader from '../components/WrappedLoader';
+import { useSelector } from 'react-redux';
 
-const MyCourseScreen = () => {
+const MyCourseScreen = ({navigation}) => {
+
+  const homeData = useSelector((state) => state.home.data);
 
   return (
 
@@ -16,11 +19,11 @@ const MyCourseScreen = () => {
 
       <ScrollView contentContainerStyle={styles.scrollContainer}>
 
-       <MyCourseCard/>
-       <MyCourseCard/>
-       <MyCourseCard/>
-       <MyCourseCard/>
-       <MyCourseCard/>
+       {
+        homeData.learningCourses.map((item,index)=>(
+          <MyCourseCard key={index} name={item.name} progress={item.progress} navigation={navigation} courseId={item.courseId} />
+        ))
+       }
 
       </ScrollView>
     </>  
