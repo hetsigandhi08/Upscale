@@ -4,9 +4,17 @@ import apple from '../assets/apple.png'
 import google from '../assets/google.png'
 import {url} from '../constant/Constant'
 import axios from 'axios'
+import { save } from '../services/SecureStore'
+import { getValueFor } from '../services/SecureStore'
 // import * as Keychain from 'react-native-keychain';
 
 const LoginScreen = ({ navigation }) => {
+
+  getValueFor("auth").then((res)=>{
+    if(res){
+      navigation.navigate('Tab')
+    }
+  })
 
     const [emailValue, setEmailValue] = useState({
       value:"",
@@ -24,7 +32,12 @@ const LoginScreen = ({ navigation }) => {
         await axios.post(url+"api/auth/login",{email:emailValue.value,password:passwordValue})
         .then((res)=>{
           console.log(res.data)
-          // await Keychain.setGenericPassword(emailValue.value, passwordValue);
+          save("auth",res.data.access_token);
+          setEmailValue({
+            value:"",
+            valid:true,
+          })
+          setPasswordValue("");
           navigation.navigate("Tab")
         })
         .catch((err)=>{
@@ -59,9 +72,9 @@ const LoginScreen = ({ navigation }) => {
     </View>
 
     <View style={styles.inputContainer}>
-      <TextInput onChangeText={emailValidate} style={emailFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Email Address' autoComplete='email' autoCapitalize="none" returnKeyType="next" onBlur={()=>setEmailFocusState(false)} onFocus={()=>setEmailFocusState(true)}/>
+      <TextInput onChangeText={emailValidate} value={emailValue.value} style={emailFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Email Address' autoComplete='email' autoCapitalize="none" returnKeyType="next" onBlur={()=>setEmailFocusState(false)} onFocus={()=>setEmailFocusState(true)}/>
       {/* <Text style={{fontSize:10}}>{emailValue.valid ? "" : "Enter valid Email"}</Text> */}
-      <TextInput onChangeText={(e)=>setPasswordValue(e)} style={passwordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Enter Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setPasswordFocusState(false)} onFocus={()=>setPasswordFocusState(true)}/>
+      <TextInput onChangeText={(e)=>setPasswordValue(e)} value={passwordValue} style={passwordFocusState ? styles.mailInputFocused : styles.mailInput} placeholder='Enter Password' secureTextEntry={true} autoComplete='password' onBlur={()=>setPasswordFocusState(false)} onFocus={()=>setPasswordFocusState(true)}/>
     
 
       <TouchableOpacity style={styles.loginBtn} onPress={login} >

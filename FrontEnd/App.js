@@ -21,6 +21,7 @@ import ChangePasswordScreen from './screens/ChangePasswordScreen';
 import SearchScreen from './screens/SearchScreen';
 import SearchPage from './screens/SearchPage';
 import CourseVideoScreen from './screens/CourseVideoScreen';
+import AccountInfoScreen from './screens/AccountInfoScreen';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 // import * as Keychain from 'react-native-keychain';
@@ -63,7 +64,7 @@ export default function App () {
   return (
     <Provider store={store} >
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Tab">
+      <Stack.Navigator initialRouteName="GetStarted1">
       <Stack.Screen name = "GetStarted1" options = {{headerShown: false}} component = {GetStartedScreen1} />
       <Stack.Screen name = "GetStarted2" options = {{headerShown: false}} component = {GetStartedScreen2} />
       <Stack.Screen name = "GetStarted3" options = {{headerShown: false}} component = {GetStartedScreen3} />
@@ -81,6 +82,8 @@ export default function App () {
       <Stack.Screen name='CourseVideo' options={{headerShown: false}} component={CourseVideoScreen}/>
       <Stack.Screen  name="SearchScreen" options={{headerShown: false}} component={SearchScreen} />
       <Stack.Screen  name="Searchpage" options={{headerShown: false}} component={SearchPage} />
+      <Stack.Screen name='AccountInfo' options={{headerShown: false}} component={AccountInfoScreen} />
+
 
       </Stack.Navigator>
       <StatusBar style='dark' />

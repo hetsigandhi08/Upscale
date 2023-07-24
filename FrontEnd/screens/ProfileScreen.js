@@ -2,8 +2,9 @@ import { StyleSheet, Text, View, ActivityIndicator, TouchableOpacity, ScrollView
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React, {useState, useEffect} from 'react';
 import WrappedLoader from '../components/WrappedLoader';
+import { deleteValue } from '../services/SecureStore';
 
-const ProfileScreen = () => {
+const ProfileScreen = ({navigation}) => {
   
 return (
    <>
@@ -23,7 +24,7 @@ return (
           Settings
          </Text>
 
-         <TouchableOpacity style={styles.btnContainer}>
+         <TouchableOpacity onPress={()=>navigation.navigate("AccountInfo")} style={styles.btnContainer}>
          <View style={{display:'flex',flexDirection:'row',alignItems:'center',gap:10}}>
          <Ionicons name="person-circle-outline" size={24} color="black" />
          <Text>Account Information</Text>
@@ -108,7 +109,10 @@ return (
 
       </View>
 
-      <TouchableOpacity style={styles.signOutBtn} onPress={toSignUp=()=>{navigation.navigate('OnBoardingScreen1')}} >
+      <TouchableOpacity style={styles.signOutBtn} onPress={toSignUp=()=>{
+        deleteValue("auth");
+        navigation.navigate('Login')}
+        } >
           <Text style={styles.signupText}>Sign Out</Text>
       </TouchableOpacity>
 
