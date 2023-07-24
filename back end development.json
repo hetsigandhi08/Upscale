@@ -1,0 +1,216 @@
+{
+	"Back-end development": [
+		{
+			"Introduction to Back-end development": [
+				{
+					"Overview of Back-end development": {
+						"url": "XBu54nfzxAQ",
+						"thumbnail": "https://img.youtube.com/vi/XBu54nfzxAQ/maxresdefault.jpg",
+						"duration": 777,
+						"channel": "SuperSimpleDev"
+					}
+				},
+				{
+					"Backend Tools and Technologies": {
+						"url": "B11jzlVCgxI",
+						"thumbnail": "https://img.youtube.com/vi/B11jzlVCgxI/maxresdefault.jpg",
+						"duration": 583,
+						"channel": "Tiff In Tech"
+					}
+				}
+			]
+		},
+		{
+			"Node.js": [
+				{
+					"Introduction to Node.js": {
+						"url": "ENrzD9HAZK4",
+						"thumbnail": "https://img.youtube.com/vi/ENrzD9HAZK4/maxresdefault.jpg",
+						"duration": 979,
+						"channel": "Fireship"
+					}
+				},
+				{
+					"Native Node Modules": {
+						"url": "CJqERG2rBaU",
+						"thumbnail": "https://img.youtube.com/vi/CJqERG2rBaU/maxresdefault.jpg",
+						"duration": 189,
+						"channel": "FireJet"
+					}
+				},
+				{
+					"The NPM Package Manager and Installing External Node Modules": {
+						"url": "P3aKRdUyr0s",
+						"thumbnail": "https://img.youtube.com/vi/P3aKRdUyr0s/maxresdefault.jpg",
+						"duration": 866,
+						"channel": "Coder Coder"
+					}
+				}
+			]
+		},
+		{
+			"Express.js with Node.js": [
+				{
+					"Express.js": {
+						"url": "0QRFOsrBtXw",
+						"thumbnail": "https://img.youtube.com/vi/0QRFOsrBtXw/maxresdefault.jpg",
+						"duration": 307,
+						"channel": "Simplilearn"
+					}
+				},
+				{
+					"HTTP Requests": {
+						"url": "-Zea7GB2OwA",
+						"thumbnail": "https://img.youtube.com/vi/-Zea7GB2OwA/maxresdefault.jpg",
+						"duration": 295,
+						"channel": "Codecademy"
+					}
+				},
+				{
+					"Introduction to Middlewares": {
+						"url": "lY6icfhap2o",
+						"thumbnail": "https://img.youtube.com/vi/lY6icfhap2o/maxresdefault.jpg",
+						"duration": 887,
+						"channel": "Web Dev Simplified"
+					}
+				}
+			]
+		},
+		{
+			"Databases": [
+				{
+					"SQL vs NOSQL": {
+						"url": "_Ss42Vb1SU4",
+						"thumbnail": "https://img.youtube.com/vi/_Ss42Vb1SU4/maxresdefault.jpg",
+						"duration": 240,
+						"channel": "Exponent"
+					}
+				},
+				{
+					"SQL Commands": {
+						"url": "vUj-kUEC_oA",
+						"thumbnail": "https://img.youtube.com/vi/vUj-kUEC_oA/maxresdefault.jpg",
+						"duration": 619,
+						"channel": "Gate Smashers"
+					}
+				},
+				{
+					"Understanding SQL Relationships, Foreign Keys": {
+						"url": "B5r8CcTUs5Y",
+						"thumbnail": "https://img.youtube.com/vi/B5r8CcTUs5Y/maxresdefault.jpg",
+						"duration": 504,
+						"channel": "Eddie Woo"
+					}
+				},
+				{
+					" Joins": {
+						"url": "9yeOJ0ZMUYw",
+						"thumbnail": "https://img.youtube.com/vi/9yeOJ0ZMUYw/maxresdefault.jpg",
+						"duration": 625,
+						"channel": "Socratica"
+					}
+				}
+			]
+		},
+		{
+			"MongoDB": [
+				{
+					"MongoDB CRUD Operations": {
+						"url": "fbYExfeFsI0",
+						"thumbnail": "https://img.youtube.com/vi/fbYExfeFsI0/maxresdefault.jpg",
+						"duration": 2558,
+						"channel": "MongoDB"
+					}
+				},
+				{
+					"Relationships in MongoDB": {
+						"url": "DHDxlwZdwys",
+						"thumbnail": "https://img.youtube.com/vi/DHDxlwZdwys/maxresdefault.jpg",
+						"duration": 321,
+						"channel": "procademy"
+					}
+				}
+			]
+		},
+		{
+			"Mongoose": [
+				{
+					"Introduction to Mongoose": {
+						"url": "-PdjUx9JZ2E",
+						"thumbnail": "https://img.youtube.com/vi/H0XScE08hy8/maxresdefault.jpg",
+						"duration": 1025,
+						"channel": "Dave Gray"
+					}
+				},
+				{
+					"Data Validation with Mongoose": {
+						"url": "nukNITdis9g",
+						"thumbnail": "https://img.youtube.com/vi/nukNITdis9g/maxresdefault.jpg",
+						"duration": 1394,
+						"channel": "The Net Ninja "
+					}
+				}
+			]
+		},
+		{
+			"REST API": [
+				{
+					"Introduction to REST API": {
+						"url": "lsMQRaeKNDk",
+						"thumbnail": "https://img.youtube.com/vi/lsMQRaeKNDk/maxresdefault.jpg",
+						"duration": 551,
+						"channel": "IBM Technology"
+					}
+				},
+				{
+					"CURD Operations": {
+						"url": "AhCSfuG9Jxw",
+						"thumbnail": "https://img.youtube.com/vi/AZqRjdqa_D8/maxresdefault.jpg",
+						"duration": 1530,
+						"channel": "6 Pack Program"
+					}
+				}
+			]
+		},
+		{
+			"Authentication & Security": [
+				{
+					"JavaScript Optimization": {
+						"url": "ElY3rjtukig",
+						"thumbnail": "https://img.youtube.com/vi/ElY3rjtukig/maxresdefault.jpg",
+						"duration": 4126,
+						"channel": "Backend Story"
+					}
+				},
+				{
+					"Cookies and Sessions": {
+						"url": "GhrvZ5nUWNg",
+						"thumbnail": "https://img.youtube.com/vi/GhrvZ5nUWNg/maxresdefault.jpg",
+						"duration": 673,
+						"channel": "Valentin Despa"
+					}
+				}
+			]
+		},
+		{
+			"React.js": [
+				{
+					"Introduction to React": {
+						"url": "Y6aYx_KKM7A",
+						"thumbnail": "https://img.youtube.com/vi/Y6aYx_KKM7A/maxresdefault.jpg",
+						"duration": 569,
+						"channel": "Simplilearn"
+					}
+				},
+				{
+					"React Components": {
+						"url": "Ib-80HIjuZ4",
+						"thumbnail": "https://img.youtube.com/vi/Ib-80HIjuZ4/maxresdefault.jpg",
+						"duration": 1313,
+						"channel": "Cand Dev"
+					}
+				}
+			]
+		}
+	]
+}

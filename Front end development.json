@@ -1,0 +1,216 @@
+{
+	"Front-end development": [
+		{
+			"Introduction to Application Development": [
+				{
+					"Overview of Web and Cloud Development": {
+						"url": "M988_fsOSWo",
+						"thumbnail": "https://img.youtube.com/vi/M988_fsOSWo/maxresdefault.jpg",
+						"duration": 383,
+						"channel": "Simplilearn"
+					}
+				},
+				{
+					"Learning Front-End Development": {
+						"url": "l7XxVX2cXfg",
+						"thumbnail": "https://img.youtube.com/vi/l7XxVX2cXfg/maxresdefault.jpg",
+						"duration": 432,
+						"channel": "Marty"
+					}
+				}
+			]
+		},
+		{
+			"HTML Overview": [
+				{
+					"Introduction to HTML": {
+						"url": "MDLn5-zSQQI",
+						"thumbnail": "https://img.youtube.com/vi/MDLn5-zSQQI/maxresdefault.jpg",
+						"duration": 553,
+						"channel": "Simplilearn"
+					}
+				},
+				{
+					"HTML Features": {
+						"url": "OxJTnSEAva4",
+						"thumbnail": "https://img.youtube.com/vi/OxJTnSEAva4/maxresdefault.jpg",
+						"duration": 490,
+						"channel": "Easy Engineering Classes"
+					}
+				},
+				{
+					"HTML5 Browser Support": {
+						"url": "2s7Ul1ZLS_I",
+						"thumbnail": "https://img.youtube.com/vi/2s7Ul1ZLS_I/maxresdefault.jpg",
+						"duration": 468,
+						"channel": "Skillsoft YouTube"
+					}
+				}
+			]
+		},
+		{
+			"CSS Overview & HTML5 Elements": [
+				{
+					"HTML5 Tags and Structural Elements": {
+						"url": "kX3TfdUqpuU",
+						"thumbnail": "https://img.youtube.com/vi/kX3TfdUqpuU/maxresdefault.jpg",
+						"duration": 1477,
+						"channel": "Dave Gray"
+					}
+				},
+				{
+					"CSS: Styling HTML": {
+						"url": "azZCW24XtT4",
+						"thumbnail": "https://img.youtube.com/vi/azZCW24XtT4/maxresdefault.jpg",
+						"duration": 960,
+						"channel": "Dani Krossing"
+					}
+				},
+				{
+					"CSS Frameworks": {
+						"url": "nDXDxA27poE",
+						"thumbnail": "https://img.youtube.com/vi/nDXDxA27poE/maxresdefault.jpg",
+						"duration": 546,
+						"channel": "Giraffe Academy"
+					}
+				}
+			]
+		},
+		{
+			"JavaScript Programming for Web Applications": [
+				{
+					"JavaScript Language: Overview and Syntax": {
+						"url": "KXxXr0RxGDE",
+						"thumbnail": "https://img.youtube.com/vi/KXxXr0RxGDE/maxresdefault.jpg",
+						"duration": 799,
+						"channel": "CoderLipi"
+					}
+				},
+				{
+					"JavaScript: Variables and Control Statements": {
+						"url": "p-JoZ_UxwB8",
+						"thumbnail": "https://img.youtube.com/vi/p-JoZ_UxwB8/maxresdefault.jpg",
+						"duration": 259,
+						"channel": "Telusko"
+					}
+				},
+				{
+					"JavaScript: Functions and Prototypes": {
+						"url": "RgNa6mqt7NE",
+						"thumbnail": "https://img.youtube.com/vi/RgNa6mqt7NE/maxresdefault.jpg",
+						"duration": 476,
+						"channel": "Steve Griffith - Prof3ssor"
+					}
+				},
+				{
+					"JavaScript APIs": {
+						"url": "cuEtnrL9-H0",
+						"thumbnail": "https://img.youtube.com/vi/cuEtnrL9-H0/maxresdefault.jpg",
+						"duration": 394,
+						"channel": "Web Dev Simplified"
+					}
+				}
+			]
+		},
+		{
+			"Client-side JavaScript": [
+				{
+					"Client-Side JavaScript: with HTML": {
+						"url": "CYlNJpltjMM",
+						"thumbnail": "https://img.youtube.com/vi/CYlNJpltjMM/maxresdefault.jpg",
+						"duration": 575,
+						"channel": "JavaScript Academy"
+					}
+				},
+				{
+					"Client-Side JavaScript: with DOM": {
+						"url": "hRaDYCHqFQQ",
+						"thumbnail": "https://img.youtube.com/vi/hRaDYCHqFQQ/maxresdefault.jpg",
+						"duration": 367,
+						"channel": "Apna College"
+					}
+				}
+			]
+		},
+		{
+			"Debugging and Troubleshooting": [
+				{
+					"JavaScript Debugging": {
+						"url": "H0XScE08hy8",
+						"thumbnail": "https://img.youtube.com/vi/H0XScE08hy8/maxresdefault.jpg",
+						"duration": 447,
+						"channel": "Google Chrome Developers"
+					}
+				},
+				{
+					"Basic Debugging Concepts": {
+						"url": "_sSGdBw976w",
+						"thumbnail": "https://img.youtube.com/vi/_sSGdBw976w/maxresdefault.jpg",
+						"duration": 560,
+						"channel": "Craig Piercy"
+					}
+				}
+			]
+		},
+		{
+			"Introduction to Automated build tools": [
+				{
+					"Introduction to Web Build and Automated Tools": {
+						"url": "9TRywYThcMM",
+						"thumbnail": "https://img.youtube.com/vi/9TRywYThcMM/maxresdefault.jpg",
+						"duration": 489,
+						"channel": "Learning RPA Technologies"
+					}
+				},
+				{
+					"Essential Concepts of Webpack": {
+						"url": "AZqRjdqa_D8",
+						"thumbnail": "https://img.youtube.com/vi/AZqRjdqa_D8/maxresdefault.jpg",
+						"duration": 933,
+						"channel": "Tim Benniks"
+					}
+				}
+			]
+		},
+		{
+			"Cross-Browser Java Optimization and Testing Frameworks": [
+				{
+					"JavaScript Optimization": {
+						"url": "oewDaISQpw0",
+						"thumbnail": "https://img.youtube.com/vi/oewDaISQpw0/maxresdefault.jpg",
+						"duration": 1234,
+						"channel": "SimonDev"
+					}
+				},
+				{
+					"Testing Frameworks": {
+						"url": "8WKhMsS9HBw",
+						"thumbnail": "https://img.youtube.com/vi/8WKhMsS9HBw/maxresdefault.jpg",
+						"duration": 246,
+						"channel": "Automation Step by Step"
+					}
+				}
+			]
+		},
+		{
+			"Designing INtuitive Front Ends and Mockup Design Principles": [
+				{
+					"What is Design and UI/UX? ": {
+						"url": "TgqeRTwZvIo",
+						"thumbnail": "https://img.youtube.com/vi/TgqeRTwZvIo/maxresdefault.jpg",
+						"duration": 344,
+						"channel": "DesignCourse"
+					}
+				},
+				{
+					"Visual Design Principles in UI Design": {
+						"url": "uwNClNmekGU",
+						"thumbnail": "https://img.youtube.com/vi/uwNClNmekGU/maxresdefault.jpg",
+						"duration": 555,
+						"channel": "Jesse Showalter"
+					}
+				}
+			]
+		}
+	]
+}
